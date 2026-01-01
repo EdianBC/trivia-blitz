@@ -86,13 +86,13 @@ def main():
     print("2. True/False (boolean)")
     qtype_input = input("Question type (1 or 2): ")
     qtype = "multiple" if qtype_input == "1" else "boolean" if qtype_input == "2" else None
-    
+
+    time_limit = input("\nSelect time limit (leave blank for infinite):")
+
     clear_console()
 
     # Fetch questions from the API
     questions = fetch_questions(amount, category, difficulty, qtype)
-    
-    # print(questions)
 
     print("\nLet's start the game!\n")
 
