@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import telegram
 from telegram import Update, ReplyKeyboardMarkup, KeyboardButton
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
-import state_machine as sm
+import state_machine_applied as sm
 
 load_dotenv()
 
@@ -29,14 +29,23 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     
     text = update.message.text    
 
-    #The idea here is to call this on a thread 
-    
+    #The idea here is to call this on a thread or a process
     actions = sm.run_state_machine_step(update.effective_user.id, text)
     for action in actions:
         if isinstance(action, str):
             await update.message.reply_text(action)
         elif isinstance(action, ReplyKeyboardMarkup):
-            await update.message.reply_text(" ", reply_markup=action)
+            await update.message.reply_text(".", reply_markup=action)
+        elif isinstance(action, dict) and action.get("type") == "quiz":  # Si es un cuestionario
+            await context.bot.send_poll(
+                chat_id=update.effective_chat.id,
+                question=action["question"],
+                options=action["options"],
+                type="quiz",
+                correct_option_id=action["correct_option_id"],
+                is_anonymous=action["is_anonymous"],
+                open_period=action.get("open_period")  # Opcional
+            )
         else:
             await update.message.reply_text(f"IDK how to handle this action: {action}")
 

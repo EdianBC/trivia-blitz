@@ -1,51 +1,33 @@
-from telegram import ReplyKeyboardMarkup, KeyboardButton
+class State:
+    protocol = None
+    transition_function = None #They both could be just one function, maybe I will unify them later
 
-user_state = {}
-game_names = []
+    def __init__(self, protocol=None, transition_function=None):
+        self.protocol = protocol
+        self.transition_function = transition_function
 
-def run_state_machine_step(user_id: int, message: str) -> list:
+states = {}
+
+def add_state(name, protocol, transition_function):
+    states[name] = State(protocol, transition_function)
     
-    if user_id not in user_state:
-        user_state[user_id] = "MAIN"
-        return ["Welcome to the game! Choose an option: Create a game, Join a game, Settings"]
+def run_state(state_name, data):
+    output = [] #Should be a list of pairs (type, content). For example ('text', 'Hello World') or ('image', image_data)
+    state = states.get(state_name)
+
+    if state.protocol:
+        protocol_output = state.protocol(data) #Should I pass data here? We will see
+        if protocol_output:
+            output.extend(protocol_output)
     
-    outputs = []
-    state = user_state[user_id]
-
-    if state == "MAIN":
-        if message == "Create a game":
-            user_state[user_id] = "CREATE"
-            outputs.append("You have chosen to create a game. Please enter the game name:")
-        elif message == "Join a game":
-            user_state[user_id] = "JOIN"
-            outputs.append("You have chosen to join a game. Please enter the game code:")
-        elif message == "Settings":
-            outputs.append("I owe you this feature, brother")
-
-    elif state == "CREATE":
-        game_name = message.strip()
-        if game_name in game_names:
-            #The idea is to genererate a unique key for the game here but thats for later. We are using name as key for now
-            outputs.append("A game with this name already exists. Please choose a different name")
-        else:
-            game_names.append(game_name)
-            outputs.append(f"You have successfully created the game: {game_name}")
-            user_state[user_id] = "MAIN"
-            keyboard = [KeyboardButton(text="Create a game"), KeyboardButton(text="Join a game"), KeyboardButton(text="Settings")]
-            outputs.append(ReplyKeyboardMarkup([keyboard], resize_keyboard=True))
-
-    elif state == "JOIN":
-        game_code = message.strip()
-        if game_code in game_names:
-            outputs.append(f"You have successfully joined the game: {game_code}")
-            user_state[user_id] = "MAIN"
-            keyboard = [KeyboardButton(text="Create a game"), KeyboardButton(text="Join a game"), KeyboardButton(text="Settings")]
-            outputs.append(ReplyKeyboardMarkup([keyboard], resize_keyboard=True))
-        else:
-            outputs.append("Invalid game code. Please try again")
-         
+    if state.transition_function:
+        next_state_name, transition_output = state.transition_function(data)
+        if transition_output:
+            output.extend(transition_output)
     else:
-        outputs.append("Looks like you fucked up. Please try to write a valid command")
+        next_state_name = state_name
+    
+    return next_state_name, output
 
-    return outputs
-
+#Idea: in the state define the transition function on which the transition is made and return the target state
+#then there is another thing that runs the transition protocol for that transition
