@@ -31,10 +31,15 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
 
 async def answer_to_user(update: Update, context: ContextTypes.DEFAULT_TYPE, actions) -> None:
     for action in actions:
+        #IDEA: Create a type "textkeyboard" that combines text and keyboard in one action 
         if action[0] == "text":
             await update.message.reply_text(action[1])
         elif action[0] == "keyboard":
             await update.message.reply_text("...", reply_markup=action[1])
+        elif action[0] == "textkeyboard":
+            await update.message.reply_text(action[1][0], reply_markup=action[1][1])
+        elif action[0] == "textnokeyboard":
+            await update.message.reply_text(action[1], reply_markup=telegram.ReplyKeyboardRemove())
         elif action[0] == "quiz":
             await context.bot.send_poll(
                 chat_id=update.effective_chat.id,
@@ -47,6 +52,7 @@ async def answer_to_user(update: Update, context: ContextTypes.DEFAULT_TYPE, act
             )
         else:
             await update.message.reply_text(f"IDK how to handle this action: {action}")
+
 
 
 def main() -> None:

@@ -40,7 +40,7 @@ def run_state_machine_step(user_id: int, data: dict) -> list:
 def test_entry(data):
     keyboard = [KeyboardButton(text="Option 1"), KeyboardButton(text="Option 2")]
     reply_markup = ReplyKeyboardMarkup([keyboard], resize_keyboard=True)
-    return [("text", "You are in test state now"), ("keyboard", reply_markup)]
+    return [("textkeyboard", ("You are in test state now", reply_markup))]
 
 def test_core(data):
     question = "What is the capital of France?"
@@ -82,7 +82,7 @@ def start_transition(data):
 def main_entry(data):
     keyboard = [KeyboardButton(text="Host a game"), KeyboardButton(text="Join a game"), KeyboardButton(text="Settings")]
     reply_markup = ReplyKeyboardMarkup([keyboard], resize_keyboard=True)
-    return [("text", "Welcome to the main menu!"), ("keyboard", reply_markup)]
+    return [("textkeyboard", ("Welcome to the main menu!", reply_markup))]
 
 def main_core(data):
     return []
@@ -108,7 +108,7 @@ def main_transition(data):
 
 
 def create_entry(data):
-    return [("text", "You have chosen to create a game. Please enter the game name:")]
+    return [("textnokeyboard", "Please enter the game name:")]
 
 def create_core(data):
     #TASK Create hash generation for game codes
@@ -119,7 +119,7 @@ def create_transition(data):
     game_name = message.strip()
 
     if game_name in game_names:
-        return "CREATE", [("text", "A game with this name already exists. Please choose a different name")]
+        return "CREATE", [("text", "A game with this name already exists")]
     else:
         game_names.append(game_name)
         return "WAITROOM", [("text", f"You have successfully created the game: {game_name}")]
@@ -127,7 +127,7 @@ def create_transition(data):
 
 
 def join_entry(data):
-    return [("text", "You have chosen to join a game. Please enter the game code:")]
+    return [("textnokeyboard", "Please enter the game code:")]
 
 def join_core(data):
     return []
@@ -139,12 +139,12 @@ def join_transition(data):
     if game_code in game_names:
         return "WAITROOM", [("text", f"You have successfully joined the game: {game_code}")]
     else:
-        return "JOIN", [("text", "Invalid game code. Please try again")]
+        return "JOIN", [("text", "Invalid game code")]
     
 
 
 def settings_entry(data):
-    return [("text", "Settings are not implemented yet.")]
+    return [("textnokeyboard", "Settings are not implemented yet.")]
 
 def settings_core(data):
     return []
@@ -157,7 +157,7 @@ def settings_transition(data):
 def waitroom_entry(data):
     keyboard = [KeyboardButton(text="Leave Game")]
     reply_markup = ReplyKeyboardMarkup([keyboard], resize_keyboard=True)
-    return [("text", "You are now in the wait room. Please wait for the game to start"), ("keyboard", reply_markup)]
+    return [("textkeyboard", ("You are now in the waiting room. Please wait for the game to start", reply_markup))]
 
 def waitroom_core(data):
     return []
