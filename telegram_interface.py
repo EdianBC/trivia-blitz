@@ -76,6 +76,9 @@ async def answer_to_user(application, user_id, action) -> None:
             is_anonymous=action[1]["is_anonymous"],
             open_period=action[1].get("open_period")
         )
+    elif action[0] == "run":
+        data = action[1]
+        await sma.run_state_machine_step(data)
     else:
         await application.bot.send_message(chat_id=user_id, text= f"Mmm... Thinking... Brrrr Bipp Bopp... System Overload... Error 404... Just kidding!")
         print(f"Unknown action type: {action[0]}")
