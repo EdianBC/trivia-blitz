@@ -10,29 +10,23 @@ class State:
 
 states = {}
 
-def add_state(name, entry_protocol=None, core_protocol=None, transition_protocol=None):
+async def add_state(name, entry_protocol=None, core_protocol=None, transition_protocol=None):
     states[name] = State(entry_protocol, core_protocol, transition_protocol)
     
-def run_state(state_name, data):
-    output = [] #Should be a list of pairs (type, content). For example ('text', 'Hello World') or ('image', image_data)
+async def run_state(state_name, data):
     state = states.get(state_name)
 
     if state.core_protocol:
-        protocol_output = state.core_protocol(data)
-        if protocol_output:
-            output.extend(protocol_output)
-    
+        await state.core_protocol(data)
+        
     if state.transition_protocol:
-        next_state_name, transition_output = state.transition_protocol(data)
-        if transition_output:
-            output.extend(transition_output)
+        next_state_name = await state.transition_protocol(data)
     else:
         next_state_name = state_name
 
     state = states.get(next_state_name)
     if state.entry_protocol:
-        entry_output = state.entry_protocol(data)
-        if entry_output:
-            output.extend(entry_output)
+        await state.entry_protocol(data)
     
-    return next_state_name, output
+    return next_state_name
+
