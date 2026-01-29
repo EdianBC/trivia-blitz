@@ -1,20 +1,86 @@
 import requests
 import html
 import os
+import aiohttp
+import asyncio
 
 available_trivia_databases = ['OpenTDB']
-selected_trivia_database = 'OpenTDB'
 
-def fetch_categories():
-    if selected_trivia_database == 'OpenTDB':
+#region Asynchronous
+
+# Function to fetch categories asynchronously
+async def fetch_categories_async(trivia_database="OpenTDB"):
+    if trivia_database == 'OpenTDB':
+        url = "https://opentdb.com/api_category.php"
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as response:
+                if response.status == 200:
+                    data = await response.json()
+                    categories = data['trivia_categories']
+                    return categories
+                else:
+                    print(f"Error connecting to the API: {response.status}")
+                    return []
+
+# Function to fetch questions asynchronously
+async def fetch_questions_async(trivia_database="OpenTDB", amount=10, category=None, difficulty=None, qtype=None):
+    if trivia_database == 'OpenTDB':
+        url = "https://opentdb.com/api.php"
+    
+        # Parameters for the request
+        params = {
+            "amount": amount,
+            "category": category,
+            "difficulty": difficulty,
+            "type": qtype
+        }
+        
+        # Remove empty parameters
+        params = {k: v for k, v in params.items() if v is not None}
+        
+        # Make the request to the API
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url, params=params) as response:
+                if response.status == 200:
+                    data = await response.json()
+                    if data["response_code"] == 0:
+                        return data['results']
+                    else:
+                        print("Error fetching questions.")
+                else:
+                    print(f"Error connecting to the API: {response.status}")
+        return []
+
+
+# Example usage
+async def main():
+    categories = await fetch_categories()
+    print("Categories:", categories)
+
+    questions = await fetch_questions(amount=5, category=9, difficulty="easy", qtype="multiple")
+    print("Questions:", questions)
+
+# Run the example
+if __name__ == "__main__":
+    asyncio.run(main())
+
+
+
+
+
+
+#region Synchronous
+
+def fetch_categories(trivia_database="OpenTDB"):
+    if trivia_database == 'OpenTDB':
         url = "https://opentdb.com/api_category.php"
         response = requests.get(url)
         categories = response.json()['trivia_categories']
         return categories
     
 # Function to fetch questions from the API
-def fetch_questions(amount=10, category=None, difficulty=None, qtype=None):
-    if selected_trivia_database == 'OpenTDB':
+def fetch_questions(trivia_database="OpenTDB", amount=10, category=None, difficulty=None, qtype=None):
+    if trivia_database == 'OpenTDB':
         url = "https://opentdb.com/api.php"
     
         # Parameters for the request

@@ -1,11 +1,12 @@
 from telegram import ReplyKeyboardMarkup, KeyboardButton
 import state_machine as sm
 import asyncio
+import game_manager as gm
+
 
 task_queue = asyncio.Queue()
 user_state = {}
 user_vault = {}
-game_names = []
 
 
 async def start_state_machine():
@@ -17,11 +18,13 @@ async def start_state_machine():
     await sm.add_state("SETTINGS", settings_entry, settings_core, settings_transition)
     await sm.add_state("WAITROOM", waitroom_entry, waitroom_core, waitroom_transition)
     await sm.add_state("ADMWAITROOM", admin_waitroom_entry, admin_waitroom_core, admin_waitroom_transition)
+    await sm.add_state("GAME", game_entry, game_core, game_transition)
 
 async def run_state_machine_step(data: dict) -> list:
     user_id = data.get("id")
     if user_id not in user_state:
         user_state[user_id] = "START"
+        user_vault[user_id] = {}
 
     state = user_state[user_id]
     next_state = await sm.run_state(state, data)
@@ -34,6 +37,7 @@ async def run_state_machine_step(data: dict) -> list:
 # Cores must receive a dict with data and return a list of pairs (type, content)
 # Transitions must receive a dict with data and return a tuple (next_state_name, list of pairs (type, content))
 
+# TEST
 async def test_entry(data):
     keyboard = [KeyboardButton(text="Option 1"), KeyboardButton(text="Option 2")]
     reply_markup = ReplyKeyboardMarkup([keyboard], resize_keyboard=True)
@@ -61,25 +65,22 @@ async def test_transition(data):
 
 
 
-
+# START
 async def start_entry(data):
     pass
 
-async def start_protocol(data):
-    await task_queue.put((data["id"], ("text", "Welcome to the game!")))
-
 async def start_core(data):
-    pass
+    await task_queue.put((data["id"], ("text", "Welcome to the game!")))
+    # await task_queue.put((data["id"], ("run", data)))
 
 async def start_transition(data):
     return "MAIN"
 
 
-
+# MAIN
 async def main_entry(data):
     keyboard = [KeyboardButton(text="Host a game"), KeyboardButton(text="Join a game"), KeyboardButton(text="Settings")]
     reply_markup = ReplyKeyboardMarkup([keyboard], resize_keyboard=True)
-    # return [("textkeyboard", ("Welcome to the main menu!", reply_markup))]
     await task_queue.put((data["id"], ("textkeyboard", "Welcome to the main menu!", reply_markup)))
 
 async def main_core(data):
@@ -105,7 +106,7 @@ async def main_transition(data):
         return "MAIN"
 
 
-
+# CREATE
 async def create_entry(data):
     keyboard = [KeyboardButton(text="Back")]
     reply_markup = ReplyKeyboardMarkup([keyboard], resize_keyboard=True)
@@ -117,21 +118,25 @@ async def create_core(data):
 
 async def create_transition(data):
     message = data.get("message")
-    game_name = message.strip()
 
     if message == "Back":
         return "MAIN"
     
-    if game_name in game_names:
+    game_room_id = message.strip()
+    
+    if await gm.game_room_exists(game_room_id):
         await task_queue.put((data["id"], ("text", "A game with this name already exists")))
         return "CREATE"
     else:
-        game_names.append(game_name)
-        await task_queue.put((data["id"], ("text", f"Game {game_name} created successfully.")))
+        gm.game_rooms[game_room_id] = gm.game_room()
+        asyncio.create_task(gm.game_master(game_room_id))
+        user_vault[data["id"]]['game_room_id'] = game_room_id
+        await gm.add_player_to_room(data["id"], game_room_id)
+        await task_queue.put((data["id"], ("text", f"Game {game_room_id} created successfully.")))
         return "ADMWAITROOM"
     
 
-
+# JOIN
 async def join_entry(data):
     keyboard = [KeyboardButton(text="Back")]
     reply_markup = ReplyKeyboardMarkup([keyboard], resize_keyboard=True)
@@ -142,20 +147,22 @@ async def join_core(data):
 
 async def join_transition(data):
     message = data.get("message")
-    game_code = message.strip()
+    game_room_id = message.strip()
 
     if message == "Back":
         return "MAIN"
     
-    if game_code in game_names:
-        await task_queue.put((data["id"], ("text", f"You have successfully joined the game: {game_code}")))
+    if await gm.game_room_exists(game_room_id):
+        await gm.add_player_to_room(data["id"], game_room_id)
+        await task_queue.put((data["id"], ("text", f"You have successfully joined the game: {game_room_id}")))
+        user_vault[data["id"]]['game_room_id'] = game_room_id
         return "WAITROOM"
     else:
         await task_queue.put((data["id"], ("text", "Invalid game code")))
         return "JOIN"
     
 
-
+# SETTINGS
 async def settings_entry(data):
     await task_queue.put((data["id"], ("textnokeyboard", "Settings are not implemented yet.")))
     await task_queue.put((data["id"], ("run", data)))
@@ -167,7 +174,7 @@ async def settings_transition(data):
     return "MAIN"
 
 
-
+# WAITROOM
 async def waitroom_entry(data):
     keyboard = [KeyboardButton(text="Leave Game")]
     reply_markup = ReplyKeyboardMarkup([keyboard], resize_keyboard=True)
@@ -177,6 +184,9 @@ async def waitroom_core(data):
     pass
 
 async def waitroom_transition(data):
+    if data.get("move_on", False):
+        return "GAME"
+    
     message = data.get("message")
 
     if message == "Leave Game":
@@ -187,7 +197,7 @@ async def waitroom_transition(data):
         return "WAITROOM"
     
 
-
+# ADMWAITROOM
 async def admin_waitroom_entry(data):
     keyboard = [KeyboardButton(text="Start Game"), KeyboardButton(text="Leave Game")]
     reply_markup = ReplyKeyboardMarkup([keyboard], resize_keyboard=True)
@@ -201,12 +211,30 @@ async def admin_waitroom_transition(data):
 
     if message == "Start Game":
         await task_queue.put((data["id"], ("text", "The game is starting...")))
-        return "MAIN"
+        await gm.start_game_in_room(user_vault[data["id"]]['game_room_id'])
+        return "GAME"
     elif message == "Leave Game":
         await task_queue.put((data["id"], ("text", "You have left the game")))
         return "MAIN"
     else:
         await task_queue.put((data["id"], ("text", "Waiting for the game to start...")))
         return "ADMWAITROOM"
+
+
+
+# GAME
+async def game_entry(data):
+    pass
+
+async def game_core(data):
+    pass
+
+async def game_transition(data):
+    if data.get("game_over", False):
+        return "MAIN"
+    
+    message = data.get("message")
+    await gm.submit_answer_in_room(data["id"], user_vault[data["id"]]['game_room_id'], message)
+    return "GAME"
 
 #endregion

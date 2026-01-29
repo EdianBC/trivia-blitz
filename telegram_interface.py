@@ -28,7 +28,7 @@ async def set_bot_commands(application):
 async def start_command_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = update.effective_user.id  # investigar tipo
     sma.user_state[user_id] = "START"
-    await answer_to_user(update, context, sma.run_state_machine_step(user_id, None))
+    await sma.run_state_machine_step({"id": user_id})
     
 async def time_command_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     # Enviar un mensaje inicial con la hora actual
@@ -47,6 +47,7 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     text = update.message.text
     data = {"id": update.effective_user.id, "message": text}
     await sma.run_state_machine_step(data)
+    #asyncio.create_task(sma.run_state_machine_step(data))
 
 async def task_handler(application):
     while True:
@@ -79,6 +80,7 @@ async def answer_to_user(application, user_id, action) -> None:
     elif action[0] == "run":
         data = action[1]
         await sma.run_state_machine_step(data)
+        #asyncio.create_task(sma.run_state_machine_step(data))
     else:
         await application.bot.send_message(chat_id=user_id, text= f"Mmm... Thinking... Brrrr Bipp Bopp... System Overload... Error 404... Just kidding!")
         print(f"Unknown action type: {action[0]}")
