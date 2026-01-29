@@ -54,10 +54,10 @@ async def fetch_questions_async(trivia_database="OpenTDB", amount=10, category=N
 
 # Example usage
 async def main():
-    categories = await fetch_categories()
+    categories = await fetch_categories_async()
     print("Categories:", categories)
 
-    questions = await fetch_questions(amount=5, category=9, difficulty="easy", qtype="multiple")
+    questions = await fetch_questions_async(amount=5, category=9, difficulty="hard", qtype="multiple")
     print("Questions:", questions)
 
 # Run the example

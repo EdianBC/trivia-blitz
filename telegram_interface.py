@@ -27,7 +27,9 @@ async def set_bot_commands(application):
 
 async def start_command_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = update.effective_user.id  # investigar tipo
+    username = update.effective_user.username
     sma.user_state[user_id] = "START"
+    sma.user_vault[user_id] = {"username": username}
     await sma.run_state_machine_step({"id": user_id})
     
 async def time_command_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
