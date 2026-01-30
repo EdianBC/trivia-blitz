@@ -173,6 +173,9 @@ async def create_transition(data):
             await gm.set_admin_in_room(user_vault[data["id"]]['username'], data["id"], game_room_id)
             await task_queue.put((data["id"], ("text", f"🎉 *Success!* Your game room '{game_room_id}' has been created. Invite your friends and get ready to play! 🚀")))
             return "ADMWAITROOM"
+    else:
+        await task_queue.put((data["id"], ("text", "❌ Invalid option")))
+        return "CREATE"
 
 async def numquestions_transition(data):
     message = data.get("message")

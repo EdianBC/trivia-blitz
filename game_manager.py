@@ -109,7 +109,7 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
     questions = await fetch_questions("OpenTDB", amount=num_of_questions, category=None, difficulty=difficulty.lower(), qtype=None)
     await asyncio.sleep(1)
 
-    for question in questions:
+    for index, question in enumerate(questions):
         if len(room.players) == 0:
             game_rooms.pop(room_id, None)
             return
@@ -120,7 +120,7 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
             random.shuffle(possible_answers)
             keyboard = [[KeyboardButton(text=answer)] for answer in possible_answers] # + [[KeyboardButton(text="Abandon Game")]]
             reply_markup = ReplyKeyboardMarkup(keyboard, one_time_keyboard=True, resize_keyboard=True)
-            await sma.task_queue.put((player_id, ("textkeyboard", f"❓ *QUESTION:*\n\n{question["question"]}", reply_markup)))
+            await sma.task_queue.put((player_id, ("textkeyboard", f"❓ *QUESTION ({index+1}/{num_of_questions}):*\n\n{question["question"]}", reply_markup)))
 
         await asyncio.sleep(time_per_question)
         for submission in room.submissions.items():
@@ -139,7 +139,7 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
         for player_username, player_id in room.players.items():
             if player_username not in winners_of_the_round:
                 await sma.task_queue.put((player_id, ("text", f"📢 The correct answer was: {question['correct_answer']} ✅")))
-            await sma.task_queue.put((player_id, ("text", f"🏆 Winners of this round: {', '.join(winners_of_the_round) if winners_of_the_round else 'No one'}")))
+            await sma.task_queue.put((player_id, ("text", f"🏆 Winner{'s' if len(winners_of_the_round)>=2 else ''} of this round: {', '.join(winners_of_the_round) if winners_of_the_round else 'No one'}")))
         winners_of_the_round = []
         await asyncio.sleep(4)
 
