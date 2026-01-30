@@ -5,6 +5,7 @@ import state_machine_applied as sma
 class game_room:
     def __init__(self):
         self.players = {}
+        self.admin = None
         self.game_on = False
         self.game_cancelled = False
         self.results = {}
@@ -16,9 +17,12 @@ class game_room:
     async def add_player(self, player_name, player_id):
         self.players[player_name] = player_id
 
+    async def set_admin(self, player_name):
+        self.admin = player_name
+
     async def remove_player(self, player_name):
         if player_name in self.players:
-            del self.players[player_name]
+            self.players.pop(player_name)
 
     async def submit_answer(self, player_name, answer):
         self.submissions[player_name] = answer
@@ -30,11 +34,13 @@ class game_room:
 game_rooms = {}
 
 
+#TASK Agregar manejo de errores por si la API no responde
 async def fetch_categories(trivia_database):
     return await trivia.fetch_categories_async(trivia_database=trivia_database)
 
 async def fetch_questions(trivia_database, amount=10, category=None, difficulty=None, qtype=None):
     return await trivia.fetch_questions_async(trivia_database=trivia_database, amount=amount, category=category, difficulty=difficulty, qtype=qtype)
+
 
 async def add_player_to_room(player_name, player_id, room_id):
     print(f"Adding player {player_name} to room {room_id}")#p
@@ -42,6 +48,12 @@ async def add_player_to_room(player_name, player_id, room_id):
     if room:
         await room.add_player(player_name, player_id)
         print(f"Current players in room {room_id}: {room.players}")#p
+
+async def set_admin_in_room(player_name, player_id, room_id):
+    room = game_rooms.get(room_id)
+    if room:
+        await room.set_admin(player_name)
+        await room.add_player(player_name, player_id)
     
 async def remove_player_from_room(player_name, room_id):
     room = game_rooms.get(room_id)
@@ -53,6 +65,10 @@ async def submit_answer_in_room(player_name, room_id, answer):
     if room:
         await room.submit_answer(player_name, answer)
 
+async def set_game_cancelled(room_id):
+    room = game_rooms.get(room_id)
+    if room:
+        room.game_cancelled = True
 
 async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_question=15):
     room = game_rooms[room_id]
@@ -61,9 +77,10 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
         #TASK actualizar estado de la sala
         if room.game_cancelled:
             for player_username, player_id in room.players.items():
-                data = {"id": player_id, "game_cancelled": True}
-                await sma.task_queue.put((player, ("run", data)))
-                game_rooms.pop(room_id, None)
+                if player_username != room.admin:
+                    data = {"id": player_id, "game_cancelled": True}
+                    await sma.task_queue.put((player_id, ("run", data)))
+            game_rooms.pop(room_id, None)
             return
         await asyncio.sleep(0.1)
 
@@ -74,10 +91,15 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
         await sma.task_queue.put((player_id, ("run", data)))
 
     questions = await fetch_questions("OpenTDB", amount=num_of_questions, category=None, difficulty=difficulty.lower(), qtype=None)
+    asyncio.sleep(2)
 
     for question in questions:
+        if len(room.players) == 0:
+            game_rooms.pop(room_id, None)
+            return
+
         for player_username, player_id in room.players.items():
-            await sma.task_queue.put((player_id, ("text", question["question"])))
+            await sma.task_queue.put((player_id, ("text", f"**QUESTION:**\n{question["question"]}")))
         await asyncio.sleep(time_per_question)
         for submission in room.submissions.items():
             player, answer = submission
@@ -111,6 +133,9 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
 
     game_rooms.pop(room_id, None)
 
+async def create_game_room(room_id, num_of_questions=10, difficulty=None, time_to_answer=15):
+    game_rooms[room_id] = game_room()
+    asyncio.create_task(game_master(room_id, num_of_questions, difficulty, time_to_answer))
 
 async def game_room_exists(room_id):
     return room_id in game_rooms

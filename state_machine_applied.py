@@ -10,6 +10,12 @@ user_state = {}
 user_vault = {}
 
 
+async def games_monitor():
+    while True:
+        print(f"Games running now: {list(gm.game_rooms.keys())}")
+        await asyncio.sleep(3)
+
+
 #region State Machine Setup
 async def start_state_machine():
     #          State Name   Entry Function   Core Function   Transition Function
@@ -27,6 +33,8 @@ async def start_state_machine():
     await sm.add_state("WAITROOM", waitroom_entry, None, waitroom_transition)
     await sm.add_state("ADMWAITROOM", admin_waitroom_entry, None, admin_waitroom_transition)
     await sm.add_state("GAME", None, None, game_transition)
+
+    asyncio.create_task(games_monitor())
 
 async def run_state_machine_step(data: dict) -> list:
     user_id = data.get("id")
@@ -106,14 +114,11 @@ async def main_transition(data):
 
 #region CREATION MENU
 async def create_entry(data):
-    keyboard = [KeyboardButton(text="Create game"),
-                KeyboardButton(text="Game room name"),
-                KeyboardButton(text="Number of questions"),
-                KeyboardButton(text="Difficulty"), 
-                KeyboardButton(text="Time to answer"),
-                KeyboardButton(text="Username"),
-                KeyboardButton(text="Back")]
-    reply_markup = ReplyKeyboardMarkup([keyboard], resize_keyboard=True)
+    keyboard = [[KeyboardButton(text="Create game"), KeyboardButton(text="Game room name")],
+                [KeyboardButton(text="Number of questions"), KeyboardButton(text="Difficulty")], 
+                [KeyboardButton(text="Time to answer"), KeyboardButton(text="Username")],
+                [KeyboardButton(text="Back")]]
+    reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
     await task_queue.put((data["id"], ("textkeyboard", "This is the game creation menu", reply_markup)))
 
     game_room_name = user_vault[data["id"]].setdefault('game_room_id', f'MyGameRoom{random.randint(1000,9999)}')
@@ -162,9 +167,8 @@ async def create_transition(data):
             num_of_questions = user_vault[data["id"]].get('number_of_questions')
             difficulty = user_vault[data["id"]].get('difficulty')
             time_to_answer = user_vault[data["id"]].get('time_to_answer')
-            gm.game_rooms[game_room_id] = gm.game_room()
-            asyncio.create_task(gm.game_master(game_room_id, num_of_questions, difficulty, time_to_answer))#FIX: pasarle los demas argumentos
-            await gm.add_player_to_room(user_vault[data["id"]]['username'], data["id"], game_room_id)
+            await gm.create_game_room(game_room_id, num_of_questions, difficulty, time_to_answer)
+            await gm.set_admin_in_room(user_vault[data["id"]]['username'], data["id"], game_room_id)
             await task_queue.put((data["id"], ("text", f"Game {game_room_id} created successfully.")))
             return "ADMWAITROOM"
 
@@ -262,6 +266,9 @@ async def waitroom_entry(data):
 
 async def waitroom_transition(data):
     if data.get("move_on", False):
+        keyboard = [KeyboardButton(text="Abandon Game")]
+        reply_markup = ReplyKeyboardMarkup([keyboard], resize_keyboard=True)
+        await task_queue.put((data["id"], ("textkeyboard", "The game is starting...", reply_markup)))
         return "GAME"
     if data.get("game_cancelled", False):
         await task_queue.put((data["id"], ("text", "The game has been cancelled by the host")))
@@ -294,6 +301,7 @@ async def admin_waitroom_transition(data):
         await gm.start_game_in_room(user_vault[data["id"]]['game_room_id'])
         return "GAME"
     elif message == "Leave Game":
+        await gm.set_game_cancelled(user_vault[data["id"]]['game_room_id'])
         await task_queue.put((data["id"], ("text", "You have cancelled the game")))
         return "MAIN"
     else:
@@ -309,7 +317,7 @@ async def game_transition(data):
     
     message = data.get("message")
     if message == "Abandon Game":
-        await gm.remove_player_from_room(data["id"], user_vault[data["id"]]['game_room_id'])
+        await gm.remove_player_from_room(user_vault[data["id"]]['username'], user_vault[data["id"]]['game_room_id'])
         await task_queue.put((data["id"], ("text", "You have abandoned the game")))
         return "MAIN"
     else:
