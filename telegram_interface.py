@@ -58,6 +58,8 @@ async def task_handler(application):
             await answer_to_user(application, user_id, action)
         except asyncio.QueueEmpty:
             await asyncio.sleep(0.1)
+        except Exception as e:
+            print(f"Error in task_handler: {e}\n\nAction: {action}")
 
 async def answer_to_user(application, user_id, action) -> None:
      

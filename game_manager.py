@@ -118,7 +118,7 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
 
             possible_answers = question["incorrect_answers"] + [question["correct_answer"]]
             random.shuffle(possible_answers)
-            keyboard = [[KeyboardButton(text=answer)] for answer in possible_answers] # + [[KeyboardButton(text="Abandon Game")]]
+            keyboard = [[KeyboardButton(text=answer)] for answer in possible_answers] + [[KeyboardButton(text=" ")]] + [[KeyboardButton(text="🐔 Abandon Game")]]
             reply_markup = ReplyKeyboardMarkup(keyboard, one_time_keyboard=True, resize_keyboard=True)
             await sma.task_queue.put((player_id, ("textkeyboard", f"❓ *QUESTION ({index+1}/{num_of_questions}):*\n\n{question["question"]}", reply_markup)))
 
