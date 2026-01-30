@@ -1,6 +1,5 @@
 import requests
 import html
-import os
 import aiohttp
 import asyncio
 
@@ -28,6 +27,8 @@ async def fetch_categories_opentdb():
 
 
 #region Fetch Qs Async
+
+# Must return list of dictionaries with keys: 'question':str, 'correct_answer':str, 'incorrect_answers':list[str]
 async def fetch_questions_async(trivia_database="OpenTDB", amount=10, category=None, difficulty=None, qtype=None):
     if trivia_database == 'OpenTDB':
         return await fetch_questions_opentdb(amount, category, difficulty, qtype)
@@ -46,18 +47,29 @@ async def fetch_questions_opentdb(amount=10, category=None, difficulty=None, qty
     # Remove empty parameters
     params = {k: v for k, v in params.items() if v is not None}
     
+    questions = []
     # Make the request to the API
     async with aiohttp.ClientSession() as session:
         async with session.get(url, params=params) as response:
             if response.status == 200:
                 data = await response.json()
                 if data["response_code"] == 0:
-                    return data['results']
+                    questions = data['results']
                 else:
                     print("Error fetching questions.")
+                    return []
             else:
                 print(f"Error connecting to the API: {response.status}")
-    return []
+                return []
+    
+    #Eliminate all keys except 'question', 'correct_answer', 'incorrect_answers'
+    questions = [{'question': html.unescape(q['question']),
+                  'correct_answer': html.unescape(q['correct_answer']),
+                  'incorrect_answers': [html.unescape(ans) for ans in q['incorrect_answers']]}
+                for q in questions]
+    
+    return questions
+
 
 
 # Example usage
@@ -65,7 +77,7 @@ async def main():
     categories = await fetch_categories_async()
     print("Categories:", categories)
 
-    questions = await fetch_questions_async(amount=5, category=9, difficulty="hard", qtype="multiple")
+    questions = await fetch_questions_async(amount=5, category=9, difficulty="easy")
     print("Questions:", questions)
 
 # Run the example

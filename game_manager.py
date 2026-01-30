@@ -1,5 +1,7 @@
 import trivia
 import asyncio
+import random
+from telegram import ReplyKeyboardMarkup, KeyboardButton
 import state_machine_applied as sma
 
 class game_room:
@@ -70,6 +72,20 @@ async def set_game_cancelled(room_id):
     if room:
         room.game_cancelled = True
 
+async def create_game_room(room_id, num_of_questions=10, difficulty=None, time_to_answer=15):
+    game_rooms[room_id] = game_room()
+    asyncio.create_task(game_master(room_id, num_of_questions, difficulty, time_to_answer))
+
+async def game_room_exists(room_id):
+    return room_id in game_rooms
+
+async def start_game_in_room(room_id):
+    room = game_rooms.get(room_id)
+    if room:
+        await room.start_game()
+
+
+#region Game Master
 async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_question=15):
     room = game_rooms[room_id]
 
@@ -91,7 +107,7 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
         await sma.task_queue.put((player_id, ("run", data)))
 
     questions = await fetch_questions("OpenTDB", amount=num_of_questions, category=None, difficulty=difficulty.lower(), qtype=None)
-    asyncio.sleep(2)
+    await asyncio.sleep(1)
 
     for question in questions:
         if len(room.players) == 0:
@@ -99,7 +115,13 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
             return
 
         for player_username, player_id in room.players.items():
-            await sma.task_queue.put((player_id, ("text", f"**QUESTION:**\n{question["question"]}")))
+
+            possible_answers = question["incorrect_answers"] + [question["correct_answer"]]
+            random.shuffle(possible_answers)
+            keyboard = [[KeyboardButton(text=answer)] for answer in possible_answers] # + [[KeyboardButton(text="Abandon Game")]]
+            reply_markup = ReplyKeyboardMarkup(keyboard, one_time_keyboard=True, resize_keyboard=True)
+            await sma.task_queue.put((player_id, ("textkeyboard", f"❓ *QUESTION:*\n\n{question["question"]}", reply_markup)))
+
         await asyncio.sleep(time_per_question)
         for submission in room.submissions.items():
             player, answer = submission
@@ -107,19 +129,19 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
             winners_of_the_round = []
             if answer == question["correct_answer"]:
                 room.results[player] += 1
-                await sma.task_queue.put((player_id, ("text", "✅ Correct answer! 🎉")))
+                await sma.task_queue.put((player_id, ("text", "✅ *Correct answer!* 🎉")))
                 winners_of_the_round.append(player)
             else:
-                await sma.task_queue.put((player_id, ("text", "❌ Wrong answer 😞")))
+                await sma.task_queue.put((player_id, ("text", "❌ *Wrong answer* 😞")))
 
         await room.clear_submissions()
 
         for player_username, player_id in room.players.items():
             if player_username not in winners_of_the_round:
-                await sma.task_queue.put((player_id, ("text", f"The correct answer was: {question['correct_answer']}")))
-            await sma.task_queue.put((player_id, ("text", f"Winners of this round: {', '.join(winners_of_the_round) if winners_of_the_round else 'No one'}")))
+                await sma.task_queue.put((player_id, ("text", f"📢 The correct answer was: {question['correct_answer']} ✅")))
+            await sma.task_queue.put((player_id, ("text", f"🏆 Winners of this round: {', '.join(winners_of_the_round) if winners_of_the_round else 'No one'}")))
         winners_of_the_round = []
-        await asyncio.sleep(2)
+        await asyncio.sleep(4)
 
     inform = await get_result_inform(room_id)
     for player_username, player_id in room.players.items():
@@ -133,17 +155,6 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
 
     game_rooms.pop(room_id, None)
 
-async def create_game_room(room_id, num_of_questions=10, difficulty=None, time_to_answer=15):
-    game_rooms[room_id] = game_room()
-    asyncio.create_task(game_master(room_id, num_of_questions, difficulty, time_to_answer))
-
-async def game_room_exists(room_id):
-    return room_id in game_rooms
-
-async def start_game_in_room(room_id):
-    room = game_rooms.get(room_id)
-    if room:
-        await room.start_game()
 
 async def get_result_inform(room_id):
     room = game_rooms[room_id]
@@ -156,7 +167,7 @@ async def get_result_inform(room_id):
     medals = ["🥇", "🥈", "🥉"]
     for index, (player, score) in enumerate(sorted_results):
         medal = medals[index] if index < len(medals) else "🎮"  # Use a controller emoji for others
-        result_text += f"{medal} {player}: {score} points\n"
+        result_text += f"{medal} *{player}*: {score} points\n"
     
     return result_text
 

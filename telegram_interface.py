@@ -62,13 +62,13 @@ async def task_handler(application):
 async def answer_to_user(application, user_id, action) -> None:
      
     if action[0] == "text":
-        await application.bot.send_message(chat_id=user_id, text=action[1])
+        await application.bot.send_message(chat_id=user_id, text=action[1], parse_mode="Markdown")
     elif action[0] == "keyboard":
-        await application.bot.send_message(chat_id=user_id, text="...", reply_markup=action[1])
+        await application.bot.send_message(chat_id=user_id, text="...", reply_markup=action[1], parse_mode="Markdown")  
     elif action[0] == "textkeyboard":
-        await application.bot.send_message(chat_id=user_id, text=action[1], reply_markup=action[2])
+        await application.bot.send_message(chat_id=user_id, text=action[1], reply_markup=action[2], parse_mode="Markdown")
     elif action[0] == "textnokeyboard":
-        await application.bot.send_message(chat_id=user_id, text=action[1], reply_markup=telegram.ReplyKeyboardRemove())
+        await application.bot.send_message(chat_id=user_id, text=action[1], reply_markup=telegram.ReplyKeyboardRemove(), parse_mode="Markdown")
     elif action[0] == "quiz":
         await application.bot.send_poll(
             chat_id=user_id,
