@@ -63,9 +63,9 @@ async def fetch_questions_opentdb(amount=10, category=None, difficulty=None, qty
                 return []
     
     #Eliminate all keys except 'question', 'correct_answer', 'incorrect_answers'
-    questions = [{'question': html.unescape(q['question']),
-                  'correct_answer': html.unescape(q['correct_answer']),
-                  'incorrect_answers': [html.unescape(ans) for ans in q['incorrect_answers']]}
+    questions = [{'question': html.unescape(q['question']).strip(),
+                  'correct_answer': html.unescape(q['correct_answer']).strip(),
+                  'incorrect_answers': [html.unescape(ans).strip() for ans in q['incorrect_answers']]}
                 for q in questions]
     
     return questions

@@ -84,6 +84,17 @@ async def start_game_in_room(room_id):
     if room:
         await room.start_game()
 
+async def can_player_join(room_id, username):
+    room = game_rooms.get(room_id)
+    if room:
+        if room.game_on:
+            return "ONGOING"
+        if username in room.players:
+            return "TAKEN"
+        return "OK"
+    return "NOEXIST"    
+
+
 
 #region Game Master
 async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_question=15):
@@ -111,12 +122,15 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
             last_update_time = asyncio.get_event_loop().time()
         await asyncio.sleep(0.1)
 
+    # Send signal to all players that the game is starting (except admin who already knows)
     print(room.players)
     for player_username, player_id in room.players.items():
-        room.results[player_username] = 0
-        data = {"id": player_id, "move_on": True}
-        await sma.task_queue.put((player_id, ("run", data)))
+        if player_username != room.admin:
+            room.results[player_username] = 0
+            data = {"id": player_id, "move_on": True}
+            await sma.task_queue.put((player_id, ("run", data)))
 
+    # Main loop for questions
     questions = await fetch_questions("OpenTDB", amount=num_of_questions, category=None, difficulty=difficulty.lower(), qtype=None)
     await asyncio.sleep(1)
 
@@ -128,7 +142,7 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
         for player_username, player_id in room.players.items():
             possible_answers = question["incorrect_answers"] + [question["correct_answer"]]
             random.shuffle(possible_answers)
-            keyboard = [[KeyboardButton(text=answer)] for answer in possible_answers] + [[KeyboardButton(text=" ")]] + [[KeyboardButton(text="🐔 Abandon Game")]]
+            keyboard = [[KeyboardButton(text=answer)] for answer in possible_answers] + [[KeyboardButton(text=" ")], [KeyboardButton(text=" ")]] + [[KeyboardButton(text="🐔 Abandon Game")]]
             reply_markup = ReplyKeyboardMarkup(keyboard, one_time_keyboard=True, resize_keyboard=True)
             await sma.task_queue.put((player_id, ("textkeyboard", f"❓ *QUESTION ({index+1}/{num_of_questions}):*\n\n{question["question"]}", reply_markup)))
             await sma.task_queue.put((player_id, ("text", f"⏳ You have *{time_per_question} second{'' if time_per_question==1 else 's'}* left")))
