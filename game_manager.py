@@ -88,9 +88,9 @@ async def start_game_in_room(room_id):
 #region Game Master
 async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_question=15):
     room = game_rooms[room_id]
-
+    last_update_time = asyncio.get_event_loop().time()
     while not room.game_on:
-        #TASK actualizar estado de la sala
+        # Check if the game was cancelled
         if room.game_cancelled:
             for player_username, player_id in room.players.items():
                 if player_username != room.admin:
@@ -98,6 +98,17 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
                     await sma.task_queue.put((player_id, ("run", data)))
             game_rooms.pop(room_id, None)
             return
+        
+        # Update the waiting message every second
+        if asyncio.get_event_loop().time() - last_update_time >= 1:
+            text = f"🎽 *Current players ({len(room.players)})*:\n\n" + "\n".join([f"{player}" for player in room.players.keys()])
+            text_for_admin = f"🎽 *Current players ({len(room.players)})*:\n\n" + "\n".join([f"{player}" for player in room.players.keys()])
+            for player_username, player_id in room.players.items():
+                if player_username == room.admin:
+                    await sma.task_queue.put((player_id, ("edittext", text_for_admin)))
+                else:
+                    await sma.task_queue.put((player_id, ("edittext", text)))
+            last_update_time = asyncio.get_event_loop().time()
         await asyncio.sleep(0.1)
 
     print(room.players)
@@ -115,24 +126,32 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
             return
 
         for player_username, player_id in room.players.items():
-
             possible_answers = question["incorrect_answers"] + [question["correct_answer"]]
             random.shuffle(possible_answers)
             keyboard = [[KeyboardButton(text=answer)] for answer in possible_answers] + [[KeyboardButton(text=" ")]] + [[KeyboardButton(text="🐔 Abandon Game")]]
             reply_markup = ReplyKeyboardMarkup(keyboard, one_time_keyboard=True, resize_keyboard=True)
             await sma.task_queue.put((player_id, ("textkeyboard", f"❓ *QUESTION ({index+1}/{num_of_questions}):*\n\n{question["question"]}", reply_markup)))
+            await sma.task_queue.put((player_id, ("text", f"⏳ You have *{time_per_question} second{'' if time_per_question==1 else 's'}* left")))
 
-        await asyncio.sleep(time_per_question)
+        start_time = asyncio.get_event_loop().time()
+        while asyncio.get_event_loop().time() - start_time < time_per_question:
+            if len(room.submissions) >= len(room.players):
+                break
+            for player_username, player_id in room.players.items():
+                time_left = time_per_question - int(asyncio.get_event_loop().time() - start_time)
+                await sma.task_queue.put((player_id, ("edittext", f"⏳ You have *{time_left} second{'' if time_left==1 else 's'}* left")))
+            await asyncio.sleep(1)
+
+        winners_of_the_round = []
         for submission in room.submissions.items():
             player, answer = submission
             player_id = room.players[player]
-            winners_of_the_round = []
             if answer == question["correct_answer"]:
                 room.results[player] += 1
                 await sma.task_queue.put((player_id, ("text", "✅ *Correct answer!* 🎉")))
                 winners_of_the_round.append(player)
             else:
-                await sma.task_queue.put((player_id, ("text", "❌ *Wrong answer* 😞")))
+                await sma.task_queue.put((player_id, ("text", f"❌ *Wrong answer* 😞")))
 
         await room.clear_submissions()
 
@@ -167,7 +186,7 @@ async def get_result_inform(room_id):
     medals = ["🥇", "🥈", "🥉"]
     for index, (player, score) in enumerate(sorted_results):
         medal = medals[index] if index < len(medals) else "🎮"  # Use a controller emoji for others
-        result_text += f"{medal} *{player}*: {score} points\n"
+        result_text += f"{medal} *{player}*: {score} point{'' if score==1 else 's'}\n"
     
     return result_text
 

@@ -1,8 +1,8 @@
 from telegram import ReplyKeyboardMarkup, KeyboardButton
-import state_machine as sm
 import asyncio
-import game_manager as gm
 import random
+import game_manager as gm
+import state_machine as sm
 
 
 task_queue = asyncio.Queue()
@@ -270,6 +270,7 @@ async def waitroom_entry(data):
     keyboard = [KeyboardButton(text="🐔 Leave Game")]
     reply_markup = ReplyKeyboardMarkup([keyboard], resize_keyboard=True)
     await task_queue.put((data["id"], ("textkeyboard", "⏳ Welcome to the *Waiting Room*! ⏳\n\nPlease wait patiently while the host prepares the game 🎮", reply_markup)))
+    await task_queue.put((data["id"], ("text", "🌀 Loading players...")))
 
 async def waitroom_transition(data):
     if data.get("move_on", False):
@@ -284,7 +285,7 @@ async def waitroom_transition(data):
     message = data.get("message")
 
     if message == "🐔 Leave Game":
-        await gm.remove_player_from_room(data["id"], user_vault[data["id"]]['game_room_id'])
+        await gm.remove_player_from_room(user_vault[data["id"]]['username'], user_vault[data["id"]]['game_room_id'])
         await task_queue.put((data["id"], ("text", "🐔 You have left the game")))
         return "MAIN"
     else:
@@ -298,6 +299,7 @@ async def admin_waitroom_entry(data):
     reply_markup = ReplyKeyboardMarkup([keyboard], resize_keyboard=True)
     text = "👑 Welcome to the Admin *Waiting Room*! 👑\n\nYou are the host of this game. Once all players have joined, you can start the game by tapping *Start Game* 🎮\n\n"
     await task_queue.put((data["id"], ("textkeyboard", text, reply_markup)))
+    await task_queue.put((data["id"], ("text", "🌀 Loading players...")))
 
 async def admin_waitroom_transition(data):
     message = data.get("message")
@@ -329,7 +331,9 @@ async def game_transition(data):
         await task_queue.put((data["id"], ("text", "🐔🐔🐔 You have *abandoned* the game 🐔🐔🐔")))
         return "MAIN"
     else:
-        await gm.submit_answer_in_room(user_vault[data["id"]]['username'], user_vault[data["id"]]['game_room_id'], message)
+        print(f"Submitting answer from {user_vault[data['id']]['username']} in room {user_vault[data['id']]['game_room_id']}: {message}")
+        if message:
+            await gm.submit_answer_in_room(user_vault[data["id"]]['username'], user_vault[data["id"]]['game_room_id'], message)
     return "GAME"
 
 #endregion

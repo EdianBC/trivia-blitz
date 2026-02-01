@@ -12,6 +12,8 @@ load_dotenv()
 
 TOKEN = os.getenv("TELEGRAM_TOKEN")
 
+last_message_id = {}
+
 async def post_init(application):
     await set_bot_commands(application)
     await sma.start_state_machine()
@@ -64,13 +66,17 @@ async def task_handler(application):
 async def answer_to_user(application, user_id, action) -> None:
      
     if action[0] == "text":
-        await application.bot.send_message(chat_id=user_id, text=action[1], parse_mode="Markdown")
+        message_sent = await application.bot.send_message(chat_id=user_id, text=action[1], parse_mode="Markdown")
+        last_message_id[user_id] = message_sent.message_id
     elif action[0] == "keyboard":
-        await application.bot.send_message(chat_id=user_id, text="...", reply_markup=action[1], parse_mode="Markdown")  
+        message_sent = await application.bot.send_message(chat_id=user_id, text="...", reply_markup=action[1], parse_mode="Markdown")  
+        last_message_id[user_id] = message_sent.message_id
     elif action[0] == "textkeyboard":
-        await application.bot.send_message(chat_id=user_id, text=action[1], reply_markup=action[2], parse_mode="Markdown")
+        message_sent = await application.bot.send_message(chat_id=user_id, text=action[1], reply_markup=action[2], parse_mode="Markdown")
+        last_message_id[user_id] = message_sent.message_id
     elif action[0] == "textnokeyboard":
-        await application.bot.send_message(chat_id=user_id, text=action[1], reply_markup=telegram.ReplyKeyboardRemove(), parse_mode="Markdown")
+        message_sent = await application.bot.send_message(chat_id=user_id, text=action[1], reply_markup=telegram.ReplyKeyboardRemove(), parse_mode="Markdown")
+        last_message_id[user_id] = message_sent.message_id
     elif action[0] == "quiz":
         await application.bot.send_poll(
             chat_id=user_id,
@@ -85,8 +91,18 @@ async def answer_to_user(application, user_id, action) -> None:
         data = action[1]
         await sma.run_state_machine_step(data)
         #asyncio.create_task(sma.run_state_machine_step(data))
+    elif action[0] == "edittext":
+        if user_id in last_message_id:
+            try:
+                await application.bot.edit_message_text(chat_id=user_id, message_id=last_message_id[user_id], text=action[1], parse_mode="Markdown")
+            except telegram.error.TelegramError as e:
+                print(f"Failed to edit message for user {user_id}: {e}")
+        else:
+            message_sent = await application.bot.send_message(chat_id=user_id, text=action[1], parse_mode="Markdown")
+            last_message_id[user_id] = message_sent.message_id
     else:
-        await application.bot.send_message(chat_id=user_id, text= f"Mmm... Thinking... Brrrr Bipp Bopp... System Overload... Error 404... Just kidding!")
+        message_sent = await application.bot.send_message(chat_id=user_id, text= f"Mmm... Thinking... Brrrr Bipp Bopp... System Overload... Error 404... Just kidding!")
+        last_message_id[user_id] = message_sent.message_id
         print(f"Unknown action type: {action[0]}")
 
 
