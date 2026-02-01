@@ -100,6 +100,8 @@ async def answer_to_user(application, user_id, action) -> None:
         else:
             message_sent = await application.bot.send_message(chat_id=user_id, text=action[1], parse_mode="Markdown")
             last_message_id[user_id] = message_sent.message_id
+    elif action[0] == "textnoedit":
+        message_sent = await application.bot.send_message(chat_id=user_id, text=action[1], parse_mode="Markdown")
     else:
         message_sent = await application.bot.send_message(chat_id=user_id, text= f"Mmm... Thinking... Brrrr Bipp Bopp... System Overload... Error 404... Just kidding!")
         last_message_id[user_id] = message_sent.message_id

@@ -33,6 +33,7 @@ async def start_state_machine():
     await sm.add_state("SETTINGS", settings_entry, None, settings_transition)
     await sm.add_state("WAITROOM", waitroom_entry, None, waitroom_transition)
     await sm.add_state("ADMWAITROOM", admin_waitroom_entry, None, admin_waitroom_transition)
+    await sm.add_state("ANNOUNCEMENT", None, None, announcement_transition)
     await sm.add_state("GAME", None, None, game_transition)
 
     # asyncio.create_task(games_monitor())
@@ -314,8 +315,8 @@ async def waitroom_transition(data):
 
 # ADMWAITROOM
 async def admin_waitroom_entry(data):
-    keyboard = [KeyboardButton(text="🚀 Start Game"), KeyboardButton(text="🚪 Cancel Game")]
-    reply_markup = ReplyKeyboardMarkup([keyboard], resize_keyboard=True)
+    keyboard = [[KeyboardButton(text="🚀 Start Game"), KeyboardButton(text="📢 Make Announcement")], [KeyboardButton(text="🚪 Cancel Game")]]
+    reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
     text = "👑 Welcome to the *Admin Waiting Room*! 👑\n\nYou are the host of this game. Once all players have joined, you can start the game by tapping *Start Game* 🎮\n\n"
     await task_queue.put((data["id"], ("textkeyboard", text, reply_markup)))
     await task_queue.put((data["id"], ("text", "🌀 Loading players...")))
@@ -333,10 +334,30 @@ async def admin_waitroom_transition(data):
         await gm.set_game_cancelled(user_vault[data["id"]]['game_room_id'])
         await task_queue.put((data["id"], ("text", "❌ You have cancelled the game")))
         return "MAIN"
+    elif message == "📢 Make Announcement":
+        await task_queue.put((data["id"], ("textnokeyboard", "📢 What announcement would you like to make to all players?")))
+        return "ANNOUNCEMENT"
     else:
         await task_queue.put((data["id"], ("text", "⏳ Waiting for players to join...")))
         return "ADMWAITROOM"
 
+async def announcement_transition(data):
+    message = data.get("message")
+    if message:
+        game_room_id = user_vault[data["id"]]['game_room_id']
+        room = gm.game_rooms.get(game_room_id)
+        if room:
+            for player_username, player_id in room.players.items():
+                if player_username != user_vault[data["id"]]['username']:
+                    await task_queue.put((player_id, ("textnoedit", f"📢 *Announcement from Host:* {message}")))
+            await task_queue.put((data["id"], ("text", "✅ Announcement sent to all players.")))
+            return "ADMWAITROOM"
+        else:
+            await task_queue.put((data["id"], ("text", "❌ Unable to send announcement. Game room not found.")))
+        return "ADMWAITROOM"
+    else:
+        await task_queue.put((data["id"], ("text", "❌ *Oops!* Announcement cannot be empty.")))
+        return "ANNOUNCEMENT"
 
 
 # GAME
