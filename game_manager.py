@@ -34,6 +34,7 @@ class game_room:
     
 
 game_rooms = {}
+public_game_rooms = []
 
 
 #TASK Agregar manejo de errores por si la API no responde
@@ -43,6 +44,13 @@ async def fetch_categories(trivia_database):
 async def fetch_questions(trivia_database, amount=10, category=None, difficulty=None, qtype=None):
     return await trivia.fetch_questions_async(trivia_database=trivia_database, amount=amount, category=category, difficulty=difficulty, qtype=qtype)
 
+async def get_public_games_info():
+    info = []
+    for room_id in public_game_rooms:
+        room = game_rooms.get(room_id)
+        if room:
+            info.append({"room_id": room_id, "num_of_players": len(room.players), "admin": room.admin})
+    return info
 
 async def add_player_to_room(player_name, player_id, room_id):
     print(f"Adding player {player_name} to room {room_id}")#p
@@ -72,8 +80,10 @@ async def set_game_cancelled(room_id):
     if room:
         room.game_cancelled = True
 
-async def create_game_room(room_id, num_of_questions=10, difficulty=None, time_to_answer=15):
+async def create_game_room(room_id, num_of_questions=10, difficulty=None, time_to_answer=15, privacy=False):
     game_rooms[room_id] = game_room()
+    if privacy == "Public":
+        public_game_rooms.append(room_id)
     asyncio.create_task(game_master(room_id, num_of_questions, difficulty, time_to_answer))
 
 async def game_room_exists(room_id):
@@ -113,22 +123,25 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
         # Update the waiting message every second
         if asyncio.get_event_loop().time() - last_update_time >= 1:
             text = f"🎽 *Current players ({len(room.players)})*:\n\n" + "\n".join([f"{player}" for player in room.players.keys()])
-            text_for_admin = f"🎽 *Current players ({len(room.players)})*:\n\n" + "\n".join([f"{player}" for player in room.players.keys()])
+            # text_for_admin = f"🎽 *Current players ({len(room.players)})*:\n\n" + "\n".join([f"{player}" for player in room.players.keys()])
             for player_username, player_id in room.players.items():
-                if player_username == room.admin:
-                    await sma.task_queue.put((player_id, ("edittext", text_for_admin)))
-                else:
-                    await sma.task_queue.put((player_id, ("edittext", text)))
+                # if player_username == room.admin:
+                #     await sma.task_queue.put((player_id, ("edittext", text_for_admin)))
+                # else:
+                #     await sma.task_queue.put((player_id, ("edittext", text)))
+                await sma.task_queue.put((player_id, ("edittext", text)))
             last_update_time = asyncio.get_event_loop().time()
         await asyncio.sleep(0.1)
 
     # Send signal to all players that the game is starting (except admin who already knows)
+    if room_id in public_game_rooms:
+        public_game_rooms.remove(room_id)
     print(room.players)
     for player_username, player_id in room.players.items():
         if player_username != room.admin:
-            room.results[player_username] = 0
             data = {"id": player_id, "move_on": True}
             await sma.task_queue.put((player_id, ("run", data)))
+        room.results[player_username] = 0
 
     # Main loop for questions
     questions = await fetch_questions("OpenTDB", amount=num_of_questions, category=None, difficulty=difficulty.lower(), qtype=None)
@@ -145,7 +158,7 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
             keyboard = [[KeyboardButton(text=answer)] for answer in possible_answers] + [[KeyboardButton(text=" ")], [KeyboardButton(text=" ")]] + [[KeyboardButton(text="🐔 Abandon Game")]]
             reply_markup = ReplyKeyboardMarkup(keyboard, one_time_keyboard=True, resize_keyboard=True)
             await sma.task_queue.put((player_id, ("textkeyboard", f"❓ *QUESTION ({index+1}/{num_of_questions}):*\n\n{question["question"]}", reply_markup)))
-            await sma.task_queue.put((player_id, ("text", f"⏳ You have *{time_per_question} second{'' if time_per_question==1 else 's'}* left")))
+            await sma.task_queue.put((player_id, ("editabletext", f"⏳ You have *{time_per_question} second{'' if time_per_question==1 else 's'}* left")))
 
         start_time = asyncio.get_event_loop().time()
         while asyncio.get_event_loop().time() - start_time < time_per_question:
