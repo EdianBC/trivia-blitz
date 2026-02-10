@@ -3,6 +3,10 @@ import asyncio
 import random
 from telegram import ReplyKeyboardMarkup, KeyboardButton
 import state_machine_applied as sma
+import re
+import unicodedata
+import jellyfish
+
 
 class game_room:
     def __init__(self):
@@ -80,11 +84,11 @@ async def set_game_cancelled(room_id):
     if room:
         room.game_cancelled = True
 
-async def create_game_room(room_id, num_of_questions=10, difficulty=None, time_to_answer=15, privacy=False):
+async def create_game_room(room_id, num_of_questions=10, difficulty=None, time_to_answer=15, privacy=False, clues=True):
     game_rooms[room_id] = game_room()
     if privacy == "Public":
         public_game_rooms.append(room_id)
-    asyncio.create_task(game_master(room_id, num_of_questions, difficulty, time_to_answer))
+    asyncio.create_task(game_master(room_id, num_of_questions, difficulty, time_to_answer, clues))
 
 async def game_room_exists(room_id):
     return room_id in game_rooms
@@ -107,7 +111,7 @@ async def can_player_join(room_id, username):
 
 
 #region Game Master
-async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_question=15):
+async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_question=15, use_clues=True):
     room = game_rooms[room_id]
     last_update_time = asyncio.get_event_loop().time()
     while not room.game_on:
@@ -155,8 +159,14 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
         for player_username, player_id in room.players.items():
             possible_answers = question["incorrect_answers"] + [question["correct_answer"]]
             random.shuffle(possible_answers)
-            keyboard = [[KeyboardButton(text=answer)] for answer in possible_answers] + [[KeyboardButton(text=" ")], [KeyboardButton(text=" ")]] + [[KeyboardButton(text="🐔 Abandon Game")]]
+            if use_clues:
+                keyboard = [[KeyboardButton(text=answer)] for answer in possible_answers] + [[KeyboardButton(text=" ")], [KeyboardButton(text=" ")]] + [[KeyboardButton(text="🐔 Abandon Game")]]
+            else:
+                keyboard = [[KeyboardButton(text="🐔 Abandon Game")]]
             reply_markup = ReplyKeyboardMarkup(keyboard, one_time_keyboard=True, resize_keyboard=True)
+            if question["question"].contains("one of these"):
+                possibilities = ", ".join([f"{answer}" for answer in possible_answers])
+                question["question"] += f" {possibilities}"
             await sma.task_queue.put((player_id, ("textkeyboard", f"❓ *QUESTION ({index+1}/{num_of_questions}):*\n\n{question["question"]}", reply_markup)))
             await sma.task_queue.put((player_id, ("editabletext", f"⏳ You have *{time_per_question} second{'' if time_per_question==1 else 's'}* left")))
 
@@ -173,17 +183,25 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
         for submission in room.submissions.items():
             player, answer = submission
             player_id = room.players[player]
-            if answer == question["correct_answer"]:
-                room.results[player] += 1
-                await sma.task_queue.put((player_id, ("text", "✅ *Correct answer!* 🎉")))
-                winners_of_the_round.append(player)
+            if use_clues:
+                if answer == question["correct_answer"]:
+                    room.results[player] += 1
+                    await sma.task_queue.put((player_id, ("text", "✅ *Correct answer!* 🎉")))
+                    winners_of_the_round.append(player)
+                else:
+                    await sma.task_queue.put((player_id, ("text", f"❌ *Wrong answer* 😞")))
             else:
-                await sma.task_queue.put((player_id, ("text", f"❌ *Wrong answer* 😞")))
+                if validate_answer(answer, question["correct_answer"]):
+                    room.results[player] += 1
+                    await sma.task_queue.put((player_id, ("text", "✅ *Correct answer!* 🎉")))
+                    winners_of_the_round.append(player)
+                else:
+                    await sma.task_queue.put((player_id, ("text", f"❌ *Wrong answer* 😞")))
 
         await room.clear_submissions()
 
         for player_username, player_id in room.players.items():
-            if player_username not in winners_of_the_round:
+            if player_username not in winners_of_the_round or not use_clues:
                 await sma.task_queue.put((player_id, ("text", f"📢 The correct answer was: {question['correct_answer']} ✅")))
             await sma.task_queue.put((player_id, ("text", f"🏆 Winner{'s' if len(winners_of_the_round)>=2 else ''} of this round: {', '.join(winners_of_the_round) if winners_of_the_round else 'No one'}")))
         winners_of_the_round = []
@@ -218,3 +236,59 @@ async def get_result_inform(room_id):
     return result_text
 
 
+
+def normalize_text(text):
+    # 1. Pasar a minúsculas
+    text = text.lower()
+    
+    # 2. Eliminar acentos (NFD descompone caracteres como 'á' en 'a' + '´')
+    text = "".join(c for c in unicodedata.normalize('NFD', text) 
+                  if unicodedata.category(c) != 'Mn')
+    
+    # 3. Eliminar artículos comunes (español e inglés)
+    stopwords = r'\b(el|la|los|las|un|una|unos|unas|the|a|an)\b'
+    text = re.sub(stopwords, '', text)
+    
+    # 4. Limpiar puntuación y espacios extra
+    text = re.sub(r'[^\w\s]', '', text)
+    text = " ".join(text.split())
+    
+    return text
+
+def contains_numbers(text):
+    return any(char.isdigit() for char in text)
+
+def validate_answer(answer, ground_truth, threshold=0.85):
+    # Normalizamos ambos textos
+    clean_user = normalize_text(answer)
+    clean_truth = normalize_text(ground_truth)
+    
+    # --- REGLA DE ORO: EXCEPCIÓN DE NÚMEROS ---
+    # Si la respuesta correcta contiene números, buscamos coincidencia exacta de esos números
+    truth_numbers = re.findall(r'\d+', ground_truth)
+    if truth_numbers:
+        user_numbers = re.findall(r'\d+', answer)
+        if set(truth_numbers) != set(user_numbers):
+            return False # Si los números no coinciden exactamente, falla
+            
+    # --- VALIDACIÓN 1: Coincidencia Exacta tras normalizar ---
+    if clean_user == clean_truth:
+        return True
+    
+    # --- VALIDACIÓN 2: Fonética (Metaphone) ---
+    # Útil para "Burj" vs "Bursh" o errores ortográficos por sonido
+    if jellyfish.metaphone(clean_user) == jellyfish.metaphone(clean_truth):
+        return True
+        
+    # --- VALIDACIÓN 3: Similitud Jaro-Winkler o Levenshtein ---
+    # Jaro-Winkler suele ser mejor para nombres cortos y typos
+    similarity = jellyfish.jaro_winkler_similarity(clean_user, clean_truth)
+    
+    return similarity >= threshold
+
+# --- EJEMPLOS DE USO ---
+# print(validate_answer("El Burj Khalifa", "Burj Khalifa")) # True (por normalización)
+# print(validate_answer("Bur Kalifa", "Burj Khalifa"))      # True (por fonética/similitud)
+# print(validate_answer("En el año 1984", "1984"))          # True (contiene el número)
+# print(validate_answer("En el año 1985", "1984"))          # False (número incorrecto)
+# print(validate_answer("Mesi", "Messi"))                  # True (typo leve)

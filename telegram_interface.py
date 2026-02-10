@@ -47,6 +47,14 @@ async def time_command_handler(update: Update, context: ContextTypes.DEFAULT_TYP
     # Opcional: Agregar un mensaje final indicando que la actualización terminó
     await message.edit_text("Actualización completada.")
 
+async def join_pseudo_command_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    text = update.message.text
+    if text.startswith("/join"):
+        code = text.split("/join_")[1].strip()
+        data = {"id": update.effective_user.id, "message": f"{code}"}
+        await sma.run_state_machine_step(data)
+        #asyncio.create_task(sma.run_state_machine_step(data))
+
 
 async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     text = update.message.text
@@ -117,6 +125,7 @@ def main() -> None:
     application = Application.builder().token(TOKEN).post_init(post_init).build()
     application.add_handler(CommandHandler("start", start_command_handler))
     application.add_handler(CommandHandler("time", time_command_handler))
+    application.add_handler(MessageHandler(filters.Regex(r"^/join_"), join_pseudo_command_handler))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, message_handler))
     
     print("El bot ha iniciado. Presiona Ctrl+C para detenerlo.")

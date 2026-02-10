@@ -65,7 +65,7 @@ async def public_game_rooms_updater():
                 room_id = game["room_id"]
                 num_of_players = game["num_of_players"]
                 admin = game["admin"]
-                public_games_text += f"📺 Room: `{room_id}` | 👑 Host: *{admin}* | 👥 Players: *{num_of_players}*\n"
+                public_games_text += f"📺 Room: `{room_id}` | 👑 Host: *{admin}* | 👥 Players: *{num_of_players}* | ⚡️ Join: /join\\_{room_id}\n"
         
         else:
             public_games_text += "🌀 No public games available at the moment. Check back later! 🕒"
@@ -132,8 +132,7 @@ async def start_transition(data):
 async def main_entry(data):
     user_vault[data["id"]].setdefault('username', f'Player{random.randint(1000, 9999)}')
     keyboard = [[KeyboardButton(text="🎮 Host a Game"), KeyboardButton(text="🕹️ Join a Game")],
-                [KeyboardButton(text="🔍 Search for Games")],
-                [KeyboardButton(text="⚙️ Game Settings")]]
+                [KeyboardButton(text="🔍 Search for Games"), KeyboardButton(text="⚙️ Game Settings")]]
     reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
     await task_queue.put((data["id"], ("textkeyboard", "🌟 Welcome to the *Main Menu*! 🌟", reply_markup)))
 
@@ -167,6 +166,7 @@ async def create_entry(data):
     game_room_name = user_vault[data["id"]].setdefault('game_room_id', f'MyGameRoom{random.randint(1000,9999)}')
     number_of_questions = user_vault[data["id"]].setdefault('number_of_questions', 20)
     difficulty = user_vault[data["id"]].setdefault('difficulty', 'Easy')
+    clues = user_vault[data["id"]].setdefault('clues', True)
     time_to_answer = user_vault[data["id"]].setdefault('time_to_answer', 20)
     username = user_vault[data["id"]].setdefault('username', f'Player{random.randint(1000,9999)}')#Actually all that random thing could be removed
     privacy = user_vault[data["id"]].setdefault('privacy', 'Public')
@@ -174,7 +174,7 @@ async def create_entry(data):
     f"🎮 *Current Game Settings* 🎮\n\n"
     f"🏷️ *Name:* {game_room_name}\n"
     f"❓ *Number of Questions:* {number_of_questions}\n"
-    f"🎯 *Difficulty:* {difficulty}\n"
+    f"🎯 *Difficulty:* {difficulty}{" (with clues)" if clues else " (without clues)"}\n"
     f"⏱️ *Time to Answer:* {time_to_answer} seconds\n"
     f"🔒 *Privacy:* {privacy}\n"
     f"👤 *Username:* {username}\n"
@@ -190,7 +190,8 @@ async def create_transition(data):
         await task_queue.put((data["id"], ("textnokeyboard", "📝 How many questions do you want in your game?")))
         return "NUMQUESTIONS"
     elif message == "🎯 Adjust Difficulty":
-        difficulty_keyboard = [[KeyboardButton(text="Easy 🟢"), KeyboardButton(text="Medium 🟡"), KeyboardButton(text="Hard 🔴")]]
+        difficulty_keyboard = [[KeyboardButton(text="Easy 🟢"), KeyboardButton(text="Medium 🟡"), KeyboardButton(text="Hard 🔴")],
+                               [KeyboardButton(text="Easy (without clues) 🟢"), KeyboardButton(text="Medium (without clues) 🟡"), KeyboardButton(text="Hard (without clues) 🔴")]]
         reply_markup = ReplyKeyboardMarkup(difficulty_keyboard, resize_keyboard=True)
         text = "🎯 Choose Your Difficulty Level!\n\n🟢 *Easy*: For a relaxed experience.\n🟡 *Medium*: A balanced challenge.\n🔴 *Hard*: Only for the brave!\n\n"
         await task_queue.put((data["id"], ("textkeyboard", text, reply_markup)))
@@ -217,9 +218,10 @@ async def create_transition(data):
         else:
             num_of_questions = user_vault[data["id"]].get('number_of_questions')
             difficulty = user_vault[data["id"]].get('difficulty')
+            clues = user_vault[data["id"]].get('clues', True)
             time_to_answer = user_vault[data["id"]].get('time_to_answer')
             privacy = user_vault[data["id"]].get('privacy', 'Public')
-            await gm.create_game_room(game_room_id, num_of_questions, difficulty, time_to_answer, privacy)
+            await gm.create_game_room(game_room_id, num_of_questions, difficulty, time_to_answer, privacy, clues)
             await gm.set_admin_in_room(user_vault[data["id"]]['username'], data["id"], game_room_id)
             await task_queue.put((data["id"], ("text", f"🎉 *Success!* Your game room has been created\n\n`{game_room_id}`\n\nInvite your friends and get ready to play! 🚀")))
             return "ADMWAITROOM"
@@ -241,6 +243,10 @@ async def difficulty_transition(data):
     if message in ["Easy 🟢", "Medium 🟡", "Hard 🔴"]:
         # Extract the difficulty level without the emoji
         user_vault[data["id"]]['difficulty'] = message.split()[0]
+        return "CREATE"
+    elif message in ["Easy (without clues) 🟢", "Medium (without clues) 🟡", "Hard (without clues) 🔴"]:
+        user_vault[data["id"]]['difficulty'] = message.split()[0]
+        user_vault[data["id"]]['clues'] = False
         return "CREATE"
     else:
         await task_queue.put((data["id"], ("text", "❌ Invalid choice!")))
@@ -288,7 +294,7 @@ async def privacy_transition(data):
 async def search_entry(data):
     keyboard = [KeyboardButton(text="🔙 Back to Main Menu")]
     reply_markup = ReplyKeyboardMarkup([keyboard], resize_keyboard=True)
-    await task_queue.put((data["id"], ("textkeyboard", "🔍 Welcome to the *Search Menu!* Here you can find public game rooms to join and compete with other players\n\nSimply copy the name of the room you'd like to join, or tap *Back to Main Menu* to return. 🚀", reply_markup)))
+    await task_queue.put((data["id"], ("textkeyboard", "🔍 Welcome to the *Search Menu!* Here you can find public game rooms to join and compete with other players\n\nSimply *copy and paste* the name of the room you'd like to join, or tap *Back to Main Menu* to return. 🚀", reply_markup)))
     await task_queue.put((data["id"], ("editabletext", "🌐 *Public Games:*\n\n🌀 Loading available game rooms...")))
     searching_users.append(data["id"])
 
@@ -371,7 +377,7 @@ async def settings_transition(data):
 async def waitroom_entry(data):
     keyboard = [KeyboardButton(text="🐔 Leave Game")]
     reply_markup = ReplyKeyboardMarkup([keyboard], resize_keyboard=True)
-    await task_queue.put((data["id"], ("textkeyboard", "⏳ Welcome to the *Waiting Room*! ⏳\n\nPlease wait patiently while the host prepares the game 🎮", reply_markup)))
+    await task_queue.put((data["id"], ("textkeyboard", "⏳ Welcome to the *Waiting Room*! ⏳\n\nPlease wait for the host to start the game 🎮", reply_markup)))
     await task_queue.put((data["id"], ("editabletext", "🌀 Loading players...")))
 
 async def waitroom_transition(data):
