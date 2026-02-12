@@ -1,4 +1,4 @@
-,Questions,Correct,A,B,C,D
+Unnamed: 0,Questions,Correct,A,B,C,D
 0,"In what fictional city is the TV show Futurama set?
 ",New New York,New Chicago,New New York,New San Francisco,None of these
 1,"What is the lowest ranking species in the Covenant hierarchy in the Halo series?
@@ -75,8 +75,6 @@
 ",Koopas,Bowsers,The Jungle,Mushroom Kingdom,Koopas
 37,"Who is the last boss in video game Paper Mario 2?
 ",Shadow Queen,Gloom Tail,Bowser,Shadow Queen,Cackletta
-38,"Which movie is this Warcraft 3 quote from?
-",ndit: -What we have here is a failure to communicate.,Cool Hand Luke,For a Fistful of Dollars,Dirty Sanchez,Cool Hand Luke
 39,"Where does the popular video game character Mario live?
 ",The Mushroom Kingdom,The Koopa Kingdom,The Kingdom of Sarasaland,The Mushroom Kingdom,Yoshi Island
 40,"What is Marios nationality according to Nintendo video games?
@@ -92,7 +90,7 @@
 45,"What does the Fire Flower do to Mario in the Mario video games?
 ",Allows him to throw fire balls.,Allows him to breath fire.,Nothing,It makes him angry.,Allows him to throw fire balls.
 46,"What effect does the Super Mushroom have on Mario in the popular series of video games?
-",It makes him bigger.,It makes him bigger.,None,It makes him impervious to danger.,It makes him smaller.
+",It makes him bigger.,It makes him bigger.,,It makes him impervious to danger.,It makes him smaller.
 47,"In the Mario series of video games, Mario never uses any weapons.
 ",False,False,True,,
 48,"What is Marios occupation in the Mario series of games?
@@ -129,12 +127,6 @@
 ",Final Fantasy Tactics,Final Fantasy Mystic Quest,Final Fantasy Tactics Advance,Kingdom Hearts,Final Fantasy Tactics
 64,"Final Fantasy X featured which mini-game?
 ",Blitzball,Snowboarding,Blitzball,Triple Triad,Tetra Master
-65,"Which video game is the following quote from?
-",e got muscles in places youve never even heard of.,Escape from Monkey Island,Escape from Monkey Island,Simon the Sorcerer 3D,Grim Fandango
-66,"Which video game are the following quotes from?
-",," Come on, comrades! Up to the rooftop! Go!", Get that flag up! Berlin is ours!,Call of Duty,Medal of Honor
-67,"Come on, comrades! Up to the rooftop! Go!
-", Get that flag up! Berlin is ours!,Call of Duty,Medal of Honor,Call of Duty,Hidden and Dangerous 2
 68,"What is the cheat for getting 50 000 simoleans in the computer game The Sims 2?
 ",motherlode,kaching,all of these,motherlode,simoleons_$$$
 69,"What are the expansion packs available for The Sims 2 game?
@@ -213,8 +205,6 @@
 ",Dark Templar,Dark Archon,High Templar,Dark Templar,Zealot
 106,"What are characteristics of the Archon unit?
 ",10 hit points and 350 plasma shield,10 hit points and 250 plasma shield,20 hit points and 250 plasma shield,10 hit points and 350 plasma shield,20 hit points and 300 plasma shield
-107,"What unit says that in the game?
-",Dark Templar,Zealot,Scout,Dark Templar,Zealot
 108,"What is Alexei Stukovs rank?
 ",Vice Admiral,General,Admiral,Vice Admiral,Corporal
 109,"During which mission do Edmund Duke and Fenix die?
@@ -303,8 +293,6 @@
 ",150,140,160,150,120
 151,"Listen to the dialogue and determine what name is missing at the end
 ",Alexei,Raynor,Alexei,Gerard,Kerrigan
-152,"What hero do these words belong to: I fear no death, I fear no enemy, our
-",rength is eternal,Fenix,Artanis,Zeratul,Fenix
 153,"What is the official version for the death of Alexei Stukov?
 ",He dies during the final assault on planet Char,He commits suicide after his fleet is destroyed,"He is killed by Samir Duran, because he was a traitor",His spaceship is blown up by Prottos forces,He dies during the final assault on planet Char
 154,"Which unit says You called down the Thunder, now reap the Whirlwind.
@@ -962,11 +950,11 @@
 480,"What is the award you get for infecting every player in Flood mode in Halo 4 Multiplayer?
 ",Gravemind,Hunter,Gravemind,Floodifier,Flood Master
 481,"Which  Halo 4 Multiplayer map has a Mantis being constructed in the center of the map?
-",None,Adrift,None,Ragnarok,Longbow
+",,Adrift,,Ragnarok,Longbow
 482,"You can drop weapons of your choice in Halo 4.
 ",True,False,True,,
 483,"On what ship does the Halo 4 Multiplayer take place?
-",UNSC Infinity,UNSC Pillar of Autumn,UNSC Infinity,UNSC Spirit of Fire,None
+",UNSC Infinity,UNSC Pillar of Autumn,UNSC Infinity,UNSC Spirit of Fire,
 484,"The Binary Rifle in Halo 4 can only kill someone with a headshot.
 ",False,False,True,,
 485,"What is the Promethean pistol called in Halo 4?

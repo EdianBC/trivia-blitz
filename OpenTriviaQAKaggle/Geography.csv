@@ -1,4 +1,4 @@
-,Questions,Correct,A,B,C,D
+Unnamed: 0,Questions,Correct,A,B,C,D
 0,"What is the capital of Afghanistan?
 ",Kabul,Tirana,Kabul,Dushanbe,Tashkent
 1,"What is the capital of Australia?
@@ -433,8 +433,6 @@
 ",Sicily,Sicily,Corsica,Rhodes,Sardinia
 216,"Which French Mediterranean island is the birthplace of Napoléon Bonaparte?
 ",Corsica,Cyprus,Gozo,Corsica,Montecristo
-217,"Complete the lyrics of this 1999 hit single by the Vengaboys, referring to a Spanish island: 
-",y Me High,...............Sky,oah! Were Going To ............,oah! Back To The Island,oah! Were Going To ..........
 218,"On April 11, 2002, Al-Qaeda carried out a terrorist attack near a synagogue on which Tunisian island?
 ",Djerba,Djerba,Yalikavak,Salih Ada,Kargi Adasi
 219,"Which one of these Mediterranean islands does not belong to the group of the Balearic Islands?
@@ -583,8 +581,6 @@
 ",The Pacific Ocean,The Pacific Ocean,The Southern Ocean,The Indian Ocean,The Atlantic Ocean
 291,"The Dead Sea is actually a lake.
 ",True,False,True,,
-292,"The Pacific Ocean is the largest of the Earths oceanic divisions. Its name is derived from the Latin name Mare Pacificum which has the following meaning.
-",The Peaceful Sea,The Peaceful Sea,The Lonely Sea,The Smooth Sea,The Lonely Sea
 293,"Which one of these Asian rivers does not flow into the Indian Ocean?
 ",Saigon,Zambezi,Saigon,Indus,Ganges
 294,"What sea is known to be the only sea without shores?
@@ -1146,7 +1142,7 @@
 572,"In 1945 Borneo was the site of horrific acts of brutality. The Japanese forced over 6,000 POWs and island civilians to march to a new camp some 160 miles away. This became known as the Sandakan Death March, as only 200 marchers survived to the end of the war.
 ",False,True,False,,
 573,"How many new species of animals and plants were discovered on Borneo between July 2005 and September 2006?
-",52,None,121,3,52
+",52,,121,3,52
 574,"Between the 1980s and 2006 Borneo lost approximately 45 % of its rain forests due to logging.
 ",False,False,True,,
 575,"Borneo is the 3rd largest island in the world.
@@ -1273,8 +1269,6 @@
 ",Pissing Mare Falls,Pissing Mare Falls,Pissing Horse Falls,Pissing Elephant Falls,Pissing Buffalo Falls
 636,"What is the old name of the country of Madagascar?
 ",Malagasy Republic,Rhodesia,Mozambique,Malaysia,Malagasy Republic
-637,"Where is Madagascar?
-",Off the Southeast Coast of Africa,Off the Southeast Coast of South America,Off the Southeast Coast of South America,Off the Southwest Coast of Africa,Off the Southeast Coast of Africa
 638,"What are the 2 main languages spoken in Madagascar?
 ",French and Malagasy,Italian and French,French and English,English and Malagasy,French and Malagasy
 639,"Madagascar is the worlds largest producer and exporter of what product?
@@ -1389,10 +1383,6 @@
 ",Luzon,Mindanao,Visayas,Luzon,None of these
 694,"On which of the Canary Islands is the Mount Teide volcano located?
 ",Tenerife,Gran Canaria,Fuerteventura,La Palma,Tenerife
-695,"This countrys national holidays include:
-","Independence Day, 10 December (date of independence from Spain, 1898) ","20 May (independence from US administration, 1902)",Rebellion Day 26 July (1953),Cuba,Chile
-696,"None of these  could be found in Europe before the Great Geographical Discoveries:
-","tatoes, chocolate, cocoa, quinine, tobacco, cabbage, cane-sugar, furs, whale oil, indigo, tea, coffee, porcelain, and cotton silks .",False,True,False,
 697,"What is the highest point in the state of Illinois?
 ",Charles Mound,Lincoln Mound,Devils Mound,Charles Mound,Mount Vernon
 698,"Makawao is the capital of the State of Hawaii.
@@ -1411,10 +1401,6 @@
 ",Leadville,Vail,Leadville,Colorado Springs,Denver
 705,"Amelia Earhart, the first woman to fly solo across the Atlantic, was born in what city and state?
 ","Atchison, Kansas","Omaha, Nebraska","Louisville, Kentucky","New York City, New York","Atchison, Kansas"
-706,"Arrange the following oceans by their total area, starting with the largest:
-",The Atlantic Ocean,The Pacific Ocean,The Indian Ocean,The Arctic Ocean,The Southern Ocean
-707,"Finish the lyrics of the official state song of California, I Love You, California written by F. B. Silverwood:
-",ere the snow crowned Golden Sierras,"ep their watch oer the valleys bloom,"," is there I would be in our land by the sea,",ery breeze bearing rich perfume., is here nature gives of her rarest 
 708,"In geography, the term desert is used to refer to a region that receives little or no precipitation. Approximately one-third of Earths land surface is desert, with the largest such region being which of these?
 ",Antarctica,Sahara,Antarctica,Kalahari,Greenland
 709,"The Kalahari Desert, meaning great thirst translated from the local language, is a vast area of red-brown sands, taking up a considerable area of which of these regions?
@@ -1429,8 +1415,6 @@
 ",Simpson Desert,Tanami Desert,Simpson Desert,Great Victoria Desert,Great Sandy Desert
 714,"The largest natural karst crater on Earth - Ramon Crater, with a length of 40 km (25 miles) and width of 2 to 10 km (1.5 to 6 miles), is situated in the heart of this Middle East desert.
 ",Negev desert,Kyzyl Kum,Negev desert,Judean Desert,Mojave desert
-715,"Leonardo of Pisa or Leonardo Pisano, also known as Fibonacci, was an Italian mathematician and is best known for the discovery of the Fibonacci numbers, which form the following sequence. 
-"," 1, 1, 2, 3, 5, ...", you know what the next number is?,8,10,15
 716,"Which one of these countries is largest in area?
 ",Japan,Japan,Jordan and Japan are equal in size,Jordan,Jamaica
 717,"Which of the following oceans is the worlds largest?
@@ -1443,8 +1427,6 @@
 ",True,False,True,,
 721,"This is the worlds smallest independent state with a population in 2007 of approximately 821.
 ",Vatican City,Vatican City,Monaco,San Marino,Tuvalu
-722,"Pittsburgh is home to many universities and research facilities. One of them is described here:
-"," is a private research university. It houses the first computer science school and the first drama school in the nation as well as one of the best engineering schools, and its public policy and business schools are consistently ranked among the best in the nation.",Carnegie Mellon University,University of Pittsburgh,Carnegie Mellon University,Duquesne University
 723,"Which central European countrys all pre-1989 neighbors do not exist any more? The country is now bordered by 7 states.
 ",Poland,Austria,Poland,Hungary,Romania
 724,"The African kingdom of Dahomey was powerful in the XVIII century. Which modern day country did it cover?
@@ -1601,8 +1583,6 @@
 ",True,True,False,,
 800,"The huge grain industry in Colorado gives rise to breweries. Which of the following owns the biggest single site brewery located in Golden, Colorado?
 ",Molson Coors Brewing Company,Anheuser-Busch,Molson Coors Brewing Company,Jacob Leinenkugel Brewing Company,Highfalls Brewing Company
-801,"On May 5, 1920 two Italian-Americans, Nicola Sacco and Bartolomeo Vanzetti, were arrested, tried, and executed for the April 15, 1920 murders of a South Braintree paymaster and security guard and theft of the payroll. 
-",at did Sacco give as his alibi?,He was at the Italian consulate in Boston.,He was in Plymouth peddling fish at the time.,He was visiting friends in West Bridgewater.,He was at the Italian consulate in Boston.
 802,"What is the state motto of Colorado?
 ",Nothing Without the Deity,Nothing Without the Deity,The people rule,God enriches,We Dare Defend Our Rights
 803,"What does the word Colorado mean?
@@ -1641,8 +1621,6 @@
 ",Mount Damavand,Bazman,Sabalan,Taftan,Mount Damavand
 820,"What is the name of the active volcano situated in Skamania County, Washington, USA, 50 miles (80 km) northeast of Portland, Oregon?
 ",Mount St. Helens,Mount St. Augustus,Mount St. Paul,Mount St. Georges,Mount St. Helens
-821,"The self-governed region of the Holy Mountain is considered part of the Greek state according to a decree
-",ssed in what year?,1913,1910,1913,1925
 822,"What type of government does Sweden have?
 ",Constitutional monarchy,Absolute monarchy,Constitutional monarchy,None of these,Presidential republic
 823,"Which of these European countries shares a land border with Sweden?

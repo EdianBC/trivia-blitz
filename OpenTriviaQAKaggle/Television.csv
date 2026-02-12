@@ -1,4 +1,4 @@
-,Questions,Correct,A,B,C,D
+Unnamed: 0,Questions,Correct,A,B,C,D
 0,"Urban Meyer left the head coach position at the Utah Utes to become head coach of this team.
 ",University of Florida,Florida St.,Bowling Green,University of Florida,University of Miami
 1,"Jack Bauer, Nina Myers and George Mason are three of the characters of this TV series.
@@ -102,7 +102,7 @@
 50,"What friend has a fear of dogs?
 ",Chandler,Joey,Phoebe,Rachel,Chandler
 51,"How many Emmy Awards has the show Friends won for Outstanding Comedy Series?
-",None,2,10,1,None
+",,2,10,1,
 52,"Who does Rachel have a baby with?
 ",Ross,Tag,Joey,Chandler,Ross
 53,"What actress plays Monica Geller?
@@ -118,7 +118,7 @@
 58,"In Chandlers 50 states game, who forgot 14 of the 50 states?
 ",Monica,Monica,Phoebe,Rachel,Ross
 59,"How many children did Monica and Chandler adopt?
-",Twins,None,Triplets,Twins,One
+",Twins,,Triplets,Twins,One
 60,"This 80s television show featured a family living in a brownstone in Brooklyn. The father was an obstetrician and the mother was a lawyer.
 ",The Cosby Show,The Cosby Show,Family Ties,Growing Pains,Too Close For Comfort
 61,"This show, set in New York City at the High School For Performing Arts, was about students who wanted to become actors, musicians and dancers.
@@ -613,8 +613,6 @@
 ",Jesse James,His father,Jesse James,Daniell Boon,The president
 306,"What year did the show Bewitched first hit the airwaves?
 ",1964,1959,1963,1971,1964
-307,"What was the name of the advertising agency at which Darrin Stephens worked on the popular sitcom 
-",witched?,McMann and Tate,Even Stephens,McMann and Tate,Ads Are Us
 308,"What comedian played Samanthas uncle Arthur on the famous TV show Bewitched?
 ",Paul Lynde,Paul Lynde,Buddy Hackett,Jonathan Winters,Rich Little
 309,"Who was the first actor to play Darrin Stephens on the popular 60s sitcom Bewitched?
@@ -2295,8 +2293,6 @@
 ",1986,1986,1990,1989,1988
 1147,"What year did the popular television show Mad About You first hit the airwaves?
 ",1992,1994,1992,1990,1997
-1148,"Where did Jamie and Paul live on the hit television show Mad About You?
-",New York City,New York City,Chicago,Chicago,Philadelphia
 1149,"What was Jamie and Pauls last name on the sitcom Mad About You?
 ",Buchman,Gluckman,Buchman,Schwartz,Someguytony
 1150,"In the hit television series Mad About You, what did Paul do for a living?
@@ -2329,12 +2325,10 @@
 ",Roseanne,Roseanne,Good Times,Eight is Enough,Wonder Years
 1164,"This sitcom is about a young boy named Kevin Arnold and his sweetheart Winnie Cooper.
 ",The Wonder Years,Boy Meets World,Just the Two of Us,My Two Dads,The Wonder Years
-1165,"What sitcom had a theme song that contained these lyrics?
-","e, two, three, four, five,six, seven, eight","hlemeel, Schlemazel, Hasenfeffer incorporated","re gonna do it! Give us a chance now, well take it.","ve us any rule, well break it",re gonna make our dreams come true......Doin it our way!
 1166,"What sitcom starred actors Gary Coleman, Dana Plato, Todd Bridges and Conrad Bain?
 ",Diffrent Strokes,Diffrent Strokes,Family Matters,Step by Step,Good Times
 1167,"In the M*A*S*H TV series, B.J.s initials were short for what first name?
-",None,Bobby Jack,Barry Johnson,Billy Joe,None
+",,Bobby Jack,Barry Johnson,Billy Joe,
 1168,"What is the name of B.J. Hunnicutts daughter in the M*A*S*H series?
 ",Erin,Emily,Erin,Karen,Anne
 1169,"B.J. Hunnicutt from the TV show M*A*S*H* had a wife named Pam.
@@ -2515,14 +2509,10 @@
 ",Cartoonist,Janitor,Photographer,Mechanic,Cartoonist
 1257,"How many children did Henry and Muriel Rush have on the hit television show Too Close For Comfort?
 ",3,2,4,0,3
-1258,"What was the name of Henrys hippie niece from Delaware who appeared on the television show 
-",o Close For Comfort during the 1981-1982 season?,April,Venus,June,April
 1259,"What college did Sara Rush attend on the popular show Too Close For Comfort?
 ",San Francisco State College,BYU,LSU,Berkley College,San Francisco State College
 1260,"Who played Saras friend, Monroe Ficus in the TV series Too Close For Comfort?
 ",JM  J Bullock,JM  J Bullock,Paul Lynde,Steve Guttenberg,Hank Azaria
-1261,"Audrey Meadows, who played Alice Kramden on The Honeymooners, was on the hit television show 
-",o Close For Comfort .,True,True,False,
 1262,"What was the name of the weekly newspaper that Henry Rush bought on the famous show Too Close For Comfort?
 ",The Marin Bugler,The Marin Bugler,LA Tribune,California Times,San Francisco Herald
 1263,"The show Too Close For Comfort  was retitled The Ted Knight Show after the 1983 season.
@@ -3391,16 +3381,10 @@
 ",Hawaii Five-O,Newhart,The Wonder Years,Columbo,Hawaii Five-O
 1695,"Which Friends character delivered this line when he was trying to pick up a girl, How YOU doin?
 ",Joey,Gunther,Joey,Chandler,Ross
-1696,"Which of the Friends said this line at Thanksgiving?
-",ts very difficult to appreciate a Thanksgiving dinner once youve seen it in reverse.?,Chandler,Chandler,Monica,Ross
 1697,"Which Friends character had a grandmother with a secret chocolate chip cookie recipe?
 ",Phoebe,Joey,Monica,Phoebe,Rachel
-1698,"In the Friends episode called The One with All the Poker, who said this line at Monicas apartment when the girls started to play poker with the guys?
-","right, now, you sure? Phoebe just threw away two jacks because they didnt look happy......",Ross,Monica,Joey,Ross
 1699,"Which one of the Friends gets stung at the beach by a jellyfish in the episode called The One with All the Jellyfish?
 ",Monica,Joey,Chandler,Monica,Rachel
-1700,"In the Friends episode from Season 3, TOW the Tiny T-Shirt, which one of the Friends gang sang these lines at Monicas apartment, dancing around her kitchen table? 
-"," mama, oh daddie, I am a big old baddie! Oh mama, oh daddie, I am a big old baddie!",Joey,Joey,Phoebe,Chandler
 1701,"Which Friend always exchanges every present given to him/her for store credit in TOW Chandler in a Box from Season 4?
 ",Rachel,Monica,Rachel,Ross,Phoebe
 1702,"In the Friends show, Season 7, TOW the Nap Partners, which two of the Friends accidentally fell asleep all snuggled up together on a couch, then woke up and screamed when they realized what they had done?
@@ -3796,7 +3780,7 @@
 1897,"How many demon women are attracted to Xander during the seventh season of Buffy the Vampire Slayer?
 ",4,12,3,7,4
 1898,"What is Xanders special power in Buffy the Vampire Slayer?
-",None,Mind control,Future telling,None,Extraordinary physical strength
+",,Mind control,Future telling,,Extraordinary physical strength
 1899,"How many characters of the gang from Buffy the Vampire Slayer have murdered a person?
 ",7,7,3,4,2
 1900,"What are the very last words we hear in the final episode of the Buffy series?
@@ -3887,14 +3871,8 @@
 ",Nowhere Man,Null and Void,Nowhere Man,Nothing Else,The Nobody Man
 1943,"In Seinfeld, what was Jerrys reaction when the head of NBC wanted him to add relationship humor to his sitcom, which was about nothing?
 ",Jerry and George finally accept the idea.,Jerry and George both refuse the suggestion.,Jerry decides to quit the entire project.,Jerry refuses the suggestion but George  talks him into it.,Jerry and George finally accept the idea.
-1944,"Luck is the lady that he loves best.
-",tchez to New Orleans,vin on jacks and queens. ,o is this legend of the West?,Maverick,Sugarfoot
-1945,"Each week at the beginning of this show the newspaper editor of the local paper would start the action with this statement, This is the way it happened in the town too tough to die.
-",at is the name of the town too tough to die?,Tombstone Territory,Laramie,Virginia City,Dodge City
 1946,"The creator of this television western envisioned James Bond on horseback. In what television western would you find the characters James West and Artemus Gordon?
 ",The Wild Wild West,The Wild Wild West,Wyatt Earp,Kung Fu,Have Gun Will Travel
-1947,"He got fightin mad this rebel lad
-", packed no star as he wandered far,ere the only law was a hook and draw.,at country legend sang The Ballad of Johnny Yuma?,Johnny Cash,Johnny Ray
 1948,"The Bugle Theme would sound and the camera would pan down to the Old Ranger. He would stand and say Howdy, Im the Old Ranger and Death Valley is my stamping ground. What actor replaced the Old Ranger to introduce the stories of Death Valley Days?
 ",Ronald Reagan,Gary Cooper,Alan Ladd,Ronald Reagan,John Wayne
 1949,"Out of the night when the moon is bright  comes this bold renegade. A blade flashes and what mark is left behind?
@@ -3937,24 +3915,10 @@
 ","Roswell, NM","Paradise, AZ","Roswell, NM","Devils Hole, NV","Nogales, Mexico"
 1968,"Do, or do not. There is no try was a mystical phrase used in which classic film?
 ",Star Wars V: The Empire Strikes Back,Star Wars V: The Empire Strikes Back,Close Encounters of The Third Kind,Logans Run,Aliens
-1969,"Which film can you hear this chilling quote in?
-","man beings are a disease, a cancer of this planet. You are a plague, and we are the cure.",The Matrix,Virus,The Matrix,Mars Attacks!
 1970,"If it bleeds, we can kill it was a quote that spelled trouble for a space critter. In which film was it uttered?
 ",Predator,Alien,Tremors,Starship Troopers,Predator
-1971,"A human in which film delivered this ruthless line?
-",say we take off and nuke the entire site from orbit. Its the only way to be sure.,Aliens,Alien3,When Worlds Collide,Aliens
-1972,"This movie character had a lot to say when he described the following:
-",".its like when youre a kid, the first time they tell you that the worlds turning and you just cant quite believe it cos everything looks like its standing still? I can feel it. The turn of the Earth. The ground beneath our feet is spinning at a 1000 miles an hour and the entire planet is hurtling round the sun at 67,000 miles an hour and I can feel it. Were falling through space, you and me, clinging to the skin of this tiny little world and if we let go — thats who I am. Now forget me. Go home.","The Doctor, Doctor Who","Exeter, This Island Earth","Will Robinson, Lost In Space (1997)","The Doctor, Doctor Who"
 1973,"Hey, Luke Skywalker, use the force. was a throwaway remark from which of the following characters?
 ","John Spartan, Demolition Man","Cmdr. Peter Quincy Taggart, Galaxy Quest","Sarah Connor, Terminator 2","Han Solo, Return of The Jedi","John Spartan, Demolition Man"
-1974,"Which film is the quote from? 
-","is was supposed to be my weekend off, but no. You got me out here dragging your heavy ass through the desert, with your dreadlocks sticking out the back of my parachute. You got to come down here with an attitude, acting all big and bad. And, what the Hell is that smell?!",Independence Day,Mars Attacks!,Tremors 2,Dune
-1975,"Which film contains this Caroll-inspired quote?
-","u take the blue pill, the story ends. You wake up in your bed and you believe whatever you want to believe. You take the red pill, you stay in wonderland. And, I show you how deep the rabbit hole goes.",The Matrix,Twelve Monkeys,Men In Black II,THX 1138
-1976,"Which 1990 film does this strange sounding quote come from?
-"," things have gone wrong, Im talking to myself, and youve got a wet towel wrapped around your head.",Total Recall,Judge Dredd,The Hitch-Hikers Guide to the Galaxy,Total Recall
-1977,"Which film does the following quote come from?
-","y, I think I ran over some - I think I ran over a wookie back there on the expressway...",THX 1138,Star Wars V: The Empire Strikes Back,THX 1138,Caravan of Courage: An Ewok Adventure
 1978,"What year was ESPN launched?
 ",1979,1980,1979,1977,1978
 1979,"The first sporting event that aired on ESPN was a slow pitch softball game.
@@ -4045,12 +4009,8 @@
 ",Cristina,Addison,Cristina,Izzie,Meredith
 2022,"Which intern from the Greys Anatomy TV series said this: Go for it, man. Get yours, Im down with the rainbow. Oh, are you not gay??
 ",Alex,George,Alex,Izzie,Cristina
-2023,"Who are these characters from the show Greys Anatomy talking about?:
-",. Cristina Yang: [they all see the Nazi] Thats the Nazi? ,. George OMalley: I thought the Nazi would be a man. ,. Meredith Grey: I thought the Nazi would be... the Nazi. ,. Isobel Izzie Stevens: [Izzie walks up behind them] Maybe its professional jealousy. Maybe shes brilliant and they call her a Nazi because theyre jealous. Maybe shes nice.,Dr. Bailey
 2024,"The following words belong to which Greys Anatomy character: My mommys a filthy whore.?
 ",Meredith,Cristina,Izzie,Addison,Meredith
-2025,"Who was Dr. Bailey from Greys Anatomy talking to when she said this:
-",u mind moving this tailwagon? Youre blocking me in.?,Derek and Meredith,Burke and Cristina,Derek and Meredith,George and Izzie
 2026,"Which of these characters from Greys Anatomy made this statement about surgery: Its like candy, but with blood. Which is so much better!?
 ",Cristina,Meredith,Izzie,Dr. Bailey,Cristina
 2027,"Who delivered this line on the show Greys Anatomy: I love you, in a really, really big pretend to like your taste in music, let you eat the last piece of cheesecake, hold a radio over my head outside your window, unfortunate way that makes me hate you, love you. So pick me, choose me, love me.?
@@ -4519,8 +4479,6 @@
 ",4,2,5,3,4
 2259,"Which statement regarding the series Lou Grant is untrue?
 ",The ratings were the reason for the shows cancellation in 1984.,Many journalism classes were shortened or cancelled so the students and teachers could  watch the show.,The shows star was very outspoken about the USAs part in the politics in El Salvador.,The star of the show blamed President Reagan for the shows cancellation.,The ratings were the reason for the shows cancellation in 1984.
-2260,"When did The Fresh Prince of Bel-Air air?
-","September 10, 1990-May 20, 1996","May 10, 1990-September 20, 1996","May 10, 1990-September 20, 1996","September 10, 1990-May 20, 1997","September 10, 1990-May 20, 1996"
 2261,"What was the address of the Bel-Air mansion on the show The Fresh Prince of Bel-Air?
 ",805 St. Cloud Road,508 St. Cloud Street,805 St. Charles Street,805 St. Cloud Road,508 St. Charles Road
 2262,"Why didnt Jada Pinkett get the role of Lisa on the show The Fresh Prince of Bel-Air?
@@ -4707,26 +4665,6 @@
 ",Lisa,Kelly,Jessie,Lisa,Stacy
 2353,"Which character on Saved by the Bell did Zack NOT kiss?
 ",He kissed all of them.,He kissed all of them.,Kelly,Jessie,Lisa
-2354,"This is a dialogue between which two Greys Anatomy characters?
-","tern #1: Denny died. Burke got shot. Lets just have a little perspective and realize that what I did was a tiny, slightly small... ","tern #2: Oh, whatever, just spit it out! ","tern #1: I lost my panties, last night.",Meredith and Cristina,Callie and Meredith
-2355,"Which two characters had this conversation in season 3 of Greys Anatomy?
-","tern: You know what? Youre an ass. Youve lived! Youve done things. And youve got the hair. And the hot wife, and the beautiful ex-mistress whos pining for you... ",tending: Shes pining for me?,George and Derek,Alex and Derek,George and Burke
-2356,"Which resident is talking to George in the TV series Greys Anatomy?
-","sident: All four of you, do not make me regret setting you loose in this hospital. Please do not make me regret letting you loose in this hospital. OMalley, what do I mean by this? ",orge: You mean check with you before we cut any wires or steal any hearts?,Bailey,Addison,Bailey
-2357,"Cristina: You had a dream about the both of them. Threesome? Nice. Just when I think youre boring, you rise. 
-",redith: Im dating. And it comes with snacks.,ich two men did Meredith fantasize about on the medical drama Greys Anatomy?,Derek and Finn,Alex and George,Derek and Finn
-2358,"Which characters from the TV show Greys Anatomy had the following conversation?
-","tern: [to Meredith] Holy crap, are you pregnant?! ",tending #1: An adulterous love child?! ,tending#2: Goes along with an adulterous sociopath.,"Cristina, Addison, Derek","Cristina, Addison, Derek"
-2359,"Who is Derek from Greys Anatomy talking to?
-","man:  Oops, I take it that was the slutty intern you cheated on Addison with? ",rek: Shes not slutty. What are you doing here? ,man: You bailed on Thanksgiving and Christmas and you live in a trailer and youre getting a divorce and then theres the slutty intern. ,rek: I really dont like you. ,man: You love me.
-2360,"Which attending is Meredith talking to in this extract from the hit TV show Greys Anatomy?
-","redith: So, what happens with Donna now? ",tending: She goes back to being an unhappy man whos stuck with a penis. There are millions of us out there. ,redith: Youre unhappy with your penis? ,tending: I could be a lot less unhappy.,Mark
-2361,"Name the Greys Anatomy characters who said the following:
-",tending: Its bring-a-hot-blond-to-work day and no one told me? ,tern: [laughs and feigns sneeze] Sexual harassment.,Mark and Izzie,Derek and Izzie,Mark and Izzie
-2362,"What resident are Derek and Addison talking to in Greys Anatomy?
-",rek: We think youre depressed. ,sident Both of you? ,rek and Addison: Yes ,sident: Well for the two of you to agree on something I must be damn near suicidal.,Chief Webber
-2363,"On the show Greys Anatomy, who says this to Georges dad?
-",tern: George is the best. ,. OMalley: What? ,"tern: Hes the best intern. Hes a good doctor, and a good person, and... whatever happens, I just thought you should know that you raised a good person.",Cristina,Meredith
 2364,"Jerri Manthey, who appeared on The Surreal Life, starred on what other popular reality show?
 ",Survivor,The Amazing Race,Survivor,Real World,Big Brother
 2365,"This wild and crazy girl from The Surreal Life 2 starred on The Real World Las Vegas.
@@ -4797,18 +4735,6 @@
 ",Peter,Peter,Claire,Hiro,Nathan
 2398,"The TV show Heroes premiered on ABC in 2005.
 ",False,False,True,,
-2399,"What is the missing name?
-",me: Mackey is not a cop. Hes Al Capone with a badge.,David Aceveda,Claudette Wyms,David Aceveda,Shane Vendrell
-2400,"What is the missing name
-","me: Maybe in your own mind amigo. But around here, i dont answer to you, not now, not even on Cinco De Mayo.",Vic Mackey,Ronnie Gardocki,Holland Wagenbach,Shane Vendrell
-2401,"What is the missing name? 
-",audette Wyms: Since when do you speak Spanish?,me: Im taking a class... I work in Los Angeles. Not knowing the language was limiting me from being the best detective I could be.,Holland Wagenbach,David Aceveda,Holland Wagenbach
-2402,"Who says:
-","e list is in a safe, in the Captains office, in a POLICE STATION.",Shane Vendrell,Holland Wagenbach,Vic Mackey,Ronnie Gardocki
-2403,"Wat is wrriten in the note mentioned below?
-",,c is trying to scare a suspect in a third floor apartment,c puts a notepad and a pen in the suspects hands,"ps off the page and puts it into the lapel pocket of the suspects shirt, then leads him towards an open window",c Mackey: Looks like youre going to die a bad speller.
-2404," is trying to scare a suspect in a third floor apartment
-",c puts a notepad and a pen in the suspects hands,"ps off the page and puts it into the lapel pocket of the suspects shirt, then leads him towards an open window",c Mackey: Looks like youre going to die a bad speller.,Life Sux,Im Skum
 2405,"When did Judge Judy first air on American television?
 ",1996,1996,1994,1998,1997
 2406,"2006 saw which consecutive Judge Judy season?
@@ -5125,10 +5051,6 @@
 ",Three Is a Magic Number,"Ready or Not, Here I Come",The Good Eleven,Three Is a Magic Number,Little Twelvetoes
 2562,"Blossom Dearie, a cabaret singer, provided the unusually childlike vocals for the song Figure Eight.
 ",True,True,False,,
-2563,"Finish the lyrics to the refrain of the most popular song that Schoolhouse Rock ever put out:
-",,"njunction Junction, whats your function?",.............................................................................,Hookin up words and phrases and clauses,Hookin up words and phrases and clauses
-2564,"junction Junction, whats your function?
-",.............................................................................,Hookin up words and phrases and clauses,Hookin up words and phrases and clauses,Losing your shoe and a button or two,Out of the frying pan and into the fire
 2565,"There are two generations of Lollies manning the store in the song Lolly, Lolly, Lolly, Get Your Adverbs Here.
 ",False,False,True,,
 2566,"The Mayflower journey and the Boston Tea Party are featured in which Schoolhouse Rock song?
@@ -5742,7 +5664,7 @@
 2870,"The TV show Scrubs is filmed  in what was once a hospital.
 ",True,True,False,,
 2871,"How many times did Michael Mancini get married in the popular television series Melrose Place?
-",Six,None,Four,Five,Six
+",Six,,Four,Five,Six
 2872,"On the popular primetime soap opera Dallas, Bobby Ewing and Pamela Barnes get married on the pilot episode.
 ",False,True,False,,
 2873,"Which of the following characters was not on the pilot episode of the popular prime time soap opera Beverly Hills 90210?
@@ -6620,7 +6542,7 @@
 3309,"Which one of Lorelais loves on Gilmore Girls had a thing about having someone sleeping next to him at night?
 ",Jason,Chris,Luke,Jason,None of these
 3310,"Which two of Lorelais loves on Gilmore Girls allow their daughters to interfere with their relationship with Lorelai?
-",Luke and Chris,Luke and Chris,None,Luke and Jason,Jason and Chris
+",Luke and Chris,Luke and Chris,,Luke and Jason,Jason and Chris
 3311,"Which of her loves was Lorelai able to hide from her parents on the TV show Gilmore Girls?
 ",None of these,Chris,None of these,Luke,Jason
 3312,"Lorelai and Luke reconciled at the end of the series Gilmore Girls?
@@ -7606,7 +7528,7 @@
 3802,"Which of the following powers does Sylar, the villain from Heroes, not have?
 ",Super Strength,Precognition,Super Strength,Magnified Hearing,Levitation
 3803,"What power does Mohinder Suresh have in season one of Heroes?
-",None,Liquefaction,X-Ray Vision,Super Speed,None
+",,Liquefaction,X-Ray Vision,Super Speed,
 3804,"On the TV show Heroes, Matt Parkman saved a girl who had the power to find anyone in the world, except for one man.
 ",True,True,False,,
 3805,"What character from the NBC television show Heroes has the power of rapid cellular regeneration?
@@ -7616,21 +7538,13 @@
 3807,"Which of the following powers does Monica Dawson have on the sci-fi show Heroes?
 ",Adoptive Muscle Memory,Technopath,Adoptive Muscle Memory,Super Strength,Super Speed
 3808,"What is the superpower of Heroes character Mr. Linderman?
-",Healing,Reading Minds,Healing,None,Radiation
+",Healing,Reading Minds,Healing,,Radiation
 3809,"What character from Heroes is a telepath?
 ",Matt Parkman,Nathan Petrelli,Matt Parkman,Claire Bennet,Hiro Nakamura
-3810,"Who  says:
-",- permission to chop yourself into little pieces is officially denied.,Dylan Hunt,Tyr Anasazi,Rev Bem,Dylan Hunt
 3811,"On the hit Fox television series Glee, the jocks are always picking on the glee club members. What do they throw at them?
 ",slushies,rocks,napkins,erasers,slushies
 3812,"The 1961 Twilight Zone episode Shadow Play was written by Charles Beaumont and based on his short story of the same name. A man who is about to be executed for murder claims that this reality is actually his recurring nightmare, that all the people he encounters are people he knows from his waking life. What Emmy Award-winning American actor plays this condemned man?
 ",Dennis Weaver,Dick York,Dennis Weaver,Jack Nicholson,Roddy McDowall
-3813,"What is the missing name?   
-",ying words),me: Im proud of you Dylan. You should be.,Gaheris Rhade,Trance Gemini,Seamus Harper
-3814,"What is the missing name Name:
-",me: Missile tubes 1 through 5.,mmie: Are you sure thats necessary?,me: Its chasing us and thats rude. Well teach it some manners.,Dylan Hunt,Seamus Harper
-3815,"What is the missing name 
-","rentex: Oh, youd like that, wouldnt you? Lets have old Gerentex take us into his confidence and reveal his latest scheme for wealth and success, and then well betray him and keep it all for ourselves!",ance: We would never do that!,me: I would.,ance: True.,Seamus Harper
 3816,"Who was the first person eliminated from Project Runway?
 ",Daniel,Wendy,Starr,Kara,Daniel
 3817,"Who is the supermodel host of Project Runway, Season One?
@@ -7908,7 +7822,7 @@
 3953,"In the Combat! TV series, what was Saunders’ first name?
 ",Chip,Nick,Hammer,Sal,Chip
 3954,"How many Combat! seasons were filmed in color?
-",One,Two,None,One and a half,One
+",One,Two,,One and a half,One
 3955,"The squad member Caje from the Combat! TV series, was of what heritage?
 ",Cajun,Cajun,Seminole,Mohawk,Italian
 3956,"Hanley, played by Rick Jason, had the rank of Captain throughout most of the Combat! TV series.
@@ -8113,8 +8027,6 @@
 ",Mexico,Mexico,Russia,China,Guatemala
 4056,"This character from Sailor Moon, whose talisman is a mirror, was introduced in the shows third series along with her partner, Haruka Tenoh.
 ",Sailor Neptune,Sailor Moon,Sailor Venus,Sailor Neptune,Sailor Mercury
-4057,"When did the TV show Hawaii Five-O originally air?
-",1968-1980,1968-1979,1968-1980,1967-1978,1968-1980
 4058,"Hawaii Five-0 was filmed mostly at a CBS studio in L.A.
 ",False,False,True,,
 4059,"What was the name of the crime family who tried to kill Steve McGarrett on the TV show Hawaii Five-O?
@@ -9259,8 +9171,6 @@
 ",Bosnia and Herzegovina,Serbia,Bosnia and Herzegovina,Russia,Slovakia
 4629,"Hotel Victory is the translation of the title of a soap opera from this country.
 ",Sweden,Denmark,German,Sweden,Norway
-4630,"Complete the name of this popular Star Wars character:
-",i-Wan ___________,Kenobi,Fisto,Skywalker,Windu
 4631,"What was the name of the clone trooper captain CC-7567, who served under Anakin Skywalker?
 ",Rex,Fox,Rex,Cody,Romio
 4632,"Which of these characters wants to kill Jedi master Mace Windu?
@@ -10343,8 +10253,6 @@
 ",Begin the Begin,Begin the Begin,Break on Through,Owner of a Lonely Heart,Yesterday
 5171,"In this Greys Anatomy episode, Meredith wakes up feeling like she is going to have a bad day. She turns out to be right when a patient arrives at the hospital with a bomb in his chest cavity, threatening the lives of the entire staff.
 ",Its the End of the World,Its the End of the World,As We Know It,Tell Me Sweet Little Lies,Band-Aid Covers the Bullet Hole
-5172,"Which Greys Anatomy episode has the following plot?
-","redith and George wind up in the same bed and feel quite awkward around each other all day. Marks visit has Derek and Addison on edge once again. Denny Duquette arrives at Seattle Grace for a second time since meeting Izzie, complicating her reconciliation with Alex.",What Have I Done to Deserve This?,Break on Through,What Have I Done to Deserve This?,Yesterday
 5173,"In this episode of Greys Anatomy, the nurses union at Seattle Grace goes on strike, as does George, leaving the doctors to fend for themselves. Meredith makes a critical mistake while treating a patient, which is witnessed by the patients friends. Izzie confides a big secret from her past to a young pregnant woman.
 ",Break on Through,Yesterday,Tell Me Sweet Little Lies,Break on Through,As We Know It
 5174,"Cristina finds herself in charge of the ER. Time is running out for Denny. Derek comes to terms with the fact that a friends life is in his hands. This is part of the plot of which Greys Anatomy episode?
@@ -10457,8 +10365,6 @@
 ",Lightspeed Rescue and Wild Force,Lightspeed Rescue and Wild Force,Wild Force and SPD,Lost Galaxy and Lightspeed Rescue,DinoThunder and Ninja Storm
 5228,"What Zord in Power Rangers: Time Force is operated through voice activation by the Quantum Ranger and is incapable of combining with other Zords?
 ",The Quantasaurus-Rex,The Quantasaurus-Rex,None of these,Time Flyer 1,The Black Bear Zord
-5229,"Complete these lyrics from the theme song of Power Rangers: Time Force:
-",cing to another time,rono Morphers are on-line,meless Wonders,_________________,Fire and Thunder
 5230,"What century are the Time Force Rangers from?
 ",31st,32nd,33rd,30th,31st
 5231,"There are two Red Rangers in Power Rangers: Time Force.

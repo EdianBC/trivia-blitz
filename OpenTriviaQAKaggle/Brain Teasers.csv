@@ -1,4 +1,4 @@
-,Questions,Correct,A,B,C,D
+Unnamed: 0,Questions,Correct,A,B,C,D
 0,"Which of these is true about the sleep of zebras?
 ",They sleep standing up.,All of these,They sleep standing up.,They would fall asleep every 5 to 6 hours.,They need more than 12 hours of sleep a day.
 1,"A farmer had 12 sheep and 3 cows. All of the animals except 9 sheep died. How many animals did he have left in his farm?
@@ -99,8 +99,6 @@
 ",Yes,Yes,No,,
 49,"A man is carrying three croquet balls across a bridge. The bridge has a sign that says bridge can only hold 200 pounds. The man weighs 195 pounds and the croquet balls weigh 2 pounds each. The man ends up crossing the bridge in one trip and no one else helps him. This is possible.
 ",True,False,True,,
-50,"Which letter comes next in this series:
-",L-C-N-I-T-?,S,T,W,S
 51,"A squirrel finds a hollow log with 9 ears of corn in it.  If he can carry out 3 ears every day, how many days will it take him to empty the log?
 ",9,6,3,9,None of these
 52,"Suppose youre taking a multiple-choice quiz.  One question has three choices - A, B, C.  You do not know the answer and guess A. The instructor then announces that C is incorrect. Should you switch to B before turning in your paper?
@@ -125,8 +123,6 @@
 ",lose,lose,break even,win,None of these
 62,"A horse travels a certain distance each day. Strangely enough, two of its legs travel 30 miles each day and the other two legs travel nearly 31 miles. Can this be true?
 ",Yes,Yes,No,,
-63,"A total of 15 delegates from Africa, Asia, America, and Europe meet at an international conference.
-","ch continent sends a different number of delegates, and each is represented by at least 1 delegate.",erica and Asia send a total of 6 delegates.,ia and Europe send a total of 7 delegates.,ich continent has sent 4 delegates?,Asia
 64,"One kid has a toy car with a strange remote control- it has only one button on it. When the car is switched on, it starts moving forward and doesnt stop until its switched off. When the boy presses the button, the car makes a 60 degree turn clockwise. Considering that this is a very lazy boy, try calculating the smallest number of times he has to press the button so that the car travels back to him.
 ",5,4,5,7,3
 65,"Here is something like a warm-up before you get to the next one. Three friends, Peter, Nick and Tom were competing in a race. After they finished, a person ,who was late for the race, asked them who was the winner. Tom said I didnt finish first and Peter didnt finish second. Then Nick said Tom didnt finish second either. Who was the winner?
@@ -137,8 +133,6 @@
 ",The result is your original number,The result is your original number,The result is zero,There is remainder,The result is twice your original number
 68,"Two dice are randomly thrown. What is the possibility that the number, formed by the two digits that come form the dice, is a prime?
 ",5:12,5:12,5:18,19:36,35:36
-69,"Yesterday I heard an interesting conversation in a shop:
-",,ient: How much is one?,lesman: Twenty cents.,ient: What about ninety four?,lesman: Thirty cents.
 70,"ent: How much is one?
 ",lesman: Twenty cents.,ient: What about ninety four?,lesman: Thirty cents.,"ient: OK, Ill buy twenty nine. How much is it?",lesman: Twenty cents.
 71,"it possible that it was a real product they were talking about?
@@ -174,7 +168,7 @@
 86,"Which is the month that allows women to talk the least?
 ",February,February,December,August,March
 87,"What is the number of men born last year in USA?
-",None,None,2 013 841,6 914 381,1 502 106
+",,,2 013 841,6 914 381,1 502 106
 88,"This is what you can see once in a minute, twice in a moment, but never in a thousand years.
 ",The letter M,The sun,An eclipse,A Solstice,The letter M
 89,"With a red beard, gray mustache and black sideburns, the man had a distinct HIRSUTE quality. What does hirsute mean?
@@ -337,32 +331,20 @@
 ",55 multiplied by 45,55 multiplied by 45,They are equal.,65 multiplied by 35,None of these
 168,"Two doctors and two mothers went to an ice cream shop. Each one of them ordered different flavors. The waiter then gave them one chocolate, one vanilla, and one strawberry and everybody on the table had an ice cream. Is this possible?
 ",Yes,No,Yes,,
-169,"Two children were on their way to school, when they began to question what day of the week it was. They were so confused in their reckoning that one of them gave the following riddle to help sort the matter out: When the day after tomorrow is yesterday, then today will be as far from Sunday as that day was which was today when the day before yesterday was tomorrow!
-", which day of the week were the children heading to school?,Sunday,Saturday,Sunday,Friday
-170,"We know very little about the life of the mathematician Diophantus (called the father of algebra) except that he lived around the year 250 B.C. Due to one admirer of his, who described his life by the means of an algebraic riddle, we can at least determine his age at death:
-",ophantuss youth lasted 1/6 of his life. He had his first beard in the next 1/12 of his life. At the end of the following 1/7 of his life Diophantus got married. Five years from then his son was born. His son lived exactly 1/2 of Diophantuss life. Diophantus died 4 years after the death of his son.,w long did Diophantus live?,84 years,84 years,96 years
-171,"Three goddesses were sitting in an old Indian temple. Their names were Truth (who always tells the truth), Lie (who is always lying) and Wisdom (who sometimes lies). In order to figure out which goddess was which you posed the following questions to each:
-",king the left one: Who is sitting next to you?,"uth, she answered.",king the middle one: Who are you?,sdom.,d at last question for the right one: Who is your neighbor?
 172,"m left to right in what order are goddesses sitting?
 ",1. Wisdom 2. Lie 3. Truth,1. Wisdom 2. Truth 3. Lie,1. Lie 2.Truth 3. Wisdom,1. Wisdom 2. Lie 3. Truth,1. Truth 2. Lie 3. Wisdom
 173,"There are two kinds of people who live on a mysterious island. They are the so-called Honestants, who always speak the truth, and the others are the Swindlecants, who always lie.
 ",,"visitor to the island went to a local pub and had a few drinks. When he was ready to leave he asked the bartender how much he owed. The bartender told him the total for his bill. It was quite expensive, so he asked the bartender if he spoke the truth. But the visitor did not hear the whispered answer so he asked a man sitting next to him about it. And the man said: The bartender said yes, but he is a big liar.",,,
-174,"isitor to the island went to a local pub and had a few drinks. When he was ready to leave he asked the bartender how much he owed. The bartender told him the total for his bill. It was quite expensive, so he asked the bartender if he spoke the truth. But the visitor did not hear the whispered answer so he asked a man sitting next to him about it. And the man said: The bartender said yes, but he is a big liar.
-",,s the bartender a Honestant?,No,Yes,No
 175," the bartender a Honestant?
 ",No,Yes,No,,
 176,"You are on your way to visit your Grandma, who lives at the end of the valley. Its her birthday, and you want to give her the cakes youve made.
 ",,"tween your house and her house, you have to cross 7 bridges, and as it goes in the land of make believe, there is a troll under every bridge! Each troll, quite rightly, insists that you pay a troll toll. Before you can cross their bridge, you have to give them half of the cakes you are carrying, but as they are kind trolls, they each give you back a single cake.",,,
-177,"ween your house and her house, you have to cross 7 bridges, and as it goes in the land of make believe, there is a troll under every bridge! Each troll, quite rightly, insists that you pay a troll toll. Before you can cross their bridge, you have to give them half of the cakes you are carrying, but as they are kind trolls, they each give you back a single cake.
-",,at is the minimum number of cakes you will have to leave home with to make sure that you arrive at Grandmas with exactly 2 cakes?,2,14,5
 178,"t is the minimum number of cakes you will have to leave home with to make sure that you arrive at Grandmas with exactly 2 cakes?
 ",2,14,5,24,2
 179,"My grandson is about as many days as my son is weeks, and my grandson is as many months as I am in years. My grandson, my son and I together are 120  years. Can you tell me my age in years?
 ",72,65,78,72,84
 180,"It was Emilys first day at school. The teacher suggested that it would be a good idea for each child to meet every other child in the class. The teacher said, When you meet, please shake hands and introduce yourself by name. If there were 10 children in the class, how many were the total handshakes?
 ",45,50,45,100,55
-181,"A woman has 7 children, half of them are boys.
-",n this statement be true?,Yes,Yes,No,
 182,"Paul designs food displays for the local Supermarket. For one of his displays, he wants to set up soup cans in the form of a square pyramid. Hes decided to use 10 cans for each side of the square base of the pyramid. If each carton holds 25 soup cans, how many cartons will Paul need to open to build the pyramid?
 ",16,10,15,20,16
 183,"A firefighter stood on the middle rung of a ladder, spraying water on a burning house. He then climbed up 6 rungs before the heat of the flames caused him to come down 10 rungs. After some minutes he was able to climb 18 rungs to the very top of the ladder. How many rungs did the ladder have?
@@ -397,33 +379,3 @@
 ",2nd,4th,1st,3rd,2nd
 198,"What letter should be added the group of letters P, N, N, E, S, O, R, H, E, T, and I to form a twelve-letter word that is related to blood?
 ",Y,P,S,Y,A
-199,"A woman has 7 children, half of them are boys.
-",n this statement be true?,Yes,Yes,No,
-200,"Which letter comes next in this series:
-",L-C-N-I-T-?,S,S,W,T
-201,"A total of 15 delegates from Africa, Asia, America, and Europe meet at an international conference.
-","ch continent sends a different number of delegates, and each is represented by at least 1 delegate.",erica and Asia send a total of 6 delegates.,ia and Europe send a total of 7 delegates.,ich continent has sent 4 delegates?,Asia
-202,"Yesterday I heard an interesting conversation in a shop:
-",ient: How much is one?,lesman: Twenty cents.,ient: What about ninety four?,lesman: Thirty cents.,"ient: OK, Ill buy twenty nine. How much is it?"
-203,"What on earth could dance, and live and die?
-","thout legs, or lungs, or being alive?",Fire,Water,Darkness,Fire
-204,"Each morning I appear 
-"," lie at your feet, ",l day I follow you ," matter how fast you run, ",t I nearly die , the midday sun. 
-205,"Im one of five, and Im not alive.
-","e one who sent me forth became king, ",e one who got me died.,at am I?,A stone,A rock
-206,"I am related to the water but I am not wet.
-",am related to a shadow but I am multicolored.,create an illusion but show what is real. What am I?,a mirror,a bed,gold
-207,"I have eight to spare, in case I lose my one.
-", not a number.,at am I?,a cat,a dog,nine
-208,"Two children were on their way to school, when they began to question what day of the week it was. They were so confused in their reckoning that one of them gave the following riddle to help sort the matter out: When the day after tomorrow is yesterday, then today will be as far from Sunday as that day was which was today when the day before yesterday was tomorrow!
-", which day of the week were the children heading to school?,Sunday,Monday,Sunday,Friday
-209,"We know very little about the life of the mathematician Diophantus (called the father of algebra) except that he lived around the year 250 B.C. Due to one admirer of his, who described his life by the means of an algebraic riddle, we can at least determine his age at death:
-",ophantuss youth lasted 1/6 of his life. He had his first beard in the next 1/12 of his life. At the end of the following 1/7 of his life Diophantus got married. Five years from then his son was born. His son lived exactly 1/2 of Diophantuss life. Diophantus died 4 years after the death of his son.,w long did Diophantus live?,84 years,96 years,84 years
-210,"Three goddesses were sitting in an old Indian temple. Their names were Truth (who always tells the truth), Lie (who is always lying) and Wisdom (who sometimes lies). In order to figure out which goddess was which you posed the following questions to each:
-",king the left one: Who is sitting next to you?,"uth, she answered.",king the middle one: Who are you?,sdom.,d at last question for the right one: Who is your neighbor?
-211,"There are two kinds of people who live on a mysterious island. They are the so-called Honestants, who always speak the truth, and the others are the Swindlecants, who always lie.
-","visitor to the island went to a local pub and had a few drinks. When he was ready to leave he asked the bartender how much he owed. The bartender told him the total for his bill. It was quite expensive, so he asked the bartender if he spoke the truth. But the visitor did not hear the whispered answer so he asked a man sitting next to him about it. And the man said: The bartender said yes, but he is a big liar.",s the bartender a Honestant?,No,Yes,No
-212,"You are on your way to visit your Grandma, who lives at the end of the valley. Its her birthday, and you want to give her the cakes youve made.
-","tween your house and her house, you have to cross 7 bridges, and as it goes in the land of make believe, there is a troll under every bridge! Each troll, quite rightly, insists that you pay a troll toll. Before you can cross their bridge, you have to give them half of the cakes you are carrying, but as they are kind trolls, they each give you back a single cake.",at is the minimum number of cakes you will have to leave home with to make sure that you arrive at Grandmas with exactly 2 cakes?,2,14,24
-213,"There are these two country farmers milking their cows. While the one farmer is milking, a fly zooms into the cows ear. The cow starts jumping around, shaking its head and mooing. He tries to steady the cow and suddenly it settles down. He looks down and sees the
-","y swimming in the milk pail. He turns to his friend and asks Golly, howd that fly get down there so fast? His friend replies...___________________.",in one ear and out the udder,its a miracle beyond understanding.,in one ear and out the other,in one ear and out the udder

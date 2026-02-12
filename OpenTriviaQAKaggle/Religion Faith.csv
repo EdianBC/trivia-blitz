@@ -1,4 +1,4 @@
-,Questions,Correct,A,B,C,D
+Unnamed: 0,Questions,Correct,A,B,C,D
 0,"What Hollywood actor portrayed Casanova in the 2005 movie entitled Casanova, based on the life of the popular adventurer?
 ",Heath Ledger,Johnny Depp,Antonio Banderas,Heath Ledger,Ryan Phillippe
 1,"Which of these is NOT a son of Adam and Eve?
@@ -269,14 +269,8 @@
 ","Genesis, Exodus, Leviticus, Numbers, Deuteronomy","Genesis, Leviticus, Numbers, Deuteronomy, Exodus","Genesis, Exodus, Numbers, Deuteronomy, Leviticus","Genesis, Exodus, Leviticus, Deuteronomy, Numbers","Genesis, Exodus, Leviticus, Numbers, Deuteronomy"
 134,"What tribe of Israel was Moses born into?
 ",Levite,Reubon,Benjamin,Jacob,Levite
-135,"Eye of newt and toe of frog
-",ol of bat and tongue of dog , one of the most famous spells in English literature. In what Shakespeare play do the three witches cast their evil spells?,Macbeth,The Tempest,Hamlet
-136,"She held me spellbound in the night
-",ncing shadows and firelight,azy laughter in another room ,d she drove herself to madness,th a silver spoon.,at group sings about a Witchy Woman with the moon in her eyes?
 137,"Do you think God knew what He was doing when he created woman? Or do you think it was another one of his minor mistakes like tidal waves, earthquakes or FLOODS!, asked Daryl Van Horne in The Witches of Eastwick. What actor played Daryl Van Horne, just your average horny little devil?
 ",Jack Nicholson,Dennis Hopper,Harvey Keitel,Christopher Walken,Jack Nicholson
-138,"Ding dong the witch is dead.
-",ich old witch?,e wicked witch.,l you could see under the house was two shrivelled up legs and a pair of ruby slippers. Which wicked witchs demise brought forth such joy to the citizens of Oz in the book The Wizard of Oz?,The Wicked Witch of the East,The Wicked Witch of the West
 139,"The movie An American Haunting was based on one of the most famous hauntings in American folklore. A Tennessee farmer shot at a strange animal with the body of a dog and the head of a rabbit.  What name was given to the entity that haunted the family and was said to have murdered the Tennessee farmer?
 ",The Bell Witch,The Blair Witch,The White Witch,Mother Shipton,The Bell Witch
 140,"The works of this Jewish thinker formed the basis of the writings of Thomas Aquinas.
@@ -438,7 +432,7 @@
 218,"On Columbus first trip to the new world, many Jews were employed by Columbus. What was the highest job held by a Jew?
 ",Translator,Weatherman,Translator,Treasurer,Supply commander
 219,"What religious article must every unmarried Jewish woman wear?
-",None,Red String,Star of David,None,Fringes
+",,Red String,Star of David,,Fringes
 220,"In Judaism locusts are kosher, which means that they are allowed to be eaten.
 ",True,True,False,,
 221,"In every synagogue, in every country in the world, there are the same number of statues. How many?
@@ -849,8 +843,6 @@
 ",Moses,David,Moses,Ezra,Asaph
 424,"In Psalm 23, the Lord is referred to as what?
 ",My Shepherd,My Provider,My Shepherd,My God,My Hope
-425,"The following lines are from which psalm? 
-",,"r You formed my inward parts; You wove me in my mothers womb. I will give thanks to You, for I am fearfully and wonderfully made.",Psalm 139,Psalm 23,Psalm 139
 426," You formed my inward parts; You wove me in my mothers womb. I will give thanks to You, for I am fearfully and wonderfully made.
 ",Psalm 139,Psalm 23,Psalm 139,Psalm 150,Psalm 119
 427,"The Book of Psalms is classified as what type of book in the Bible?
@@ -1140,7 +1132,7 @@
 569,"In Judaism, what do we call food that is permissible to be eaten?
 ",Kosher,Parve,Kosher,Fleisch,Gribnitz
 570,"According to Judaism, what work is permissible on Sunday?
-",Any work,Only transportation to synagogue,Charity,None,Any work
+",Any work,Only transportation to synagogue,Charity,,Any work
 571,"What does the word Rabbi mean?
 ",My teacher,My overseer,MY priest,My leader,My teacher
 572,"The witch hunts started as a result of the superstitions of some Catholic Monks. This Dominican monk is considered to be the initiator of the witch hunts as he prepared a detailed manual of deviltry for the Church.  It did not take long before women in Southern France were sent to the stake, condemned for cohabitation with the devil.
@@ -1237,24 +1229,12 @@
 ","of a vast, enormous scale","of a vast, enormous scale",of little importance,related to a flood,very sinful in its nature
 618,"If John knows Mary in the biblical sense, what can we say about the pair?
 ",They have had sex.,Mary is Johns sister.,They have had sex.,Their parents decided about their marriage.,"They are in a Platonic relationship (ie. love, but no sex)."
-619,"What Biblical character said the following?
-"," petition and my request is this:If the king regards me with favor and if it pleases the king to grant my petition and fulfill my request, let the king and Haman come tomorrow to the banquet  I will prepare for them. Then I will answer the kings question.",Esther,Esther,Martha,Ruth
-620,"The following words belong to this biblical figure:
-","y the day of my birth perish, and the night it was said,A boy is born! That day-may it turn to darkness; may the God above not care about it; may no light shine upon it.",Job,Jesus,John the Baptist,Abraham
-621,"What Biblical hero delivered these words?
-","t of the eater, something to eat; out of the strong, something sweet.",Samson,Samson,Solomon,David
-622,"What Biblical character asked the following question? 
-"," I leading a rebellion, that you have come out with swords and clubs to capture me?",Jesus,Peter,Jude,Jesus
 623,"What character from the Bible said the following? Get rid of that slave woman and her son, for that slave womans son will never share in the inheritance with my son Isaac.
 ",Sarah,Ruth,Sarah,Leah,Rebeccah
 624,"Who said the following: It is not the healthy who need a doctor, but the sick. But go and learn what this means: I desire mercy, not sacrifice. For I have not come to call the righteous, but sinners.
 ",Jesus,John,Jesus,Joseph,Matthew
-625,"What Biblical figure said this? 
-","am now an old man and dont know the day of my death. Now then, get your weapons-your quiver and bow-and go out to the open country to hunt some wild game for me. Prepare me the kind of tasty food I like and bring it to me to eat, so that I may give you my  blessing before I die.",Issac,Jacob,Esau,Adam
 626,"Name the Biblical character who delivered these words: Pick me up and throw me into the sea, and it will become calm, I know that is is my fault that this great storm has come upon you.
 ",Jonah,Obadiah,Micah,Haggai,Jonah
-627,"What character from the Bible said this?
-",rd dont you care that my sister has left me to do the work by myself? Tell her to help me!,Martha,Queen Vashti,Martha,Mary
 628,"Who delivered these words: Suppose I go to the Israelites and say to them, The God of your fathers has sent me to you, and they ask me, ‘What is his name? Then what shall I tell them?
 ",Moses,Joseph,Jonah,Moses,Aaron
 629,"What is the symbol of the dhamma (dharma)?

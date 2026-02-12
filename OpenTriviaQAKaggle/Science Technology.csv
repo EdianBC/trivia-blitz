@@ -1,4 +1,4 @@
-,Questions,Correct,A,B,C,D
+Unnamed: 0,Questions,Correct,A,B,C,D
 0,"Immanuel Kant criticized Emanuel Swedenborg and termed him a “spook hunter”.
 ",True,True,False,,
 1,"Clouds are made up of these.
@@ -267,8 +267,6 @@
 ",$1.78,$0.35,$1.78,$2.58,$1.93
 133,"What is the next number in the following sequence: 42, 48, 54, __?
 ",60,64,50,58,60
-134,"In the following division problem, the quotient is 2: 
-",, / 6 = 2.,True,True,False
 135,"/ 6 = 2.
 ",True,True,False,,
 136,"6 is a multiple of 2 and 3, 9 is a multiple of 3 only, 10 is a multiple of 5 and what other number?
@@ -620,7 +618,7 @@
 309,"What was the name of the man who invented logarithms?
 ",John Napier,Rene Descartes,John Napier,Blaise Pascal,Robert Recorde
 310,"Sir Isaac Newton developed his calculus and physics at what college?
-",None,Oxford,None,Trinity,Cambridge
+",,Oxford,,Trinity,Cambridge
 311,"Who was the teacher of Plato?
 ",Socrates,Thales,Socrates,Aristotle,Archimedes
 312,"Who wrote the first textbook on Geometry?
@@ -633,8 +631,6 @@
 ",5,2,3,4,5
 316,"We all know what acute angles, obtuse angles, right angles, and straight angles are, but what is a reflex angle?
 ",An angle greater than 180 degrees but less than 360 degrees.,The angle a telescope makes with the Earth,An angle greater than 180 degrees but less than 360 degrees.,Any angle greater than 360 degrees,The angle you need to look a fish in the eye.
-317,"How many of these statements are true: 
-",negative one has no square root,the logarithm of negative one is negative,the reciprocal of negative one is positive one,positive one to the negative one power is one.,1
 318,"If a woman has these pains, they almost always disappear when she becomes pregnant.
 ",Arthritic pains,Stomach aches,Neural pains,Arthritic pains,Migraine pains
 319,"This organ expands up to 500 times its normal size during the pregnancy.
@@ -1284,7 +1280,7 @@
 641,"In which US city did Einstein live out his last years?
 ","Princeton, New Jersey","Cambridge, Massachusetts","New Haven, Connecticut","Boca Raton, Florida","Princeton, New Jersey"
 642,"Which type of car did Einstein own while in the USA ?
-",None,Buick,Packard,Ford,None
+",,Buick,Packard,Ford,
 643,"What important thing did Einstein do on August 2nd, 1939?
 ",He wrote a letter,He proved the Theory of Special Relativity,He found the speed of light,He wrote a letter,He proved  E=mc^2
 644,"In 1948 Albert Einstein was offered this new job.
@@ -2359,8 +2355,6 @@
 ",The need for a mother from a closely related species,The lack of knowledge about their embryonal development,The need for a mother from a closely related species,The difference in environmental conditions now and then,Lack of live dinosaur tissue
 1179,"Cloning and the boundless possibilities it offers is a challenging topic for scriptwriters imagination. All but one of these science fiction movies involve cloning in their plots.
 ",The Green Mile,Jurassic Park,The 6th Day,The Green Mile,The House of the Scorpion
-1180,"Which of these can be defined as a clones biological mother and father?
-",None of these,None of these,The egg cell donor and the surrogate mother,The egg cell donor and the surrogate mother,The genetic material donor and the egg cell donor
 1181,"Who was the first person to orbit the Earth?
 ",Yuri Gagarin,Georgi Dobrovolski,Yuri Gagarin,Neil Armstrong,Kerim Kerimov
 1182,"In 2005, this famous Russian cosmonaut set a record for total time, spent in space.
@@ -2707,8 +2701,6 @@
 ",Over 80 % of an elephants tusk is visible-the rest lies inside the gums.,Over 80 % of an elephants tusk is visible-the rest lies inside the gums.,"Aside from the elephant, the walrus has the largest tusks.",The tusks of a male elephant grow about 18 cm a year.,Biologists have found that the tooths weight and its need for muscular development has greatly influenced the development of the mammalian skull.
 1353,"Every mammal has teeth.
 ",False,False,True,,
-1354,"The narwhale has two teeth in its upper jaw, one of which develops into a horn-like protrusion (this is true).
-", is almost always the left one that  becomes the horn.,True,False,True,
 1355,"The most common  fossil is the tooth.
 ",True,True,False,,
 1356,"Consider all animals that ever lived. Which animal had the longest teeth?
@@ -3241,16 +3233,12 @@
 ",Ryan ONeal and Tatum ONeal,None of these,Paul Newman and Nell Potts,Ryan ONeal and Tatum ONeal,Henry Fonda and Jane Fonda
 1620,"What valley in California is referenced in Jack Londons novel The Valley of the Moon?
 ",Sonoma Valley,Death Valley,Sierra Valley,Deep Springs Valley,Sonoma Valley
-1621,"Which song, included on Pink Floyds concept album The Dark Side of the Moon, contains the following lyrics:
-","d you run and you run to catch up with the sun, but its sinking",d racing around to come up behind you again,"e sun is the same in the relative way, but youre older",orter of breath and one day closer to death?,None of these
 1622,"The soundtrack for which of these movies does not include the popular song Blue Moon, written by Richard Rodgers and Lorenz Hart?
 ",Bitter Moon,Grease,Bitter Moon,Blue Moon (2002),Notting Hill
 1623,"What Academy Award-winning European-born director produced and directed the drama movie Bitter Moon, starring Peter Coyote?
 ",Roman Polanski,Emir Kusturica,Milos Forman,Roman Polanski,Pedro Almodovar
 1624,"What Australian pop duo performed the 1990s hit To the Moon and Back?
 ",Savage Garden,The Seekers,Savage Garden,Soundgarden,INXS
-1625,"Name Samuel Coleridges longest poem which contains the lines:
-",e moving Moon went up the sky.,d nowhere did abide.,The Rime of the Ancient Mariner,The Rime of the Ancient Mariner,Kubla Khan
 1626,"What actress won the Academy Award for Best Actress for the portrayal of Loretta Castorini in the romantic comedy Moonstruck?
 ",Cher,Olympia Dukakis,Sophia Loren,Cher,Meryl Streep
 1627,"Ludwig van Beethoven included the Italian phrase, Quasi una fantasia in the title of his Piano Sonata No. 14, popularly known as the Moonlight Sonata. What does this Italian phrase mean in English?
@@ -3599,8 +3587,6 @@
 ",Corona,Corona,Photosphere,Prominences,Chromosphere
 1799,"The Sun has how many times the diameter of the Earth?
 ",110,150,110,100,135
-1800,"On average, how long is the sunspot cycle?
-",11.1 years,10.4 years,11.1 years,14.8 years,14.8 years
 1801,"Which of the listed NASA probes made the closest approach to the Sun?
 ",Helios 2,Helios 2,SOHO,None of these,Mariner 10
 1802,"The Sun orbits a center of mass.
@@ -3710,7 +3696,7 @@
 1854,"Neptune has rings around it just like Saturn.
 ",True,False,True,,
 1855,"How many moons does Neptune have?
-",13,3,13,None,10
+",13,3,13,,10
 1856,"How long does it take Neptune to orbit the Sun once?
 ",165 years,211 years,165 years,89 years,128 years
 1857,"How long is one day on the planet Neptune?

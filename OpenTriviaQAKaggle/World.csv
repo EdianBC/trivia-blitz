@@ -1,4 +1,4 @@
-,Questions,Correct,A,B,C,D
+Unnamed: 0,Questions,Correct,A,B,C,D
 0,"LFD2 was banned in Australia.
 ",True,False,True,,
 1,"One of the remnants of this states former status as a possession of France is the fact that it was named after a French king.
@@ -49,8 +49,6 @@
 ",Greece,Italy,Cyprus,Greece,Turkey
 24,"This country controls the Sinai Peninsula.  Following the completion of the Suez Canal in 1869, it became an important world transportation hub.
 ",Egypt,Thailand,Egypt,Hong Kong,Libya
-25,"This countrys national holidays include:
-","Independence Day, 10 December (date of independence from Spain, 1898) ","20 May (independence from US administration, 1902)",Rebellion Day 26 July (1953),Cuba,Palestine
 26,"The first American capital.  It has a nick name coined by musicians - it means  to play the big time.
 ",New York,Washington D.C.,New York,Boston,San Francisco
 27,"The cable cars of this city are the only mobile National Monument.
@@ -161,8 +159,6 @@
 ",The Victoria,The Santa Maria,The Pinta,The Victoria,The Nina
 80,"Which of the following pairs (explorer - region he discovered) is not correct?
 ",Cabral - Uruguay,Cortez - Mexico,Pizarro - Peru,Cabral - Uruguay,Vespucci - Argentina
-81,"None of these  could be found in Europe before the Great Geographical Discoveries:
-","tatoes, chocolate, cocoa, quinine, tobacco, cabbage, cane-sugar, furs, whale oil, indigo, tea, coffee, porcelain, and cotton silks .",False,True,False,
 82,"The Great Geographical Discoveries led to the spreading of colonialism and imperialism and even exploitation.
 ",True,True,False,,
 83,"How did the political life in England, Spain and France change as a result of the geographical discoveries?
@@ -317,8 +313,6 @@
 ",Peter and the Wolf,Ode to Joy,William Tell Overture,Pachelbels Canon,Peter and the Wolf
 158,"What present does Ralphie want more than anything in the film A Christmas Story?
 ",Red Ryder BB Gun,Slingshot,Bow and Arrow,Red Ryder BB Gun,Brandywine Cannon
-159,"In the movie A Christmas Story, when Ralphies mother puts soap in his mouth to teach him a lesson,
-",at effect does he imagine the soap will have on him in the future?,He goes blind,He goes blind,He goes mute,He goes deaf
 160,"Where do the Parkers end up having Christmas dinner in the film A Christmas Story?
 ",Chinese Restaurant,Chinese Restaurant,Goldblatts Department Store,The Bumpass,Griffith
 161,"What favorite television show did the film A Christmas Story inspire?
@@ -329,10 +323,6 @@
 ",Boxing Day,Perihelion,Boxing Day,Candlemas,St Patricks Day
 164,"Christmas celebrations in the Soviet Union were banned after the Russian Revolution.
 ",True,True,False,,
-165,"Finish the popular Christmas carol:
-",,lent night Holy night,l is calm all is bright,und yon virgin Mother and Child,ly infant ...
-166,"ent night Holy night
-",l is calm all is bright,und yon virgin Mother and Child,ly infant ...,so tender and mild,so tender and mild
 167,"The origins of the widespread tradition of decorating a Christmas tree can be traced back to the 16th century, in this country.
 ",Germany,The United States,France,Russia,Germany
 168,"For Catholics, Protestants and most Orthodox Christians, the 25th of December is celebrated as Christmas. However, the Jerusalem, Russian, Coptic, Serbian and Georgian Orthodox churches celebrate the birth of Jesus on this date.
@@ -553,16 +543,12 @@
 ",Hans Christian Andersen,Tove Ditlevsen,Hans Christian Andersen,Erik Mesterton,Astrid Lindgren
 276,"Mary, the betrothed wife of Joseph, gave birth to her child, Jesus in Bethlehem.
 ",Yes,No,Yes,,
-277,"This line is from a Christmas song, written by Burl Ives. Which is the song?
-",,"dont know if theyll be snow, but have a cup of cheer.",Holly Jolly Christmas,Away in a Manger,Holly Jolly Christmas
 278,"ont know if theyll be snow, but have a cup of cheer.
 ",Holly Jolly Christmas,Away in a Manger,Holly Jolly Christmas,Silent Night,Jingle Bells
 279,"What does Frosty the Snowman, the character from an animated story produced by the Rankin-Bass company, say when he wakes up?
 ",Happy Birthday!,Happy Fourth of July!,Merry Christmas!,Happy Birthday!,Happy New Year!
 280,"Jack Frost, a figure that presumably originated in Viking folklore, personifies crisp, cold, winter weather.
 ",True,True,False,,
-281,"By now in New York City, theres snow on the ground 
-","d out in California, the sunshines falling down. ","is is the opening of  the song Christmas in Dixie, performed by which group.",Alabama,Alabama,Alan Jackson
 282,"From 1796 to 1806, Louisville, a city located on the Ogeechee River, was the capital of which state?
 ",Georgia,Louisiana,Kentucky,Georgia,Maryland
 283,"Vallejo, located in the Solano County, was the capital of which state in 1852 and 1853?
@@ -706,7 +692,7 @@
 352,"The Colossus, one of the Seven Wonders of the Ancient World, was a giant statue of which Greek god?
 ",Helios,Dionysus,Zeus,Helios,Ares
 353,"How many of the Seven Ancient World Wonders exist in the modern world?
-",One,Three,None,One,Five
+",One,Three,,One,Five
 354,"Which of the Seven Wonders of the Ancient World was built on the island of Rhodes?
 ",The Colossus,The Colossus,The Hanging Gardens,The Lighthouse,The Statue of Zeus
 355,"Which classical Greek sculptor designed the magnificent Statue of Zeus?
@@ -763,8 +749,6 @@
 ",To fill in the answer sheet randomly,To get a very high score on an exam that you havent studied for,To cheat on an exam,To get a very low score on an exam that you have studied for,To fill in the answer sheet randomly
 381,"According to the Bible, after Christ was born in Bethlehem, three Magi visited him. They presented Jesus with all these treasures, but one. Can you spot it?
 ",Chrism,Chrism,Myrrh,Gold,Frankincense
-382,"Finish this popular Christmas song about Rudolph the Red-Nosed Reindeer:
-",l of the other reindeer,ed to laugh and call him names,ey never let poor Rudolph,.,Join any reindeer games
 383,"At Christmas time radio stations broadcast famous Christmas carols, songs and often, the Hallelujah chorus from the oratorio Messiah, by this composer.
 ",George Frideric Handel,Ludwig van Beethoven,Johann Sebastian Bach,Wolfgang Amadeus Mozart,George Frideric Handel
 384,"Christmas is believed to have originated from a pagan Roman festival. It lasted 7 days and included the winter solstice, which at that time fell on December 25. Which Roman god did this festival honor?
@@ -781,10 +765,6 @@
 ",27th,34th,24th,31th,27th
 390,"Florida is a Spanish adjective which means this.
 ",Flowery,Fragrant,Sunny,Flowery,Sandy
-391,"Here is the refrain of the state song of Florida, The Swanee River. However, its lines are jumbled. Can you put them in the right order?
-",, Far from the old folks at home, Everywhere I roam., All the world is sad and dreary," O brothers, how my heart grows weary"
-392,"Far from the old folks at home
-", Everywhere I roam., All the world is sad and dreary," O brothers, how my heart grows weary","3, 2, 4, 1","4, 2, 3, 1"
 393,"In God We Trust is Floridas state motto.
 ",True,False,True,,
 394,"Sidney Poitier is a Bahamian-American actor, born in Miami, Florida. He won the Academy Award for Best Actor for his role in this movie.
@@ -1507,10 +1487,6 @@
 ",Lake Superior,Lake Michigan,Lake Ontario,Lake Erie,Lake Superior
 753,"The name of the deepest lake in the world, Lake Baikal, derives from Tatar Bai-Kul, meaning this.
 ",Rich Lake,Dark Lake,Great Sea,Great Water,Rich Lake
-754,"Arrange the following oceans by their total area, starting with the largest:
-",,The Atlantic Ocean,The Pacific Ocean,The Indian Ocean,The Arctic Ocean
-755,"he Atlantic Ocean
-",The Pacific Ocean,The Indian Ocean,The Arctic Ocean,The Southern Ocean,"2, 1, 3, 5, 4"
 756,"The Bay of Pigs is located on the coast of this country.
 ",Cuba,Jamaica,Greece,Netherlands,Cuba
 757,"The Adriatic Sea separates these two peninsulas.
@@ -1729,10 +1705,6 @@
 ",November 2003,September 2005,October 2000,November 2003,August 1992
 864,"Which of these celebrities is a fan of the Los Angeles Lakers?
 ",All of these,Jack Nicholson,Leonardo DiCaprio,All of these,Denzel Washington
-865,"Finish the lyrics of the official state song of California, I Love You, California written by F. B. Silverwood:
-",,ere the snow crowned Golden Sierras,"ep their watch oer the valleys bloom,"," is there I would be in our land by the sea,",ery breeze bearing rich perfume.
-866,"re the snow crowned Golden Sierras
-","ep their watch oer the valleys bloom,"," is there I would be in our land by the sea,",ery breeze bearing rich perfume., is here nature gives of her rarest ,.....................................................................
 867,"Which one of these volcanoes is not situated in the State of California?
 ",La Palma,La Palma,Mammoth Mountain,Mount Shasta,Lassen Peak
 868,"The first motion picture theater in the USA, called Electric Theatre, opened in Los Angeles, CA, in what year?
@@ -1807,26 +1779,10 @@
 ",Algonquian,Algonquian,Sioux,English,Spanish
 903,"The Dutch played an important role in colonizing the East Coast of the United States. But only one state name is derived from Dutch. Which one?
 ",Rhode Island,Rhode Island,Maine,Connecticut,New York
-904,"Fill in the missing words:
-"," dry leaves that before the wild hurricane fly,","en they meet with an obstacle, mount to the sky,"," up to the house-top the coursers they flew,","th the sleigh full of toys, and _____ ________ ___.","Saint Nicholas, too."
-905,"What is the missing word?
-","d then, in a twinkling, I heard on the roof",e prancing and pawing of each little hoof.," I drew in my hand, and was turning around,",wn the _______ St. Nicholas came with a bound!,chimney
-906,"Find the missing words:
-"," was dressed all in fur, from his head to his foot,",d his clothes were all tarnished with ashes and soot;,"bundle of toys he had flung on his back,",d he looked like a peddler ____ _______ ___ ____.,just opening his pack.
-907,"Complete the verse:
-",s eyes -- how they twinkled! his dimples how merry!,,,,
 908," cheeks were like roses, his nose like _____ ______ !
 ",a cherry,Spongebobs snail Gary,Drew Carey,a cherry,Halle Berry
-909,"Complete the line from the famous Christmas poem:
-","s droll little mouth was drawn up like a bow,",d the beard of his chin was __ _____ __ ___ ____;,"e stump of a pipe he held tight in his teeth,",d the smoke it encircled his head like a wreath;,as white as the snow
-910,"What are the missing words?
-"," had a broad face and a little round belly,","at shook, when he laughed like _  ________ ___ _____.",a bowlful of jelly,that singer Gino Vannelli,a pregnant Carla Tortelli
-911,"What word is missing?
-","d laying his finger aside of his _____,",,,,
 912," giving a nod, up the chimney he rose;
 ",nose,nose,clothes,toes,pantyhose
-913,"Choose the correct words to complete the verse:
-"," sprang to his sleigh, to his team gave a whistle,",d away they all flew like the down of a thistle.,"t I heard him exclaim, ere he drove out of sight,",,
 914,"py Christmas to all, ___ __ ___ _ ____ _____.!!
 ",and to all a good night !!,hope I didnt give you a fright !!,may you sleep nice and tight !!,and to all a good night !!,hope your clothes fit just right !!
 915,"The Irish originally used turnips to make Jack-o-Lanterns on Halloween.
@@ -2101,8 +2057,6 @@
 ",1284,1484,1384,1184,1284
 1050,"Leonardo of Pisa or Leonardo Pisano, also known as Fibonacci, was an Italian mathematician and is best known for the discovery of the Fibonacci numbers, which form the following sequence. 
 ",," 1, 1, 2, 3, 5, ...",,,
-1051,"1, 1, 2, 3, 5, ...
-",, you know what the next number is?,8,8,6
 1052,"you know what the next number is?
 ",8,8,6,15,10
 1053,"Galileo Galilei was born in Pisa.
@@ -2470,7 +2424,7 @@
 1234,"This notorious passenger steamer was first launched in 1865. On the evening of September 3, 1878, it collided with another vessel and sank in the Thames.
 ",Princess Alice,Princess Alice,Britannic,Queen Mary,Lady Nelson
 1235,"Lusitania and Mauretania were sister ships, built to compete with fast German liners. Which one of them was torpedoed and sunk by a German submarine in 1915?
-",Lusitania,Lusitania,None,Both,Mauretania
+",Lusitania,Lusitania,,Both,Mauretania
 1236,"In 1620, this ship made a historical voyage from Plymouth, England to North Virginia, transporting the Pilgrims to America.
 ",Mayflower,Lady Nelson,Christopher Jones,Mayflower,Nimreid
 1237,"Three of the following vessels are sister ships. Which one does not belong to the group?
@@ -2643,8 +2597,6 @@
 ",False,True,False,,
 1321,"Three of these movies are set in Pittsburgh. Which is the odd one?
 ",Good Will Hunting (1997),The Silence of the Lambs (1991),Flashdance (1983),Good Will Hunting (1997),Dogma (1999)
-1322,"Pittsburgh is home to many universities and research facilities. One of them is described here:
-",," is a private research university. It houses the first computer science school and the first drama school in the nation as well as one of the best engineering schools, and its public policy and business schools are consistently ranked among the best in the nation.",Carnegie Mellon University,University of Pittsburgh,Carnegie Mellon University
 1323,"is a private research university. It houses the first computer science school and the first drama school in the nation as well as one of the best engineering schools, and its public policy and business schools are consistently ranked among the best in the nation.
 ",Carnegie Mellon University,University of Pittsburgh,Carnegie Mellon University,Pittsburgh Institute of Aeronautics,Duquesne University
 1324,"Pittsburgh is widely believed to be right behind San Francisco as the steepest city in the United States.
@@ -2687,10 +2639,6 @@
 ",False,True,False,,
 1343,"Who gave the current title, The Star-Spangled Banner, to the US anthem?
 ",Thomas Carr,Ferdinand Durang,Thomas Carr,John Stafford Smith,Joseph H Nicholson
-1344,"This is a translation of the chorus of the national anthem of which country?
-",," arms, citizens!",rm your battalions!,"rch, march!",t impure blood (of our enemies)
-1345,"arms, citizens!
-",rm your battalions!,"rch, march!",t impure blood (of our enemies),ak the furrows (of our fields).,France
 1346,"In 1931, this president signed a Congressional resolution, by which The Star-Spangled Banner was adopted as the national anthem of the United States.
 ",Herbert Hoover,Herbert Hoover,John F Kennedy,Lyndon Johnson,Woodrow Wilson
 1347,"The National Anthem of Russia was adopted in this year.
@@ -2699,10 +2647,6 @@
 ",Roseanne Barr,Jerry Seinfeld,Stephen Lynch,Jennifer Lopez,Roseanne Barr
 1349,"What country is this national anthem of?
 ",Canada,Mexico,France,Canada,Italy
-1350,"Finish these lyrics of  the US national anthem.
-",," the shore, dimly seen through the mists of the deep,","ere the foes haughty host in dread silence reposes,","at is that which the breeze, oer the towering steep,"," it fitfully blows, half conceals, ..."
-1351,"the shore, dimly seen through the mists of the deep,
-","ere the foes haughty host in dread silence reposes,","at is that which the breeze, oer the towering steep,"," it fitfully blows, half conceals, ...",half discloses?,half opposes?
 1352,"Which General Motors brand name honors a Native American Chief?
 ",Pontiac,Chevrolet,Hummer,Pontiac,Vauxhall
 1353,"Which of these cars was named after a girl?
@@ -3005,8 +2949,6 @@
 ",The Pompey Theatre,The Pompey Theatre,The town center,The Temple of Venus,The Senate
 1502,"Julius Caesar was struck down by his assassins while on his way to what location?
 ",Temple of Venus,Temple of Venus,The Pompey Theatre,The Senate,The Temple of Zeus
-1503,"From the Halls of Montezuma
-"," the Shores of Tripoli,", fight our countrys battles , the air on land and sea. , the beginning of what song related to the United States Marine Corps?,The Marines hymn
 1504,"The United States Marine Corps is a Department of the United States Army.
 ",False,False,True,,
 1505,"During the battle of Belleau Wood, the U.S. Marines fierceness and toughness earned them the respect of the Germans, who rated them of storm-trooper quality. What nickname did the U.S. Marines reportedly earn in this battle?
@@ -3137,8 +3079,6 @@
 ",Hot Dog Eating Contest,Ice Cream Eating Contest,Hot Dog Eating Contest,Hamburger Eating Contest,Pancake Eating Contest
 1568,"Which of these American cities got the nickname Americas Most Patriotic Town as a result of having the oldest Independence Day celebrations?
 ","Bristol, Rhode Island","Bristol, Rhode Island","Atlanta, Georgia","Gainesville, Georgia","Baltimore, Maryland"
-1569,"Games of what popular US sport are usually part of the July 4th celebrations?
-",Baseball,Car Racing,Baseball,Basketball,Basketball
 1570,"Pepsi 400 is the name of what major annual sports event held on July 4th, or the Saturday of the July 4th weekend?
 ",Car racing,Motorbike racing,Baseball games,A series of extreme sports events,Car racing
 1571,"Which popular flower, native to Japan, is a symbol of the Easter holiday?
@@ -3147,10 +3087,6 @@
 ",The resurrection of Jesus,The revelation of God to humankind,The rebirth of Spring,The birth of Jesus,The resurrection of Jesus
 1573,"In the 1948 musical film, Easter Parade, Fred Astaire co-stars with which famous actress?
 ",Judy Garland,Judy Garland,Ginger Rogers,Mary Pickford,Adele Astaire
-1574,"Complete these lyrics from the popular Easter song, Here Comes Peter Cottontail:
-",,"s got jellybeans for Tommy,","lored eggs for sister Sue,",eres an orchid for your mommy ,d .........................................
-1575," got jellybeans for Tommy,
-","lored eggs for sister Sue,",eres an orchid for your mommy ,d .........................................,an Easter bonnet too,chocolate bunny too
 1576,"Which term refers to an Easter egg, decorated by the written-wax batik method?
 ",Pysanka,Pagora,Pylenta,Pelinka,Pysanka
 1577,"In the past, mostly what color did Orthodox Christians paint their Easter eggs on Holy Thursday?
@@ -3425,8 +3361,6 @@
 ",United Airlines Flight 175,Ansett Airlines Flight 232,Indian Airlines Flight 814,United Airlines Flight 175,United Airlines Flight 232
 1712,"How many were the terrorists who hijacked the four airliners and carried out the September 11 attacks on the World Trade Center and the Pentagon?
 ",19,34,25,8,19
-1713,"The following lines are from a poem written by this author who was part of the Harlem Renaissance:
-",at happens to a dream deferred?,es it dry up,ke a raisin in the sun?.,Langston Hughes,W. C. Handy
 1714,"Dr. Charles R. Drew, who developed a system for storing blood and is known as The Father of the Blood Bank , bled to death after being denied help at a whites only hospital.
 ",False,True,False,,
 1715,"What is the state motto of Texas, also called The Lone Star State?
@@ -3663,8 +3597,6 @@
 ",Xanthos,Xylopoli,Xabier,Xanthos,Xrayfilmos
 1831,"This northern English city is noted for a Viking Centre, a street of mediaeval shops known as The Shambles,  and a famous Minster.
 ",York,Yate,Yeovil,York,Yarm
-1832,"The Brussels American School (US Department of Defense School) and Brussels Airport are located in
-",is municipality in the Belgian province of Flemish Brabant.,Zaventem,Zaventem,Zagreb,Zaragoza
 1833,"On November 18 in 1820, US navigator Nathaniel Palmer became the first American to land on  Antarctica. Why did he go there?
 ",He wanted to hunt for seals.,There was no more meat on his ship and he was going after whale meat.,It was a total mistake - he was trying to get to Patagonia in Argentina.,"His rudder was broken and his ship, the Hero, just sailed due South.",He wanted to hunt for seals.
 1834,"According to legend, on November 18 in 1307 William Tell shot an arrow through an apple on top of his sons head. Tell is a national hero of which country?
@@ -3679,8 +3611,6 @@
 ",Calvin and Hobbs,The Far Side,Calvin and Hobbs,Dilbert,Mutt and Jeff
 1839,"The first book printed on press was produced on November 18 in what year?
 ",1477,1309,1477,1546,1661
-1840,"What is the title of Mark Twains first story, which was printed in the New York Saturday Evening Post
-", November 18 in 1865?,The Celebrated Jumping Frog of Calaveras County,Tom Sawyer,Life  Along the Mississippi,The Celebrated Jumping Frog of Calaveras County
 1841,"Which was the second Western Hemisphere country (after the USA) to gain its independence after winning an important battle on November 18 in 1803?
 ",Haiti,Canada,Haiti,Argentina,Mexico
 1842,"Who directed Steamboat Willie, the first fully synchronized sound cartoon with Mickey Mouse, which was released on November 18 in 1928?
@@ -4013,8 +3943,6 @@
 ",Old English,Latin,Greenlandic,Esperanto,Old English
 2006,"In which language, spoken by native inhabitants of the US, does the following mean Merry Christmas and Happy New Year: Mele Kalikimaka me ka Hauʻoli Makahiki Hou?
 ",Hawaiian,Spanish,Swahili,Hawaiian,Creek
-2007,"What American hero does Henry Wadsworth Longfellow write about in this poem:
-","rough all our history, to the last,"," the hour of darkness, and peril, and need,",e people will waken and listen to hear,e hurrying hoof-beats of that stead,d the midnight message of?
 2008,"What city does Carl Sandburg call Hog Butcher for the World and City of the Big Shoulders?
 ",Chicago,Chicago,Dallas,San Francisco,Miami
 2009,"Bartletts Book of Anecdotes describes this poet and short story writer as a doyenne of light verse and wit. This line is from her most often quoted poem: Men seldom make passes At girls who wear glasses. Name the author of this poem.
@@ -4023,10 +3951,6 @@
 ",False,False,True,,
 2011,"I saw the best minds of my generation destroyed by madness, is the opening line of Allen Ginsbergs poem Howl. Name the poetry movement with which Allan Ginsberg is associated?
 ",The Beats,The Black Mountain Poets,The Beats,Harlem Renaissance,Symbolist
-2012,"This poet, who is famous for his use of lowercase letters and word space, wrote the following:
-", Just-,ring  when the world is mud,scious the little lamebaloonman,istles,            far
-2013,"What is the name of this poem by Edna St. Vincent Millay:
-", candle burns at both ends;, will not last the night;,"t ah, my foes, and oh, my friends-", gives a lovely light!?,First Fig
 2014,"When was the song Grandma Got Run Over by a Reindeer first performed?
 ",1979,1969,1959,1979,1985
 2015,"What was the profession of the man who first performed Grandma Got Run Over by a Reindeer, before he made it big as a singer of comedy songs?
@@ -4377,8 +4301,6 @@
 ",Playboy Enterprises,United States Postal Workers,Texico,United Postal Service,Playboy Enterprises
 2188,"Dawn Moore donated, at her Fathers request, an item worn by her fathers most famous character, John Reid. John Reid would be a combination of Zorro, Robin Hood and the Texas Rangers. By what name is John Reid better known?
 ",Lone Ranger,Lone Ranger,The Rifleman,Johnny Ringo,Paladin
-2189,"Aaay! Happy Days are here again. When the Smithsonian added this characters leather jacket to their collection, the Smithsonian became the epitome of  Cool.
-",at television character would probably have said Whoa! when told he would become a museum piece?,Fonzie,Richie,Fonzie,Potsie
 2190,"Although never on display, the Smithsonian has among all its dusty artifacts John Dillingers penis.
 ",False,False,True,,
 2191,"In terms of yearly undrgraduate  tuition the most expensive college in the USA is in this state.
@@ -5347,8 +5269,6 @@
 ",Brockton,Boston,New Bedford,Rockland,Brockton
 2673,"The ship that can be seen in Plymouth, Massachusetts is called the Mayflower.
 ",False,True,False,,
-2674,"On May 5, 1920 two Italian-Americans, Nicola Sacco and Bartolomeo Vanzetti, were arrested, tried, and executed for the April 15, 1920 murders of a South Braintree paymaster and security guard and theft of the payroll. 
-",at did Sacco give as his alibi?,He was at the Italian consulate in Boston.,He was at the Italian consulate in Boston.,He was visiting friends in West Bridgewater.,He was at work and had a time-card to prove it.
 2675,"One of Nathaniel Hawthornes stories is called The Old Manse (Mosses from an Old Manse). The Old Manse was Nathaniel and his wife Sofias first home and is located in Concord, Massachusetts.
 ",True,True,False,,
 2676,"Nathaniel Hawthorne is said to have changed the spelling of his name for what reason?
@@ -5769,10 +5689,6 @@
 ","orange, white, and green","orange, white, and green","black, white, and green","blue, yellow, and white","red, white, and blue"
 2884,"Is India the second most populous country in the world?
 ",Yes,No,Yes,,
-2885,"The national anthem of which country contains the following lyrics:
-","say, can you see, by the dawns early light,",at so proudly we hailed at the twilights last gleaming??,United States of America,United States of America,England
-2886,"These verses are part of the national anthem of which country:
-",ur history is an epic, the most brilliant feats.,"d your valour, in faith steeped,",ll protect our homes and our rights;,ll protect our homes and our rights.?
 2887,"What is done to many coins so that unscrupulous people can not clip off part of  he coin to melt down?
 ",Coins have milled  edges.,Coins have milled  edges.,Coins have special radioactive particles so that the pieced can be traced.,Coins have dates on them.,Coins are made of very malleable metals.
 2888,"Ross Perot, a very successful American business man, founded Electronic Data Systems. Which statement about him is untrue?
@@ -5893,8 +5809,6 @@
 ",Antoine de Saint-Exupéry,Anatole France,Antoine de Saint-Exupéry,Honoré de Balzac,Alexandre Dumas
 2946,"What species of bird does the term lovebird refer to?
 ",parrot,dove,swan,parrot,sparrow
-2947,"What tragic Shakesperean heroine spoke the following words in her mad ramblings:
-","-morrow is Saint Valentines day,","l in the morning betime,","d I a maid at your window,", be your Valentine.?,Ophelia
 2948,"Who is known as a Beefeater?
 ",a person who guards the Tower of London,someone who prepares the Queens food,a person who guards the Tower of London,someone who tastes the Queens food,a person who guards Buckingham Palace
 2949,"Yorkshire pudding, a dish that originated in Yorkshire, England, is usually served with which of the following?
@@ -6513,8 +6427,6 @@
 ",Rage Against the Machine,Backstreet Boys,Red Hot Chili Peppers,Public Enemy,Rage Against the Machine
 3256,"This multi-Emmy-winning composer, famous for the musical West Side Story, studied music at Harvard.
 ",Leonard Bernstein,Andrew Lloyd Webber,Leonard Bernstein,La Monte Young,Malcolm Arnold
-3257,"This virtuoso cellist, who received his bachelors degree from Harvard in 1976, performed for President John F. Kennedy when he was seven.
-",Yo-Yo Ma,Joshua Redman,Joshua Redman,Han-na Chang,Yo-Yo Ma
 3258,"The month of August was originally named Sextilis in Latin. What does sextilis mean?
 ",sixth,sixteenth,sixth,sixty,eight
 3259,"What statement is true about Augustus after whom the month of August is named?
@@ -6671,8 +6583,6 @@
 ",The Gentleman in Black,Тhe Knight,The Gentleman in Black,The King,The Queen
 3335,"Visitors of Powis Castle in Powys, Wales have reported seeing which of the following?
 ",a lady in black,a lady in black,a little girl,a man in black,a lady in white
-3336,"What British prime minister lived in Hughenden Manor, Buckinghamshire?
-",Benjamin Disraeli,Gordon Brawn,Gordon Brawn,Winston Churchill,Benjamin Disraeli
 3337,"Lanhydrock in Cornwall is thought to be home to several ghosts, including a man believed to have been hanged outside the gatehouse by Civil War Royalists.
 ",True,False,True,,
 3338,"Lyme Park in Cheshire, England is believed to be haunted by which of the following?
@@ -7275,8 +7185,6 @@
 ",True,False,True,,
 3637,"Who began his career in newspapers by taking over management of a San Francisco newspaper from his father?
 ",William Randolph Hearst,William Purcell,Lord Northcliffe,Joseph Pulitzer,William Randolph Hearst
-3638,"Who said the following:
-",,ews is something somebody doesnt want printed; all else is advertising.”?,William Randolph Hearst,Lord Northcliffe,Joseph Pulitzer
 3639,"ws is something somebody doesnt want printed; all else is advertising.”?
 ",William Randolph Hearst,Lord Northcliffe,Joseph Pulitzer,William Randolph Hearst,William Purcell
 3640,"Whose life story was a source of inspiration for the lead character in Orson Welles classic film, Citizen Kane?
@@ -8131,16 +8039,12 @@
 ",2,1,4,2,3
 4065,"What do Presidents John Adams, Thomas Jefferson and James Monroe have in common?
 ",They all died on 4 July.,They all died on 2 July.,They were all born on 4 July.,They all died on 4 July.,They all signed the Declaration of Independence.
-4066,"Complete the first sentence of the Declaration of Independence, which has been called one of the best-known sentences in the English language:
-"," hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of _____________.",Happiness,Dreams,Happiness,Truth
 4067,"Which of these Founding Fathers did not sign the Declaration of Independence?
 ",George Washington,George Washington,Benjamin Franklin,Thomas Jefferson,John Adams
 4068,"Who portrayed an anti-war activist and veteran, born July 4, 1946?
 ",Tom Cruise,Tom Cruise,John Travolta,Ben Affleck,Tom Hanks
 4069,"What treaty signed in signed on September 3, 1783 formally ended the American Revolutionary War?
 ",Treaty of Paris,Treaty of London,Treaty of Madrid,Treaty of Amsterdam,Treaty of Paris
-4070,"Who recorded the 1973 ballad 4th of July, Asbury Park (Sandy) which opens with the lyrics, 
-","ndy, the fireworks are hailin over Little Eden tonight",rcin a light into all those stony faces left stranded on this warm July?,Bruce Springsteen,U2,Beach Boys
 4071,"Upon completion, the Washington Monument, built to commemorate the first US President, became the worlds tallest structure. What is the name of the architect who designed it?
 ",Robert Mills,Charles Bulfinch,James Hoban,Jorn Utzon,Robert Mills
 4072,"The Great Pyramid of Giza claimed to be the worlds tallest man-made structure for around four millennia. Along which river is the monument located?
@@ -8421,8 +8325,6 @@
 ",a giant,a goddess,a giant,a Greek god,a mermaid
 4210,"In the 7th century, after the Islamic conquest of this territory many orthodox monks went to the Holy Mountain in Greece in an attempt to find another calm place.
 ",Egypt,Mongolia,Persia,Egypt,Tibet
-4211,"The self-governed region of the Holy Mountain is considered part of the Greek state according to a decree
-",ssed in what year?,1913,1910,1913,1925
 4212,"In the 1930s, the first Greek beauty pageant contestant to win the Miss Europe titled sneaked into the Holy Mountain dressed up as a man.
 ",True,True,False,,
 4213,"In what century was the Holy Mountain in Greece conquered by the Ottoman Empire?
@@ -8603,12 +8505,8 @@
 ",Danish,Austrian,German,Danish,Canadian
 4301,"What Victorian novelist idealised white Christmas by persistently depicting snow-carpeted streets and people scraping the snow from the pavements in front of their dwellings, and from the tops of their houses?
 ",Charles Dickens,Charles Dickens,Thomas Hardy,William Thackeray,Oscar Wilde
-4302,"What English poet wrote the poem In the Bleak Midwinter in which Snow had fallen, snow on snow,
-",ow on snow?,Christina Rossetti,Elizabeth Barret Browning,Matthew Arnold,Robert Browning
 4303,"In what fantasy novel do armored white bears live in the ice-and-snow-locked land Svalbard?
 ",Northern Lights (The Golden Compass),Arctic Adventure,Northern Lights (The Golden Compass),"The Lion, the Witch and the Wardrobe",Snow Blind
-4304,"What American Modernist poet wrote the poem The Snow Man, which opens with the lines, 
-",e must have a mind of winter, regard the frost and the boughs, the pine-trees crusted with snow;?,Wallace Stevens,Wallace Stevens
 4305,"What rare findings have been made in the Hell Creek Formation in the U.S. state of Montana?
 ",Dinosaur fossils,Mummies,Gold deposits,Diamonds,Dinosaur fossils
 4306,"What is the state animal of the U.S. state of Montana?
@@ -9111,8 +9009,6 @@
 ",The Statue of Liberty,Black Hawk Statue,Madonna of the Trail,The Statue of Liberty,The Vulcan Statue
 4555,"The Motherland Calls is a statue designed to commemorate the Soviet victory in the Eastern Front of World War II.
 ",True,False,True,,
-4556,"At the time of its construction this statue of Buddha was the tallest statue in the world.
-","Statue of Lanshan Buddha, Lanshan, China","Buddha of Bamyan, Afghanistan","Buddha of Bamyan, Afghanistan","Buddhist statue of Guanyin, Sanya, China","Statue of Lanshan Buddha, Lanshan, China"
 4557,"Which monumental statues were destroyed by the Taliban in 2001 because they were considered “idols”.
 ","The Buddhas of Bamyan, Afghanistan",None of these,"The Skobelev Monuments, Moscow",Both of these,"The Buddhas of Bamyan, Afghanistan"
 4558,"Christ the Redeemer is a statue located at the peak of the Corcovado mountain.
@@ -9247,8 +9143,6 @@
 ",1992,1987,1992,1984,1995
 4623,"Three of these Amendments have been adopted during the 1920s. Which is the odd one?
 ",15th Amendment,15th Amendment,18th Amendment,19th Amendment,17th Amendment
-4624,"The following excerpt is taken from the 13th Amendment. 
-",,"ither slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States, or any place subject to their jurisdiction.",True,True,False
 4625,"ther slavery nor involuntary servitude, except as a punishment for crime whereof the party shall have been duly convicted, shall exist within the United States, or any place subject to their jurisdiction.
 ",True,True,False,,
 4626,"The Nineteenth Amendment to the United States Constitution is known as this.
@@ -9389,14 +9283,8 @@
 ",Al Capone,Angelo Bruno,Al Capone,Pino Greco,Sam Giancana
 4694,"This holiday is the Chinese equivalent of the Western, Saint Valentines Day.
 ",The Night of Sevens,Lantern Festival,The Night of Sevens,Dragon Boat,Qing Ming Jie
-4695,"This little beauty had three deuces and a four speed and a 389. Ronnie and the Daytonas
-","ng Cmon and turn it on, wind it up, blow it out, GTO. What make of car could really why-ee-eye-ine?",Pontiac,Ford,Chevrolet,Pontiac
 4696,"In what song did Prince advise Baby Ure much 2 fast; U got to slow down.?
 ",Little Red Corvette,Pink Cadillac,Little Red Corvette,Mercedes Benz,Bitchin Camaro
-4697,"He passed me on Doheny then I began to swerve
-",t I pulled her out and there we were-at Dead Mans Curve.  ,e singer was cruisin in his Stingray late one night when he was challenged to a drag race by the owner of another car. What make of car did the singer watch slide into the curve?,XKE,XKE,Deuce Coupe
-4698,"Everybody says that there is nobody meaner than this little old grandma from Pasadena.
-",es the terror of Colorado Boulevard. What slick machine is hidden in her rickey old garage?,Super Stock Dodge,Low Rider,Hot Rod Lincoln,Super Stock Dodge
 4699,"She should have gone to the library like she told her old man but shes too busy makin the Indy 500 look like a Roman chariot race, now. Too bad cause Daddy got wise (you shouldnt have lied, you shouldnt have lied) and there isnt going to be anymore Fun, Fun, Fun. What make of car did Daddy take away?
 ",T-Bird,T-Bird,Mercedes Benz,Pink Cadillac,Little Red Corvette
 4700,"Which US state hosts the school known as the CIA?
@@ -9533,16 +9421,12 @@
 ",Cyber Monday,Cyber Monday,Shopping Monday,Gloomy Monday,Busy Monday
 4766,"Which of these movies tells a story that takes place within a 12-month period beginning and ending at Thanksgiving?
 ",Hannah and Her Sisters,Scent of a Woman,Hannah and Her Sisters,The Ice Storm,Home for the Holidays
-4767,"This Thanksgiving poem is an example of which of the following?
-",ankful families join in prayer,ppy gatherings everywhere,tumn feasts with treasured friends,w Years ending; old year ends,ndled fires on hearth will bring
 4768,"The origins of Thanksgiving Day can be traced back to harvest festivals that have been celebrated since ancient times. What is the meaning of the Anglo-Saxon word from which the word ‘harvest’ is derived?
 ",autumn,reaping,hearth,plenty,autumn
 4769,"What holiday observed in the US coincides with Thanksgiving Day in Canada?
 ",Columbus Day,All Saints’ Day,Veterans Day,Pearl Harbor Remembrance Day,Columbus Day
 4770,"Starting in 1970, what annual protest is held on Thanksgiving Day in the US?
 ",The National Day of Mourning,The National Day of Mourning,Black Protest,National Anti-racial Protest,The National Anti-nuclear Protest
-4771,"What poet, known as “The Woman in White”, wrote a Thanksgiving poem opening with these lines?
-",e Day is there of the Series,rmed Thanksgiving Day.,lebrated part at Table,rt in Memory.,Emily Dickinson
 4772,"In the movie “Scent of a Woman”, Lieutenant Colonel Frank Slade reveals to young Charlie, that his plan for the Thanksgiving holiday is: to stay in a first-class hotel, eat an agreeable meal, drink a nice glass of wine, visit his elder brother, make love to a terrific woman and then blow his brains out. Name the two actors who star in the movie.
 ",Al Pacino and Chris ODonnell,Al Pacino and Chris ODonnell,Al Pacino and Leonardo DiCaprio,Robert De Niro and Chris O’Donnell,Al Pacino and Edward Norton
 4773,"What was the dominant type of Native American living structure in the Eastern United States and Canada?
@@ -9697,8 +9581,6 @@
 ",False,True,False,,
 4848,"The reason for GEs purchase of the NBC Television Network is ironic - GE was forced to sell its RCA stock because RCA owned the fledgling broadcasting chain in the 1930s.
 ",True,True,False,,
-4849,"Is the following information true?
-","ward R. Murrow is often credited with creating broadcast news, but he was actually Director of Talks when CBS sent him to London as WWII started. Murrow built on predecessor Paul Whites work, in creating his system of European correspondents.",Yes,No,Yes,
 4850,"Radio did not die when pictures were added just before World War I (Britain) or just after it (U.S.). How did it survive?
 ",Created the combo-man (engineer and host) and began programming music to specific demographic cells.,Aligning with the great movie production houses allowed poor mans  television,Created the combo-man (engineer and host) and began programming music to specific demographic cells.,Started the Top 40 radio format,Started Make Believe Ballroom
 4851,"What sounded the death knell for radio news on commercial radio stations?

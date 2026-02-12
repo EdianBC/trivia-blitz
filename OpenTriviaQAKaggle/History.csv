@@ -1,4 +1,4 @@
-,Questions,Correct,A,B,C,D
+Unnamed: 0,Questions,Correct,A,B,C,D
 0,"In which US state is the active Mount Rainier volcano located?
 ",Washington,Michigan,Ohio,Washington,New York
 1,"In 1990, this 5000 year old body was found in the Alps. Scientists discovered some tattoos on his leg which indicated that acupuncture was used as far back as the Copper-stone Age.
@@ -109,8 +109,6 @@
 ",True,False,True,,
 54,"Which one of these actors was not in the Academy Award winning Oliver Stone film Platoon?
 ",Tom Cruise,Tom Berenger,Charlie Sheen,Johnny Depp,Tom Cruise
-55,"On what album released in 1986 would I find the following lyrics:
-","en I was 17 I did what people told me, ",d what my father said and let my mother mold me,Control - Janet Jackson,True Stories - Talking Heads,Control - Janet Jackson
 56,"What southern sitcom, which debuted in 1986, are the following characters from: Julia, Suzanne, Mary Jo, Charlene, Anthony and Bernice?
 ",Designing Women,Designing Women,Mamas Family,Its A Living,The Golden Girls
 57,"This was an attempt to establish the use of the metric system in the United States. However it was not accepted and the US never converted.
@@ -701,8 +699,6 @@
 ",Angela Davis,Susan Saxe,Ruth Eisemann-Schier,Bernadine Dorn,Angela Davis
 350,"In 1970, in a span of 72 hours, how many women made the FBIS 10 Most Wanted List?
 ",3,5,2,3,4
-351,"Tin soldiers and Nixon coming
-",re finally on our own.,e the beginning lyrics of a Neil Young song about one states national guard firing into a group of student protesters. On what college campus did a tragic shooting leave four college students dead?,Kent State University,University of California at Berkley,Boston College
 352,"Name the first great Greek tragic playwright who is now acknowledged as the Father of Drama?
 ",Aeschylus,Aeschylus,Aesop,Euripides,Sophocles
 353,"Which Greek historian is known as the Father of History?
@@ -771,8 +767,6 @@
 ",MASH,Roots,MASH,Dallas,Gunsmoke
 385,"First photographed by Richard Avedon, this campaign was one of the most famous and successful ad campaigns of the 70s. The ads features beautiful black and white photos of Judy Garland, Marlene Dietrich, Lauren Bacall and Barbra Streisand. What company asked the question What Becomes a Legend Most?
 ",Blackglama,Psychedelic Furs,Famous Furs LTD,Blackglama,Ritz Furs
-386,"It was just the musical chords of E and F played alternately back and forth but even to this day
-",en you hear these chords you think DANGER. For what 1975 summer blockbuster did composer John Williams win an Oscar for Best Score?,Jaws,Halloween,Jaws,E.T.
 387,"How many people were murdered as a result of the Salem Witch Trials?
 ",20,40,1000,2000,20
 388,"Durong the Salem Witch Trials, those accused of witchcraft were burned at the stake.
@@ -1525,8 +1519,6 @@
 ",Alexandra,Alexandra,Maria,Catherine,Elizabeth
 762,"What was Tsarskoye Selo?
 ",The residence of the imperial family south of St. Petersburg,The Tsarist legislature,The residence of the imperial family south of St. Petersburg,The site of a famous Russian battle,The true last name of the members of the Romanov dynasty
-763,"What American product from the 50s was advertised with roadside signs reading slogans such as:
-",e place to pass, curves,u know, only at,beauty show?
 764,"The average income in the United States in 1952 was $3,515.00. What was the average price of a house at that time?
 ","$16,800.00","$2,000.00","$16,800.00","$50,000.00","$10,000.00"
 765,"In what year was the first microwave oven manufactured by Tappan and offered in the USA for $1300.00?
@@ -1665,8 +1657,6 @@
 ",Horatio Nelson,Horatio Nelson,"Arthur Wellesley, Duke of Wellington",John Paul Jones,James Wolfe
 832,"He was the bravest and strongest Greek warrior in the Trojan War. He died when Apollo helped guide Pariss arrow to this warrior only vulnerable spot?
 ",Achilles,Patroclus,Agamemnon,Hector,Achilles
-833,"Stormd at with shot and shell,
-","ldly they rode and well, ","to the jaws of Death,",to the mouth of Hell,de the six hundred.,"e verse is taken from Alfred, Lord Tennysons The Charge of the Light Brigade. The poem"
 834,"Perhaps the greatest  warrior-king in Roman history, what warrior summed up his victory in these three words, Veni, Vidi, Vici. ?
 ",Julius Caesar,Julius Caesar,Mark Anthony,Marcus Aurelius,Octavian
 835,"The US, Britain and Germany were the main belligerents at Normandy during WWII, but three other nations had troops there who fought in their own organized national units. Which of the following was NOT one of those three nations?
@@ -1760,7 +1750,7 @@
 879,"What was the last state to secede from the Union?
 ",Tennessee,Tennessee,Louisiana,Arkansas,Texas
 880,"How many Union soldiers were killed during the bombardment of Fort Sumter in Charleston Harbor?
-",None,1,4,2,None
+",,1,4,2,
 881,"In 1962 President Kennedy of the US and Chairman Khrushchev of the Soviet Union were able to peacefully end a confrontation which might have led to a nuclear war. Where was this crisis centered?
 ",Cuba,Israel,Korea,Berlin,Cuba
 882,"Early in his administration this US President survived being shot by an assassin and even showed a sense of humor when he told his wife, Honey, I forgot to duck.
@@ -2439,8 +2429,6 @@
 ",It was the naval battle that  took place at Thermopylae,It was the battle where king Darius was defeated,It was the final naval battle that destroyed the Greek fleet,It was the battle before the sacking of Athens,It was the naval battle that  took place at Thermopylae
 1219,"In the historic Battle of Thermopylae, who is Ephialtes?
 ",A greek traitor,A greek hero,A persian hero,A greek traitor,A persian traitor
-1220,"When was this headline breaking news:
-",o people found murdered outside a condominium on South Bundy Drive in the Brentwood area of Los Angeles.?,"June 13, 1994","June 13, 1994","May 10, 1994","May 13, 1994"
 1221,"Who created the concept of the Dark Ages in the 1330s?
 ",Petrarch,Johan Huizinga,Dorothy Sayers,Petrarch,Flavio Biondo
 1222,"What Renaissance humanist historian coined the term Middle Age?
@@ -2483,8 +2471,6 @@
 ",Sweden,Norway,Sweden,Finland,Denmark
 1241,"Which ancient nation is the name Gustav related to?
 ",Goths,Huns,Scythians,Goths,Vikings
-1242,"Gustav has been a common name for Swedish monarchs since the reign of Gustav Vasa or Gustav I.  
-"," became king in 1521, after leading the rebellion against King Christian II of this country who controlled most of the Sweden.",Denmark,England,Spain,Denmark
 1243,"This Swedish city was founded by Gustav II Adolf, who was known by the Latinized name Gustavus Adolphus and was King of Sweden from 1611 until his death.
 ",Goteborg,Stockholm,Goteborg,Malmo,Lund
 1244,"Charles X Gustav (Karl X Gustaf) was a descendant of the House of Palatinate-Zweibrücken. On July 10, 1655, he left Sweden to engage in the Second  Northern War (1655-1660) which started with the occupation of Dünaburg by the Swedes on July 1, 1655. Eventually his armies occupied most of this European country.
@@ -2497,8 +2483,6 @@
 ",Tennis,Chess,Polo,Golf,Tennis
 1248,"Most of the powers of the Swedish monarchy died with Gustaf VI Adolf who had two major interests in life besides his country: archeology and this science.
 ",Botany,Astronomy,Physics,Music,Botany
-1249,"King Carl XVI Gustaf ascended to the throne on September 15, 1973, after the death of his grandfather, King Gustaf VI Adolf. Carl XVI Gustaf, who is probably best known as the presenter of the Nobel Prizes,
-",blicly admitted to suffer from this condition.,Dyslexia,Hemophilia,Dyslexia,Epilepsy
 1250,"Which of these are not characteristic of Gothic architecture?
 ",dark or brown walls,dark or brown walls,ribbed vaults,flying buttresses,pointed arches
 1251,"In which of the following present-day countries was Gothic language spoken?
@@ -2703,10 +2687,6 @@
 ",Yes,No,Yes,,
 1351,"When was the first U.S. adhesive postage stamp sold?
 ",1847,1747,1690,1847,1790
-1352,"The lefty, Henry Ford, founded the Ford Motor Company. Finish this quote and find out how he defined quality. 
-",ality means doing it right when ___________________________.,...no one is looking.,...everyone is looking.,...you want to.,...no one is looking.
-1353,"On what album released in 1986 would I find the following lyrics:
-","en I was 17 I did what people told me, ",d what my father said and let my mother mold me,Control - Janet Jackson,True Stories - Talking Heads,Control - Janet Jackson
 1354,"This fashionable head accessory was hip from the very beginning of the 80s until their end.
 ",Headband,Hairpins,Artificial braids,Headband,Artificial comb
 1355,"This style dominated both music and fashion in the late 70s and early 80s. The Sex Pistols and The Exploited were just some of bands that had great influence on mens and womens look.
@@ -2803,8 +2783,6 @@
 ",Versace,Givenchy,Versace,Ferre,Gucci
 1401,"On June 17, 1994 actor and football legend O. J. Simpson, instead of turning himself into the authorities to be charged for the murder of his wife Nicole and her friend Ron Goldman, led the police on a slow speed chase on Interstate 405. O. J. Simpson was a passenger in the white Ford Bronco. Who drove the white Bronco?
 ",Al Cowlings,Robert Kardashian,Robert Shapiro,John McKay,Al Cowlings
-1402,"Always a bridesmaid and never a bride. No more!  What daytime soap actress won an Emmy
-",r her role as Erica Kane on her 19th try?,Susan Lucci,Melody Thomas Scott,Jeanne Cooper,Eileen Fulton
 1403,"Many in Hollywood were nervous when this lady was arraigned on charges of pandering and tax evasion on August 9, 1993. Who was known as the Hollywood Madam or Madam to the Stars?
 ",Heidi Fleiss,Sydney Biddle Barrows,Heidi Fleiss,Polly Adler,Mona Stangley
 1404,"Which of these movies won all five of the top categories: Best Picture, Best Actor, Best Actress, Best Director and Best Screenplay?
@@ -2839,8 +2817,6 @@
 ",False,True,False,,
 1419,"This sassy matronly housekeeper on Give Me A Break! was 54 when she died in 2003.
 ",Nell Carter,Bev Carter,Barb Streisand,Bette Midler,Nell Carter
-1420,"Tin soldiers and Nixon coming
-",re finally on our own.,e the beginning lyrics of a Neil Young song about one states national guard firing into a group of student protesters. On what college campus did a tragic shooting leave four college students dead?,Kent State University,Ohio State University,Kent State University
 1421,"The most famous battle of the Hundred Years War between England and France resulted in a massive French army being defeated by a much smaller English army, led by King Henry V. Where did this battle take place?
 ",Agincourt,Harfleur,Agincourt,The Somme,Calais
 1422,"What battle of 1781 resulted in a decisive victory of the American army against Great Britain and caused the British government to negotiate an end of the American Revolutionary War?
@@ -2861,8 +2837,6 @@
 ","Egypt, Syria, Jordan","Turkey, Jordan, Oman","Syria, Jordan, Iraq","Egypt, Syria, Turkey","Egypt, Syria, Jordan"
 1430,"The Charge of the Light Brigade, which remained in history as a rather incompetent and unsuccessful cavalry charge, led by Lord Cardigan, occurred during which military conflict?
 ",The Crimean War,The Boer War,The Crimean War,The Franco-Prussian War,The Boxer Rebellion
-1431,"It was just the musical chords of E and F played alternately back and forth but even to this day
-",en you hear these chords you think DANGER. For what 1975 summer blockbuster did composer John Williams win an Oscar for Best Score?,Jaws,Halloween,E.T.,Jaws
 1432,"During Operation Barbarossa, which began on June 22, 1941, the Red Army was found unprepared for a possible attack for what reason?
 ",All of these,The aviation units were not dispersed and ready for a battle,All of these,There was a disorganization in the armor units,Stalin didnt believe that the Third Reich was going to attack only two years after signing the Molotov-Ribbentrop Pact
 1433,"The British colony of Hong Kong was finally defeated by Japanese Forces in December, 1941 on Christmas day. The locals called that day by what name?
@@ -2901,8 +2875,6 @@
 ",Cougar,Vixen,Fox,Cougar,Badger
 1450,"The movie No Country for Old Men based on the novel by Cormac McCarthy was on many list of 10 Best Films of the Year and won Best Picture from the National Board of Review and the Critics Choice Awards.  Who directed No Country for Old Men?
 ",The Coen Brothers,The Coen Brothers,Clint Eastwood,Tim Burton,Sean Penn
-1451,"Together at last! Late Show with David Letterman won the # 1 spot in The 10 Best TV Ads.
-","ng thought to be estranged, what billionaire is Dave cuddling up with to cheer on their respective football teams.",Oprah Winfrey,Drew Barrymore,Oprah Winfrey,Steve Jobs
 1452,"In college football, 2007 may well be remembered as the year of the upset. On October 13, November 23, 24 and December 1st both the # 1and # 2 teams in the US suffered upsets and the 2007 regular season ended with Pitts shocking  win over West Virginia. But it was the defeat of Michigan, the fifth ranked team in the nation, by a 1-AA team that has been touted by many as the greatest upset in college football history. What team became the first 1-AA team to beat a ranked 1- A team?
 ",Appalachian State University,Appalachian State University,Montana State,University of Delaware,The Citadel
 1453,"If you cant do the time, dont commit the crime. Which of the following celebrities spent the LEAST amount of time in jail in 2007?
@@ -2993,8 +2965,6 @@
 ",Sudan,Sudan,Saudi Arabia,Yemen,Iraq
 1496,"Which of the following proved to be the greatest obstacle to saving lives in New York Citys 9/11 rescue efforts at the World Trade Center towers?
 ",outdated fire department radios,poor building design,lack of disaster training,outdated fire department radios,poor leadership
-1497,"What American product from the 50s was advertised with roadside signs reading slogans such as:
-",e place to pass, curves,u know, only at,beauty show?
 1498,"Which is the most accurate number of casualties (including killed, wounded or lost) of World War II?
 ","16,354,000","11,147,000","16,354,000","7,457,000","9,127,000"
 1499,"In 1942 there was a terrible ammonium nitrate explosion that killed 20 people. Where did it occur?
@@ -3033,10 +3003,6 @@
 ",He was successful in naval warfare against the British.,He used guerrilla warfare against the British.,He was able to get several Indian tribes to fight against the British.,He was successful in naval warfare against the British.,He captured several British forts in Canada.
 1516,"What statement is true about the Treaty of Paris of 1783?
 ",It recognized US independence.,It recognized US independence.,It granted territory to the US from the Atlantic Ocean to the Pacific Ocean.,All of these,It formed a permanent alliance between France and the US.
-1517,"Stormd at with shot and shell,
-","ldly they rode and well, ","to the jaws of Death,",to the mouth of Hell,de the six hundred.,"e verse is taken from Alfred, Lord Tennysons The Charge of the Light Brigade. The poem"
-1518,"We may have not known the meaning of 
-","ulez vous coucher avec moi ce joir,",t we could figure out the meaning of ,"tchi gitchi. Ya, ya.  Da. Da.","o was struttin her stuff in New Orleans asking Hey Joe, want to give it a go?",Lady Marmalade
 1519,"The pros:  this pet needed no watering, feeding, worming or grooming.  You could go on a six month vacation and never have to ask your neighbor to take care of this pet.  The cons:  this pet could only learn how to stay and  was very, very boring.  Thanks to Gary Dahl, what pet sold over 1,000,000 in 1975?
 ",Pet Rock,Chia Pet,Elmo,Pet Rock,Invisible Dog
 1520,"Where would you be if you heard Tattoo yell out,  Ze plane!  Ze plane!
@@ -3197,8 +3163,6 @@
 ",Its nose,Its nose,Its wings,Its headdress,Its tail
 1598,"What word refers to the hundreds of flat-roofed Egyptian tombs built round the Pyramids of Giza?
 ",Mastabas,Pyramidions,Mastabas,Ben-bens,Stelas
-1599,"When was this headline breaking news:
-",o people found murdered outside a condominium on South Bundy Drive in the Brentwood area of Los Angeles.?,"June 13, 1994","May 10, 1994","June 10, 1994","June 13, 1994"
 1600,"The Alamo mission was captured on this day in 1836.
 ",March 6,June 16,March 6,June 1,April 1
 1601,"Sam Houston avenged the deaths of those killed at the Alamo in this battle.
@@ -3213,12 +3177,6 @@
 ",True,True,False,,
 1606,"Richard Widmark played Jim Bowie in the 1960 movie The Alamo.
 ",True,False,True,,
-1607,"Gustav has been a common name for Swedish monarchs since the reign of Gustav Vasa or Gustav I.  
-"," became king in 1521, after leading the rebellion against King Christian II of this country who controlled most of the Sweden.",Denmark,Germany,Spain,England
-1608,"King Carl XVI Gustaf ascended to the throne on September 15, 1973, after the death of his grandfather, King Gustaf VI Adolf. Carl XVI Gustaf, who is probably best known as the presenter of the Nobel Prizes,
-",blicly admitted to suffer from this condition.,Dyslexia,Epilepsy,Dyslexia,Hemophilia
-1609,"Never in the field of human conflict was so much owed by so many to so few. These words uttered by Winston Churchill refer to the bravery of the men serving in the British Royal Air Force. What is the name given to the air warfare that was carried out by the powerful Luftwaffe against the RAF 
-",ring the summer of 1940?,Battle of Britain,Battle of Midway,Battle of Normandy,Battle of Brittany
 1610,"The Crusaders lost the Battle of Hattin because of the stupidity of King Guy of Jerusalem who insisted on marching the Crusaders in heavy armor through arid, waterless land and demanding the enemy come out and fight like good Christian soldiers. What Muslin leader was able to lead his quick, mobile cavalry to victory over the Knights Templar and the army of the Crusaders?
 ",Saladin,Emir Abd-ar-Rahman,Ali Pasha,Hannibal,Saladin
 1611,"It was on September 18,1862 that General Robert E. Lee and the Confederate Army of Northern Virgina battled General George McClellan on a cornfield near Sharpsburg, Maryland. What is the name of the battle that is often called the bloodiest single day of warfare in American history?

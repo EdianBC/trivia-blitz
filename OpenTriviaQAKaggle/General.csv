@@ -1,8 +1,6 @@
-,Questions,Correct,A,B,C,D
+Unnamed: 0,Questions,Correct,A,B,C,D
 0,"This drink contains caffeine.
 ",Coffee,Mineral water,Orange juice,Coffee,Beer
-1,"Finish the proverb:
-",,"ets are born, ________.",...not made.,...not made.,...but can also be made.
 2,"ts are born, ________.
 ",...not made.,...not made.,...but can also be made.,...but thats not for sure.,"..., long live the poets!"
 3,"If a TV program is rated G then this is true.
@@ -276,7 +274,7 @@
 137,"When did the famous American crooner Nat King Cole and his daughter Natalie Cole record their hit song, Unforgettable”?
 ",Never,in 1989,Never,in 1990,The date was never officially revealed
 138,"What does the Yiddish word Bupkis mean in English?
-",Nothing,None,Nothing,Never,Rubbish
+",Nothing,,Nothing,Never,Rubbish
 139,"In ancient times, which stone was believed to protect from drunkenness?
 ",amethyst,amethyst,ruby,emerald,onyx
 140,"Nicknamed Mighty Mo (or Big Mo), this Iowa-class battleship from the end of World War II was the last battleship built by the United States.
@@ -357,8 +355,6 @@
 ",Gynecomastia,Hepatitis,Gynecomastia,Budd-Chiari Syndrome,Caroli Disease
 178,"Studies have proven that there is a relation between wearing bras and this disease.   Research found that 3 out of 4 women wearing bras 24 hours a day had the chance to get this disease, while women wearing bras for less than 12 hours a day had a 1 out of 152 chance.
 ",Breast cancer,Gynecomastia,Breast cancer,Anemia,Asthma
-179,"What is the missing word in these lyrics taken from a traditional folk song of the Southern United States?
-","eres a yellow rose of ______ Im goin for to see, "," other soldier knows her, nobody only me.?",Texas,Jasper,Texas
 180,"The Yellow River is the second largest river after the Yangtze in what country?
 ",China,Australia,Japan,South Africa,China
 181,"A yellow ribbon is worn to recognize the struggle that men and women face when battling cancer.
@@ -791,8 +787,6 @@
 ",1,10,5,1,3
 395,"The top price for a ticket to the Super Bowl I in 1967.
 ",$12,$27,$55,$100,$12
-396,"Solve for X:
-",,= [(number of arms on a squid) - (height in feet of an NBA basketball hoop)] * [number of minutes taken for light from the sun to reach the earth],0,8,24
 397," [(number of arms on a squid) - (height in feet of an NBA basketball hoop)] * [number of minutes taken for light from the sun to reach the earth]
 ",0,8,24,72,0
 398,"Homers epic poems, The Iliad and The Odyssey, are made up of this many books each.
@@ -1197,10 +1191,6 @@
 ",Hootie and the Blowfish,Hootie and the Blowfish,King Crimson,Pearl Jam,Mike and the Mechanics
 598,"What were the names of the twin sons of Jesse and Becky from the Full House TV show?
 ",Alex and Nicky,Anthony and Darren,Tony and T. J.,Alex and Nicky,Dave and Otis
-599,"What four words end the first two lines of this famous Christmas poem ?
-",,"as the night before Christmas, when all through the house","t a creature was stirring, ___ ___ __ _____.",not even a mouse.,not even a grouse.
-600,"s the night before Christmas, when all through the house
-","t a creature was stirring, ___ ___ __ _____.",not even a mouse.,not even a grouse.,not even Juliet Prowse.,not even a mouse.
 601,"How do you say snow in French?
 ",neige,neige,vent,soleil,pluie
 602,"The word for tomato in Spanish is _________ .
@@ -1435,8 +1425,6 @@
 ",Palindrome,Perambulation,Palindrome,Personalisation,Personification
 717,"What word means a baked dish made mainly of eggs and milk?
 ",Quiche,Quivive,Quoin,Quiche,Quiddich
-718,"Complete this famous quotation, attributed to, and denied by, Winston Churchill. 
-","nt talk to me about naval tradition. Its nothing but ____, sodomy, and the lash.",Rum,Ropes,Rashes,Rotten biscuits
 719,"Which engineer founded the Institution of Mechanical Engineers in 1847?
 ",George Stephenson,Robert Stephenson,Igor Sikorski,George Stephenson,Joseph Strauss
 720,"Which of these fish is least likely to be found in seawater?
@@ -1527,12 +1515,8 @@
 ",Scarface,The Godfather: Part II,The Godfather,Scarface,Serpico
 763,"All of these gadgets belong to James Bond except one.  Can you spot it?
 ",Batarang,Batarang,Cigarette lighter (a disguised timed explosive),Polarizing Sunglasses,Phone Booth Trap
-764,"Complete the title of an 80s song by Duran Duran: 
-",w Moon on...,... Monday,... Thursday,... Monday,... Friday
 765,"Finish the title of a 1988 movie starring Richard Dreyfuss:  Moon Over _____
 ",Parador,Middlesburg,Paraguay,Miami,Parador
-766,"Finish the title of a song from the Hit TV Series, The Drew Carey Show.
-",on Over ____,Parma,Pittsburgh,Shaker Heights,Parma
 767,"1973 Pink Floyd album,entitled Dark Side of _____.
 ",... the Moon,... the Sun,... Darkness.,... the Moon,... Parapsychology
 768,"Finish the title of a 1903 clasic tune:  Shine on...
@@ -1591,8 +1575,6 @@
 ",THC Ministry,Order of the Solar Temple,Peoples Temple,THC Ministry,Heavens Gate
 795,"Leather can bring out the best in some females.  Which feline fatale said  Youre the second man who killed me this week but Ive got seven lives left.?
 ",Catwoman,Catwoman,Storm,Daredevil,Miss Kitty
-796,"Cute little Gertie from E. T.  was no where in evidence when this actress played a evil Lolita
-","o seduces her friends dad, kills the mother and tries to frame her  friend  for murder.  What actress is  Poison Ivy?",Drew Barrymore,Drew Barrymore,Brooke Shields,Sara Gilbert
 797,"What color is a John Deere tractor?
 ",Green,Red,Blue,Green,Black
 798,"Both male and female mammals have the ability to produce milk.
@@ -2317,8 +2299,6 @@
 ",Chloroplast,Mitochondria,Cytoplasm,Chloroplast,Ribosomes
 1158,"James Madison was the 3rd U.S. President.
 ",False,True,False,,
-1159,"If I mix the following ingredients together, what drink would I have? 
-","2 fluid ounce vodka, 1/2 fluid ounce cointreau, 1 teaspoon fresh lime juice, 1 1/2 fluid ounces cranberry juice, 1 twist lime zest, garnish",Cosmopolitan,Moscow Mule,Long Island Ice Tea,Basil Vodka Gimlet
 1160,"Who wrote the book To Kill a Mockingbird?
 ",Harper Lee,James Baldwin,Harper Lee,Norman Mailer,Mark Twain
 1161,"The first recorded use of the word purple in the English language dates back to what year?
@@ -2613,8 +2593,6 @@
 ",Czechoslovakia,Hungary,Ukraine,Poland,Czechoslovakia
 1306,"What Beatles single, that ran seven minutes, was the first to be released on the Beatles new Apple label?
 ","Hey, Jude",Let It Be,"Hey, Jude",Revolution,The Long and Winding Road
-1307,"When Anti-war protesters, socialists and Yippes (Youth International Party ) descended on the 1968 Democratic National Convention, the mayor of this city responded by using 12,000
-","licemen, 6,000 Illinois National Guardsmen and 6,000 U.S. army troops armed with flamethrowers and bazookas. What mayor said The policeman isnt there to create disorder, the policeman is there to preserve disorder.?",Richard Daley,Richard Daley,Jerry Brown,Nelson Rockafeller
 1308,"It was after winning the California Democratic Primary that Robert Kennedy was shot at the Ambassador Hotel when he walked into a service area to greet supporters. Who was convicted for the assassination of Robert Kennedy?
 ",Sirhan Sirhan,Jack Ruby,Lee Harvey Oswald,Sirhan Sirhan,James Earl Ray
 1309,"What is the name of Hermones cat in the Harry Potter series?
@@ -2807,12 +2785,8 @@
 ",Rent,Hair,The Heidi Chronicles,Jersey Boys,Rent
 1403,"This 1996 game introduced networked play and 3-D graphics. What game introduced or perfected this landmark first person shooter according to Entertainment Weekly?
 ",Doom,Doom,GoldenEye007,Grand Theft Auto,StarCraft
-1404,"The cow as white as milk
-",e cape as red as blood,e hair as yellow as corn,d the slipper as pure as gold. , demands the witch. As Entertainment Weekly states Everyone lives happily ever after-till Act 2. In what musical will you find the songs Cinderella at the Grave and Giants in the Sky?,Into the Woods
 1405,"Gollum was a marvel of computer graphics in The Lord of the Rings. What actor gave Gollum his movements?
 ",Andy Serkis,Andy Serkis,Eddie Deezen,Fat Joe,Savion Glover
-1406,"The best thing about being a woman
-"," the prerogative to have a little fun (fun, fun)",is lyric is from the album ranked # 24 On Entertainment Weeklys list of albums. What artist released a 1997 album that became the best selling album ever by a female artist?,Shania Twain,Mariah Carey,Beyonce
 1407,"What Victorian poet is the author of Porphyrias Lover, a poem written in the form of a shocking dramatic monologue?
 ",Robert Browning,Robert Hass,Robert Burns,Robert Browning,Robert Frost
 1408,"Which of these songs, inducted into the Grammy Hall of Fame, was not recorded by the singer-songwriter, born Robert Allen Zimmerman?
@@ -3047,8 +3021,6 @@
 ",Napoleon,Louis Philippe,Richelieu,Napoleon,Louis XIV
 1523,"Television beamed their fairytale wedding to over 270 million viewers on July 29, 1981. Sadly, on August 28, 1996 a divorce was granted to the Peoples Princess  and her once Prince Charming. Who was the Princess referring to when she stated in an interview on the BBC, There were three of us in the marriage, so, it was a bit crowded.?
 ",Camilla Parker Bowles,Wallis Warfield Simpson,Camilla Parker Bowles,Tiggy Legge-Bourke,Alice Keppel
-1524,"Look for me by moonlight
-",tch for me by moonlight,"l come to thee by moonlight, though hell should bar the way.","at is the title of the poem that tells of the ill-fated love of Bess the landlords daughter and her lover who lay in his blood on the highway, with a bunch of lace at his throat.?",The Highwayman,Danny Deever
 1525,"What color is the sweat of the Hippopotamus?
 ",Red,Red,Clear,Pink,Blue
 1526,"What is the strongest muscle in the body in relation to its size?
@@ -3611,8 +3583,6 @@
 ",Catch-22,Slaughterhouse-Five,Catch-22,One Flew Over the Cuckoos Nest,Cats Cradle
 1805,"What actress portrayed Hana, the French-Canadian nurse who looked after a critically burned man in the Oscar-winning movie The English Patient?
 ",Juliette Binoche,Kristin Scott Thomas,Catherine Deneuve,Juliette Binoche,Audrey Tautou
-1806,"What song by The Beatles, recorded during the Sgt. Pepper sessions, contains the lyrics: 
-",hind the shelter in the middle of a roundabout ,e pretty nurse is selling poppies from a tray?,Penny Lane,Help!,Strawberry Fields Forever
 1807,"In this drama film, Penelope Cruz character, Mia, trains to be a nurse and is anxious to join the anti-fascist forces during the Spanish Civil War.
 ",Head in the Clouds,All About My Mother,Vicky Cristina Barcelona,Head in the Clouds,Vanilla Sky
 1808,"In the 2001 movie Pearl Harbor, Kate Beckinsales character, Nurse Lt. Evelyn Johnson, is pregnant with a child whose father, Danny (Josh Hartnett) did not survive what event of WWII?
@@ -4141,8 +4111,6 @@
 ",True,True,False,,
 2070,"A man shoots his wife. Then he holds her underwater for 5-10 minutes. Then he hangs her. 30 minutes later they go out to dinner at a 5-star restaurant. How is this possible?
 ",He is a photographer,He is a photographer,none of these,He brings her back to life.,He remarries.
-2071,"WETYIAFHKLXVNM
-",UOPSDGJCB, which of these rows would the letter Z  go?,top,bottom,top
 2072,"Who portrayed Adam Schiff, the Manhattan District Attorney in Law and Order?
 ",Steven Hill,Fred Dalton Thompson,Steven Hill,Dann Florek,Steve Zirnkilton
 2073,"He was the young, honest lawyer who won the case in the movie and novel The Rainmaker.
@@ -4465,8 +4433,6 @@
 ",False,False,True,,
 2232,"What is a group of bears called?
 ",a sleuth,a family,a tribe,a sleuth,a band
-2233,"The following group of words (as a whole) makes up a palindrome:
-",man.  A plan.  A canal.  Panama.,True,False,True,
 2234,"Which African American invented the traffic light?
 ",Garrett Morgan,Otis Boykin,Garrett Morgan,Lewis Latimer,George Washington Carver
 2235,"What number does the Roman Numeral L represent?
@@ -5367,8 +5333,6 @@
 ",True,True,False,,
 2683,"Ailurophobia is fear of these animals.
 ",Cats,Horses,Cats,Dogs,Fish
-2684,"Finish the proverb:
-","ets are born, ________.",...not made.,...not made.,...but thats not for sure.,"..., long live the poets!"
 2685,"The first product to have a bar code was this.
 ",Gum,Gum,Oil,Flour,Wine
 2686,"All US Presidents have worn glasses.
@@ -5473,8 +5437,6 @@
 ",Yes,Yes,No,,
 2736,"What bird can be associated with the infectious disease Varicella?
 ",Chicken,Crane,Hen,Chicken,Blue jay
-2737,"What is the missing word in these lyrics taken from a traditional folk song of the Southern United States?
-","eres a yellow rose of ______ Im goin for to see, "," other soldier knows her, nobody only me.?",Texas,Texas,Kansas
 2738,"What are the lights in our homes wired in?
 ",parallel,circuits,parallel,pairs,series
 2739,"The telephone handset has two main parts. One is the mouthpiece or transmitter. What is the other one?
@@ -5533,8 +5495,6 @@
 ",A Bronx Tale - 1993,Mad Dog and Glory - 1993,This Boys Life - 1993,Heat - 1995,A Bronx Tale - 1993
 2766,"What is unusual about the curriculum of St. Helens School in Newbury, Ohio?
 ",Unicycling is a mandatory subject.,"Except for Advanced Placement  classes, all classes are taught in Latin.",Studying at least four foreign languages is mandatory.,Unicycling is a mandatory subject.,"Although it is a Catholic school, Hebrew is a required subject."
-2767,"Solve for X:
-",= [(number of arms on a squid) - (height in feet of an NBA basketball hoop)] * [number of minutes taken for light from the sun to reach the earth],0,8,24,0
 2768,"What is a moirologist?
 ",Someone paid to mourn at a funeral,A well-dressed woman,A stutterer or stammerer,Someone paid to mourn at a funeral,A trademark used as a generic term
 2769,"Geologically, we are in the Quaternary Period of the Cenozoic Era. In which geological epoch are we?
@@ -5653,12 +5613,6 @@
 ",American soldiers,Spanish soldiers,French soldiers,Japanese soldiers,American soldiers
 2826,"Fleas can jump 130 times their own height.
 ",Yes,No,Yes,,
-2827,"Complete this famous quotation, attributed to, and denied by, Winston Churchill. 
-","nt talk to me about naval tradition. Its nothing but ____, sodomy, and the lash.",Rum,Rum,Ropes,Rashes
-2828,"Complete the title of an 80s song by Duran Duran: 
-",w Moon on...,... Monday,... See ya soon!,... Thursday,... Monday
-2829,"Finish the title of a song from the Hit TV Series, The Drew Carey Show.
-",on Over ____,Parma,Parma,Miamisburg,Shaker Heights
 2830,"Who provided the voices of the characters in the Radio Program Amos n Andy from 1928 to 1960?
 ",Freeman Gosden and Charles Correll,Pranklin Pierce and John Pierce,Amos Rogers and Andrew Brown,Freeman Gosden and Charles Correll,John Paul and George Ringo
 2831,"Bud Abbott and Lou Costello were a comedy team that lasted for 20 years, from the 1930s through the 1950s. What famous baseball routine are they best known for?
@@ -5803,8 +5757,6 @@
 ",Day for Night,Day for Night,Days of  Leaud,Days in Calabria,Days in Algiers
 2901,"This is the word in Jewish folklore for a spirit that inhabits the soul and body of a dead person.
 ",Dybbuk,Dibbenhook,DBennior,Daven,Dybbuk
-2902,"The following citation is taken from this novel of F. Scott Fitzgerald. 
-", wanted not association with glittering things and glittering people — he wanted the glittering things themselves.,The Great Gatsby,Tender Is the Night,The Great Gatsby,The Beautiful and Damned
 2903,"What author of fiction wrote the eight novels known as The Kent Family Chronicles?
 ",John Jakes,John Jakes,Langston Hughes,Mark Twain,Ernest Hemingway
 2904,"What British singer recorded her biggest hit, Downtown in 1964?
@@ -5828,7 +5780,7 @@
 2913,"Sharks rarely attack humans.
 ",True,True,False,,
 2914,"How many teeth do slugs have?
-","3,000","3,000","2,000","1,000",None
+","3,000","3,000","2,000","1,000",
 2915,"Which of these fruits has a variety called Abraham Lincoln?
 ",Tomato,Nectarine,Tomato,Peach,Watermelon
 2916,"How big was the first telephone book?
@@ -5845,8 +5797,6 @@
 ",True,True,False,,
 2922,"How much air do apples contain?
 ",1/25,1/25,1/50,1/10,1/75
-2923,"When Anti-war protesters, socialists and Yippes (Youth International Party ) descended on the 1968 Democratic National Convention, the mayor of this city responded by using 12,000
-","licemen, 6,000 Illinois National Guardsmen and 6,000 U.S. army troops armed with flamethrowers and bazookas. What mayor said The policeman isnt there to create disorder, the policeman is there to preserve disorder.?",Richard Daley,Jerry Brown,Nelson Rockafeller,John Lindsay
 2924,"Which was the first Disney production to show the death of a main character?
 ",Lion King,Bambi,Lion King,Pocahontas,Peter Pan
 2925,"On the show Law and Order, Detective Lenny Briscoe was a New York City policeman for over 30 years. In that time, how many times did he shoot a person?
@@ -6045,8 +5995,6 @@
 ",Madrigal,Magnificat,Mass,Madrigal,Mambo
 3022,"For which hobby would you need frames, hoops and canvas?
 ",Needlepoint,Needlepoint,Nudism,Newsletter printing,Netball
-3023,"What O-word can be added to each of the following to make a new meaningful word:
-","t, Board, Field",Out,Old,Oaf,Oat
 3024,"The fruit of this deciduous shrub or small tree is a berry 5 - 12 cm (2 – 4.7 inches) in diameter, with thick red skin and about 600 seeds.
 ",Pomegranate,Pear,Pomegranate,Persimmon,Pawpaw
 3025,"Which actress played the part of Teresa di Vicenzo in the James Bond film On Her Majestys Secret Service?
@@ -6105,8 +6053,6 @@
 ",Autumn Leaves,Autumn Leaves,Summertime,The Summer Wind,Why Do I Have Spring Fever
 3052,"In Scandinavian mythology this is the equivalent of the apocalypse.
 ",ragnarok,rekjavak,odinthorisagak,ragnarok,rasnajivarak
-3053,"Look for me by moonlight
-",tch for me by moonlight,"l come to thee by moonlight, though hell should bar the way.","at is the title of the poem that tells of the ill-fated love of Bess the landlords daughter and her lover who lay in his blood on the highway, with a bunch of lace at his throat.?",The Highwayman,Curfew Shall Not Ring Tonight
 3054,"Who composed and performed the ballad Goodbye Yellow Brick Road?
 ",Elton John,Michael Bolton,Elton John,The Beatles,None of these
 3055,"A major earthquake struck this city in 1906, killing almost 3,000 people.
@@ -6163,8 +6109,6 @@
 ",Melvilles,Melvins,Mickeys,Minnies,Melvilles
 3081,"Which of the following was invented by a woman?
 ",all of these,circular saw,street-cleaning machine,all of these,windshield wipers
-3082,"In what 1997 movie does the following exchange take place?
-",lvin Udall: You make me want to be a better man. ,rol Connelly: ...Thats maybe the best compliment of my life.,As Good as It Gets,A Few Good Men,As Good as It Gets
 3083,"Which of the following planets is not named after a Roman god?
 ",Uranus,Neptune,Jupiter,Uranus,Mars
 3084,"What Rolling Stones member made a cameo appearance in the 2007 movie Pirates of the Caribbean: At Worlds End?
@@ -6231,8 +6175,6 @@
 ",She was the first woman to command a US Navy ship during a war.,She was the first female architect to design a skyscraper.,She was the first female winner of the Pulitzer Prize in Feature Writing,She was the first woman to command a US Navy ship during a war.,She was the first US female to demand the right to vote.
 3115,"Andreas Gruenintzig was the doctor who first  performed this procedure.
 ",Angioplasty,Thyroidectomy,Bone marrow transplant,Lung transplant,Angioplasty
-3116,"Finish the nursery rhyme:
-",ter Piper picked a peck of .........,pickled peppers,pickled pickles,pickles,pickled peppers
 3117,"Who does Michael Corleone give the kiss of death in one of the most memorable scenes of the movie Godfather II?
 ",Fredo Corleone,Kay Corleone,Sonny Corleone,Tom Hagen,Fredo Corleone
 3118,"According to the New Testament, which of the 12 Apostles gave Jesus a kiss, known as the kiss of betrayal?
@@ -6251,8 +6193,6 @@
 ",Eskimos,Pygmies in Central Africa,Eskimos,Native Americans in the US,Tasmanian Aborigines
 3125,"What character in the movie Casablanca was interrupted by Rick while singing, You must remember this / A kiss is still a kiss / A sigh is just a sigh ...?
 ",Sam,Ilsa,Captain Renault,Victor Laszlo,Sam
-3126,"This actress and singer, who performed her first adult on-screen kiss in the 1940 movie Little Nelly Kelly, wrote a love poem containing the lines: 
-",r twas not into my ear you whispered ,t into my heart ,as not my lips you kissed ,t my soul.,Judy Garland
 3127,"What was the name of the first 3-D film?
 ",The Power of Love,The Strange Boy,The Power of Love,The Power of the Thing,It Flew to Earth
 3128,"Which was the first TV series regularly broadcast in color?
@@ -6333,8 +6273,6 @@
 ",Prion,Prion,Lemma,Papule,Alper
 3166,"This Russian city, founded by Grand Duke George II of Russia in 1221, was called Gorky from 1932 to 1990.
 ",Nizhny Novgorod,Nizhny Novgorod,Okastock,Vladivostock,St. Okasburgh
-3167,"What song by The Beatles, recorded during the Sgt. Pepper sessions, contains the lyrics: 
-",hind the shelter in the middle of a roundabout ,e pretty nurse is selling poppies from a tray?,Penny Lane,Strawberry Fields Forever,Help!
 3168,"Which animal is the record holder for the largest male genital organ-to-body length ratio in nature?
 ",Slug,Starfish,Horse,Slug,Elephant
 3169,"The purpose of the striped fur of most tigers species is camouflage.
@@ -6399,8 +6337,6 @@
 ",Council,Socialistic,Council,Communist,Republic
 3199,"What is the full name of UTC, the company that manufactures Sikorsky helicopters?
 ",United Technologies Corporation,United Technologies Corporation,United Tennessee Company,Union of high-Technology Corporations,Union of Texas Craft-makers
-3200,"WETYIAFHKLXVNM
-",UOPSDGJCB, which of these rows would the letter Z  go?,top,top,none
 3201,"Who was the first person to be crowned Czar of Russia?
 ",Ivan the Terrible,Nicholas III,Alexander IV,Ivan the Terrible,Mikhail Romanov
 3202,"What was the first play Shakespeare wrote?
@@ -6417,10 +6353,6 @@
 ",False,False,True,,
 3208,"Why are Cipriano dela Valera and Casiodoro de Reina famous in the Spanish-speaking world?
 ",They are responsible for the most popular Spanish version of the Bible.,They are responsible for the first translation of  Don Quixote into English.,They are responsible for the most popular Spanish version of the Bible.,They are the publishers of the top-selling Spanish-language newspapers in  the USA.,They are the top stars of Spanish-language television in the USA.
-3209,"What is the name of the dancer described in the following lyrics?
-", would dance for you , worn out shoes,"th silver hair, a ragged shirt, and baggy pants",e old soft shoe," jumped so high, jumped so high"
-3210,"The following group of words (as a whole) makes up a palindrome:
-",man.  A plan.  A canal.  Panama.,True,True,False,
 3211,"What musician is often referred to as The Man in Black?
 ",Johnny Cash,Seal,Will Smith,Johnny Cash,Prince
 3212,"What kind of object does the term black hole refer to in physics?
@@ -6461,8 +6393,6 @@
 ",Tea color,Tea color,Earth color,Chestnut color,Wood color
 3230,"What is the name of the popular song written by American composer Joseph Winner in 1869?
 ",Little Brown Jug,Little Brown Jug,Little Brown Bug,Little Brown Child,Little Brown Chair
-3231,"Complete the title of this 1983 song by Prince:
-",ttle Red ________,Corvette,Camaro,Corvette,Impala
 3232,"Which U.S. state is nicknamed The Golden State?
 ",California,Alaska,Florida,Colorado,California
 3233,"What Academy Award-winning actress starred in the 1981 movie On Golden Pond?
