@@ -281,6 +281,9 @@ async def gameroomname_transition(data):
     if message:
         user_vault[data["id"]]['game_room_id'] = message
         return "CREATE"
+    elif " " in message:
+        await task_queue.put((data["id"], ("text", "❌ *Oops!* Room names can't contain spaces")))
+        return "GAMEROOMNAME"
     else:
         await task_queue.put((data["id"], ("text", "❌ *Oops!* That doesn't look like a valid time")))
         return "GAMEROOMNAME"
