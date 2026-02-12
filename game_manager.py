@@ -148,7 +148,7 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
         room.results[player_username] = 0
 
     # Main loop for questions
-    questions = await fetch_questions("OpenTDB", amount=num_of_questions, category=None, difficulty=difficulty.lower(), qtype=None)
+    questions = await fetch_questions("OpenTriviaQA", amount=num_of_questions, category=None)
     await asyncio.sleep(1)
 
     for index, question in enumerate(questions):
@@ -164,7 +164,7 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
             else:
                 keyboard = [[KeyboardButton(text="🐔 Abandon Game")]]
             reply_markup = ReplyKeyboardMarkup(keyboard, one_time_keyboard=True, resize_keyboard=True)
-            if question["question"].contains("one of these"):
+            if "one of these" in question["question"].lower() or "three of these" in question["question"].lower() or "which of the following" in question["question"].lower():
                 possibilities = ", ".join([f"{answer}" for answer in possible_answers])
                 question["question"] += f" {possibilities}"
             await sma.task_queue.put((player_id, ("textkeyboard", f"❓ *QUESTION ({index+1}/{num_of_questions}):*\n\n{question["question"]}", reply_markup)))

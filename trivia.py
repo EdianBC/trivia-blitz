@@ -131,12 +131,12 @@ async def fetch_questions_opentriviaqa(amount=10, categories=None):
     # Formatear las preguntas según el nuevo formato
     formatted_questions = []
     for q in selected_questions:
-        question_text = html.unescape(q.get("Questions", "")).strip()
-        correct_answer = html.unescape(q.get("Correct", "")).strip()
+        question_text = html.unescape(str(q.get("Questions", ""))).strip()
+        correct_answer = html.unescape(str(q.get("Correct", ""))).strip()
         incorrect_answers = [
             html.unescape(str(ans)).strip()
-            for ans in [q.get("A", ""), q.get("B", ""), q.get("C", ""), q.get("D", "")]
-            if str(ans).strip() and ans.strip() != correct_answer
+            for ans in [str(q.get("A", "")), str(q.get("B", "")), str(q.get("C", "")), str(q.get("D", ""))]
+            if str(ans).strip() and str(ans).strip() != correct_answer
         ]
         formatted_questions.append({
             "question": question_text,

@@ -165,7 +165,7 @@ async def create_entry(data):
 
     game_room_name = user_vault[data["id"]].setdefault('game_room_id', f'MyGameRoom{random.randint(1000,9999)}')
     number_of_questions = user_vault[data["id"]].setdefault('number_of_questions', 20)
-    difficulty = user_vault[data["id"]].setdefault('difficulty', 'Easy')
+    difficulty = user_vault[data["id"]].setdefault('difficulty', 'Normal')
     clues = user_vault[data["id"]].setdefault('clues', True)
     time_to_answer = user_vault[data["id"]].setdefault('time_to_answer', 20)
     username = user_vault[data["id"]].setdefault('username', f'Player{random.randint(1000,9999)}')#Actually all that random thing could be removed
@@ -174,7 +174,7 @@ async def create_entry(data):
     f"🎮 *Current Game Settings* 🎮\n\n"
     f"🏷️ *Name:* {game_room_name}\n"
     f"❓ *Number of Questions:* {number_of_questions}\n"
-    f"🎯 *Difficulty:* {difficulty}{" (with clues)" if clues else " (without clues)"}\n"
+    f"🎯 *Difficulty:* {difficulty}\n"
     f"⏱️ *Time to Answer:* {time_to_answer} seconds\n"
     f"🔒 *Privacy:* {privacy}\n"
     f"👤 *Username:* {username}\n"
@@ -190,10 +190,13 @@ async def create_transition(data):
         await task_queue.put((data["id"], ("textnokeyboard", "📝 How many questions do you want in your game?")))
         return "NUMQUESTIONS"
     elif message == "🎯 Adjust Difficulty":
-        difficulty_keyboard = [[KeyboardButton(text="Easy 🟢"), KeyboardButton(text="Medium 🟡"), KeyboardButton(text="Hard 🔴")],
-                               [KeyboardButton(text="Easy (without clues) 🟢"), KeyboardButton(text="Medium (without clues) 🟡"), KeyboardButton(text="Hard (without clues) 🔴")]]
+        difficulty_keyboard = [[KeyboardButton(text="Normal 🎲"), KeyboardButton(text="Hard 🧠")]]
         reply_markup = ReplyKeyboardMarkup(difficulty_keyboard, resize_keyboard=True)
-        text = "🎯 Choose Your Difficulty Level!\n\n🟢 *Easy*: For a relaxed experience.\n🟡 *Medium*: A balanced challenge.\n🔴 *Hard*: Only for the brave!\n\n"
+        text = (
+            "🎯 Choose Your Difficulty Level!\n\n"
+            "🎲 *Normal*: Questions with multiple-choice answers. You can guess if you're unsure.\n"
+            "🧠 *Hard*: No multiple-choice answers. Answer from your own knowledge!\n\n"
+        )
         await task_queue.put((data["id"], ("textkeyboard", text, reply_markup)))
         return "DIFFICULTY"
     elif message == "⏱️ Set Time to Answer":
@@ -240,16 +243,19 @@ async def numquestions_transition(data):
     
 async def difficulty_transition(data):
     message = data.get("message")
-    if message in ["Easy 🟢", "Medium 🟡", "Hard 🔴"]:
-        # Extract the difficulty level without the emoji
-        user_vault[data["id"]]['difficulty'] = message.split()[0]
+    if message == "Normal 🎲":
+        # Set difficulty to "Normal" with clues enabled
+        user_vault[data["id"]]['difficulty'] = "Normal"
+        user_vault[data["id"]]['clues'] = True
         return "CREATE"
-    elif message in ["Easy (without clues) 🟢", "Medium (without clues) 🟡", "Hard (without clues) 🔴"]:
-        user_vault[data["id"]]['difficulty'] = message.split()[0]
+    elif message == "Hard 🧠":
+        # Set difficulty to "Hard" with clues disabled
+        user_vault[data["id"]]['difficulty'] = "Hard"
         user_vault[data["id"]]['clues'] = False
         return "CREATE"
     else:
-        await task_queue.put((data["id"], ("text", "❌ Invalid choice!")))
+        # Handle invalid choice
+        await task_queue.put((data["id"], ("text", "❌ Invalid choice! Please select a valid difficulty level.")))
         return "DIFFICULTY"
     
 async def timetoanswer_transition(data):
