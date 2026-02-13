@@ -55,6 +55,11 @@ async def join_pseudo_command_handler(update: Update, context: ContextTypes.DEFA
         await sma.run_state_machine_step(data)
         #asyncio.create_task(sma.run_state_machine_step(data))
 
+async def addremove_pseudo_command_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    text = update.message.text
+    data = {"id": update.effective_user.id, "message": f"{text}"}
+    await sma.run_state_machine_step(data)
+    #asyncio.create_task(sma.run_state_machine_step(data))
 
 async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     text = update.message.text
@@ -103,6 +108,9 @@ async def answer_to_user(application, user_id, action) -> None:
     elif action[0] == "editabletext":
         message_sent = await application.bot.send_message(chat_id=user_id, text=action[1], parse_mode="Markdown")
         last_message_id[user_id] = message_sent.message_id
+    elif action[0] == "editabletextkeyboard":
+        message_sent = await application.bot.send_message(chat_id=user_id, text=action[1], reply_markup=action[2], parse_mode="Markdown")
+        last_message_id[user_id] = message_sent.message_id
     elif action[0] == "edittext":
         if user_id in last_message_id:
             try:
@@ -111,6 +119,15 @@ async def answer_to_user(application, user_id, action) -> None:
                 print(f"Failed to edit message for user {user_id}: {e}")
         else:
             message_sent = await application.bot.send_message(chat_id=user_id, text=action[1], parse_mode="Markdown")
+            last_message_id[user_id] = message_sent.message_id
+    elif action[0] == "edittextkeyboard":
+        if user_id in last_message_id:
+            try:
+                await application.bot.edit_message_text(chat_id=user_id, message_id=last_message_id[user_id], text=action[1], reply_markup=action[2], parse_mode="Markdown")
+            except telegram.error.TelegramError as e:
+                print(f"Failed to edit message for user {user_id}: {e}")
+        else:
+            message_sent = await application.bot.send_message(chat_id=user_id, text=action[1], reply_markup=action[2], parse_mode="Markdown")
             last_message_id[user_id] = message_sent.message_id
     # elif action[0] == "textnoedit":
     #     message_sent = await application.bot.send_message(chat_id=user_id, text=action[1], parse_mode="Markdown")
@@ -126,6 +143,7 @@ def main() -> None:
     application.add_handler(CommandHandler("start", start_command_handler))
     application.add_handler(CommandHandler("time", time_command_handler))
     application.add_handler(MessageHandler(filters.Regex(r"^/join_"), join_pseudo_command_handler))
+    application.add_handler(MessageHandler(filters.Regex(r"^/(add_|remove_)"), addremove_pseudo_command_handler))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, message_handler))
     
     print("El bot ha iniciado. Presiona Ctrl+C para detenerlo.")

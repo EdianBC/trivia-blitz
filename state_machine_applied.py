@@ -3,6 +3,7 @@ import asyncio
 import random
 import game_manager as gm
 import state_machine as sm
+import trivia
 
 
 task_queue = asyncio.Queue()
@@ -29,6 +30,7 @@ async def start_state_machine():
     await sm.add_state("USERNAME", None, None, username_transition)
     await sm.add_state("GAMEROOMNAME", None, None, gameroomname_transition)
     await sm.add_state("PRIVACY", None, None, privacy_transition)
+    await sm.add_state("CATEGORIES", None, None, categories_transition)
     await sm.add_state("JOIN", join_entry, None, join_transition)
     await sm.add_state("USERNAMEJOIN", None, None, usernamejoin_transition)
     await sm.add_state("SEARCH", search_entry, None, search_transition)
@@ -118,6 +120,7 @@ async def start_core(data):
     if id in searching_users:
         searching_users.remove(id)
     username = user_vault[data["id"]].setdefault('username', f'Player{random.randint(1000,9999)}')
+    categories = user_vault[data["id"]].setdefault('categories', [])
     room_id = user_vault[data["id"]].get('game_room_id', None)
     if room_id:
         await gm.remove_player_from_room(username, room_id)
@@ -159,7 +162,8 @@ async def create_entry(data):
     keyboard = [[KeyboardButton(text="🎮 Create Game"), KeyboardButton(text="🏷️ Change Room Name")],
                 [KeyboardButton(text="❓ Set Number of Questions"), KeyboardButton(text="🎯 Adjust Difficulty")],
                 [KeyboardButton(text="⏱️ Set Time to Answer"), KeyboardButton(text="👤 Update Username")],
-                [KeyboardButton(text="🔒 Set Room Privacy"), KeyboardButton(text="🔙 Back to Main Menu")]]
+                [KeyboardButton(text="🔒 Set Room Privacy"), KeyboardButton(text="📚 Choose Categories")],
+                [KeyboardButton(text="🔙 Back to Main Menu")]]
     reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
     await task_queue.put((data["id"], ("textkeyboard", "🎉 Welcome to the *Game Creation Menu*! 🎉", reply_markup)))
 
@@ -213,6 +217,23 @@ async def create_transition(data):
         reply_markup = ReplyKeyboardMarkup(privacy_keyboard, resize_keyboard=True)
         await task_queue.put((data["id"], ("textkeyboard", "🔒 Would you like your game room to be *Public* (anyone can join) or *Private* (only invited players can join)?", reply_markup)))
         return "PRIVACY"
+    elif message == "📚 Choose Categories":
+        
+        categories = await trivia.fetch_categories_async()
+        if not categories:
+            text = "⚠️ No categories available at the moment. Please try again later."
+        else:
+            text = "Here is a list of available categories. To add a category to your game, type the corresponding command:\n\n"
+            
+            for category in categories:
+                command = f"{"/add\\_" if category not in user_vault[data["id"]]["categories"] else "/remove\\_"}{category.replace(' ', '\\_')}"
+                text += f"{"🟥" if category not in user_vault[data["id"]]["categories"] else "🟢"}{category} - {command}\n"
+            text += "\nYou can add multiple categories by typing their commands one by one."
+        keyboard = [[KeyboardButton(text="🔙 Back")]]
+        reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
+        await task_queue.put((data["id"], ("textkeyboard", "📚 *Choose Categories*:", reply_markup)))
+        await task_queue.put((data["id"], ("editabletext", text)))
+        return "CATEGORIES"
     elif message == "🎮 Create Game":
         game_room_id = user_vault[data["id"]].get('game_room_id')
         if await gm.game_room_exists(game_room_id):
@@ -224,7 +245,8 @@ async def create_transition(data):
             clues = user_vault[data["id"]].get('clues', True)
             time_to_answer = user_vault[data["id"]].get('time_to_answer')
             privacy = user_vault[data["id"]].get('privacy', 'Public')
-            await gm.create_game_room(game_room_id, num_of_questions, difficulty, time_to_answer, privacy, clues)
+            categories = user_vault[data["id"]].get('categories', [])
+            await gm.create_game_room(game_room_id, num_of_questions, difficulty, time_to_answer, privacy, clues, categories)
             await gm.set_admin_in_room(user_vault[data["id"]]['username'], data["id"], game_room_id)
             await task_queue.put((data["id"], ("text", f"🎉 *Success!* Your game room has been created\n\n`{game_room_id}`\n\nInvite your friends and get ready to play! 🚀")))
             return "ADMWAITROOM"
@@ -297,6 +319,41 @@ async def privacy_transition(data):
         await task_queue.put((data["id"], ("text", "❌ Invalid choice!")))
         return "PRIVACY"    
 
+async def categories_transition(data):
+    message = data.get("message")
+    if message and message.startswith("/add_"):
+        category_name = message[5:].replace("_", " ")
+        # Aquí podrías agregar lógica para verificar si la categoría es válida
+        user_vault[data["id"]].setdefault('categories', []).append(category_name)
+        # await task_queue.put((data["id"], ("text", f"✅ Category '{category_name}' added to your game!")))
+    elif message and message.startswith("/remove_"):
+        category_name = message[8:].replace("_", " ")
+        if 'categories' in user_vault[data["id"]] and category_name in user_vault[data["id"]]['categories']:
+            user_vault[data["id"]]['categories'].remove(category_name)
+            # await task_queue.put((data["id"], ("text", f"✅ Category '{category_name}' removed from your game!")))
+        # else:
+        #     await task_queue.put((data["id"], ("text", f"❌ Category '{category_name}' is not in your game!")))
+    elif message == "🔙 Back":
+        return "CREATE"
+
+    categories = await trivia.fetch_categories_async()
+    if not categories:
+        text = "⚠️ No categories available at the moment. Please try again later."
+    else:
+        text = (
+            "Here is a list of available categories. To add a category to your game, "
+            "type the corresponding command:\n\n"
+        )
+        for category in categories:
+            command = f"{"/add\\_" if category not in user_vault[data["id"]]["categories"] else "/remove\\_"}{category.replace(' ', '\\_')}"
+            text += f"{"🟥" if category not in user_vault[data["id"]]["categories"] else "🟢"}{category} - {command}\n"
+        text += "\nYou can add multiple categories by typing their commands one by one."
+    # keyboard = [[KeyboardButton(text="🔙 Back")]]
+    # reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
+    # await task_queue.put((data["id"], ("edittextkeyboard", text, reply_markup)))
+    await task_queue.put((data["id"], ("edittext", text)))
+    print(f"User {data['id']} categories updated: {user_vault[data['id']]['categories']}")
+    return "CATEGORIES"
 
 
 #region SEARCH MENU

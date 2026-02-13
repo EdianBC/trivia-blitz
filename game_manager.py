@@ -84,11 +84,11 @@ async def set_game_cancelled(room_id):
     if room:
         room.game_cancelled = True
 
-async def create_game_room(room_id, num_of_questions=10, difficulty=None, time_to_answer=15, privacy=False, clues=True):
+async def create_game_room(room_id, num_of_questions=10, difficulty=None, time_to_answer=15, privacy=False, clues=True, categories=None):
     game_rooms[room_id] = game_room()
     if privacy == "Public":
         public_game_rooms.append(room_id)
-    asyncio.create_task(game_master(room_id, num_of_questions, difficulty, time_to_answer, clues))
+    asyncio.create_task(game_master(room_id, num_of_questions, difficulty, time_to_answer, clues, categories))
 
 async def game_room_exists(room_id):
     return room_id in game_rooms
@@ -111,7 +111,7 @@ async def can_player_join(room_id, username):
 
 
 #region Game Master
-async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_question=15, use_clues=True):
+async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_question=15, use_clues=True, categories=None):
     room = game_rooms[room_id]
     last_update_time = asyncio.get_event_loop().time()
     while not room.game_on:
@@ -148,7 +148,7 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
         room.results[player_username] = 0
 
     # Main loop for questions
-    questions = await fetch_questions("OpenTriviaQA", amount=num_of_questions, category=None)
+    questions = await fetch_questions("OpenTriviaQA", amount=num_of_questions, category=categories)
     await asyncio.sleep(1)
 
     for index, question in enumerate(questions):

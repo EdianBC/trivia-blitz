@@ -136,7 +136,7 @@ async def fetch_questions_opentriviaqa(amount=10, categories=None):
         incorrect_answers = [
             html.unescape(str(ans)).strip()
             for ans in [str(q.get("A", "")), str(q.get("B", "")), str(q.get("C", "")), str(q.get("D", ""))]
-            if str(ans).strip() and str(ans).strip() != correct_answer
+            if str(ans).strip() and str(ans).strip() != correct_answer and str(ans).strip() != "nan"
         ]
         formatted_questions.append({
             "question": question_text,
