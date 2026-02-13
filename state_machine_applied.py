@@ -20,7 +20,6 @@ user_vault = {}
 #region State Machine Setup
 async def start_state_machine():
     #          State Name   Entry Function   Core Function   Transition Function
-    await sm.add_state("TEST", test_entry, test_core, test_transition)
     await sm.add_state("START", None, start_core, start_transition)
     await sm.add_state("MAIN", main_entry, None, main_transition)
     await sm.add_state("CREATE", create_entry, None, create_transition)
@@ -85,34 +84,6 @@ async def public_game_rooms_updater():
 # Entries must receive a dict with data (for example {"message":"hi"}) and return a list of pairs (type, content)
 # Cores must receive a dict with data and return a list of pairs (type, content)
 # Transitions must receive a dict with data and return a tuple (next_state_name, list of pairs (type, content))
-
-# TEST
-async def test_entry(data):
-    keyboard = [KeyboardButton(text="Option 1"), KeyboardButton(text="Option 2")]
-    reply_markup = ReplyKeyboardMarkup([keyboard], resize_keyboard=True)
-    await task_queue.put((data["id"], ("textkeyboard", "You are in test state now", reply_markup)))
-
-async def test_core(data):
-    question = "What is the capital of France?"
-    options = ["Paris", "Berlin", "Madrid", "Rome"]
-    correct_option_id = 0  # Índice de la respuesta correcta ("Paris")
-    
-    # Crear un diccionario con los datos del cuestionario
-    quiz = {
-        "type": "quiz",
-        "question": question,
-        "options": options,
-        "correct_option_id": correct_option_id,
-        "is_anonymous": False,  # Para que no sea anónimo
-        "open_period": 30  # Duración de la encuesta en segundos
-    }
-
-    await task_queue.put((data["id"], ("quiz", quiz)))
-
-async def test_transition(data):
-    return "MAIN"
-
-
 
 # START
 async def start_core(data):
@@ -427,17 +398,45 @@ async def usernamejoin_transition(data):
         return "JOIN"
     else:
         await task_queue.put((data["id"], ("text", "❌ *Oops!* That doesn't look like a valid username")))
-        return "USERNAME"
+        return "USERNAMEJOIN"
     
 
 # SETTINGS
 async def settings_entry(data):
-    await task_queue.put((data["id"], ("textnokeyboard", "👨‍💻 Settings are not implemented yet 🛠")))
-    await task_queue.put((data["id"], ("run", data)))
+    keyboard = [
+        [KeyboardButton(text="✏️ Change Username")],
+        [KeyboardButton(text="🔙 Back")]
+    ]
+    reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
+    text = (
+        "⚙️ *Settings*\n\n"
+        "Here you can customize your game experience. Choose an option below:\n\n"
+        "• ✏️ *Change Username*: Update your display name for the game.\n"
+        "• 🔙 *Back*: Return to the main menu.\n\n"
+        "What would you like to do?"
+    )
+    await task_queue.put((data["id"], ("textkeyboard", text, reply_markup)))
 
 async def settings_transition(data):
-    return "MAIN"
+    message = data.get("message")
 
+    if message == "✏️ Change Username":
+        await task_queue.put((data["id"], ("textnokeyboard", "👤 What should I call you?")))
+        return "USERNAMESETTINGS"
+    elif message == "🔙 Back":
+        return "MAIN"
+    else:
+        await task_queue.put((data["id"], ("text", "❌ Invalid option")))
+        return "SETTINGS"   
+
+async def usernamesettings_transition(data):
+    message = data.get("message")
+    if message:
+        user_vault[data["id"]]['username'] = message
+        return "SETTINGS"
+    else:
+        await task_queue.put((data["id"], ("text", "❌ *Oops!* That doesn't look like a valid username")))
+        return "USERNAMESETTINGS"
 
 #region WAITING ROOM AND GAME
 async def waitroom_entry(data):

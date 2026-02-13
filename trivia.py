@@ -144,7 +144,7 @@ async def fetch_questions_opentriviaqa(amount=10, categories=None):
             "incorrect_answers": incorrect_answers
         })
     
-    return formatted_questions
+    return random.shuffle(formatted_questions)
  
 
 # Example usage
