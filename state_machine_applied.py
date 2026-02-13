@@ -223,11 +223,11 @@ async def create_transition(data):
         if not categories:
             text = "⚠️ No categories available at the moment. Please try again later."
         else:
-            text = "Here is a list of available categories. To add a category to your game, type the corresponding command:\n\n"
+            text = "📚 Here is a list of *available categories*. To add a category to your game, type the corresponding command:\n\n"
             
             for category in categories:
                 command = f"{"/add\\_" if category not in user_vault[data["id"]]["categories"] else "/remove\\_"}{category.replace(' ', '\\_')}"
-                text += f"{"🟥" if category not in user_vault[data["id"]]["categories"] else "🟢"}{category} - {command}\n"
+                text += f"{"🔴" if category not in user_vault[data["id"]]["categories"] else "🟢"}{category} - {command}\n"
             text += "\nYou can add multiple categories by typing their commands one by one."
         keyboard = [[KeyboardButton(text="🔙 Back")]]
         reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
@@ -341,12 +341,12 @@ async def categories_transition(data):
         text = "⚠️ No categories available at the moment. Please try again later."
     else:
         text = (
-            "Here is a list of available categories. To add a category to your game, "
+            "📚 Here is a list of *available categories*. To add a category to your game, "
             "type the corresponding command:\n\n"
         )
         for category in categories:
             command = f"{"/add\\_" if category not in user_vault[data["id"]]["categories"] else "/remove\\_"}{category.replace(' ', '\\_')}"
-            text += f"{"🟥" if category not in user_vault[data["id"]]["categories"] else "🟢"}{category} - {command}\n"
+            text += f"{"🔴" if category not in user_vault[data["id"]]["categories"] else "🟢"}{category} - {command}\n"
         text += "\nYou can add multiple categories by typing their commands one by one."
     # keyboard = [[KeyboardButton(text="🔙 Back")]]
     # reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
