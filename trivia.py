@@ -111,7 +111,7 @@ async def fetch_questions_opentriviaqa(amount=10, categories=None):
         if not selected_files:
             return []  # Si no hay archivos para las categorías, retornar lista vacía
         random.shuffle(selected_files)
-
+        # print(f"Selected files: {selected_files}")
         # Calcular cuántas preguntas tomar de cada categoría
         num_categories = len(selected_files)
         base_amount = amount // num_categories
@@ -127,7 +127,7 @@ async def fetch_questions_opentriviaqa(amount=10, categories=None):
             num_questions = base_amount + (1 if remainder > 0 else 0)
             remainder -= 1
             selected_questions.extend(random.sample(questions, min(num_questions, len(questions))))
-    
+    # print(f"Selected questions: {selected_questions}")
     # Formatear las preguntas según el nuevo formato
     formatted_questions = []
     for q in selected_questions:
@@ -143,8 +143,10 @@ async def fetch_questions_opentriviaqa(amount=10, categories=None):
             "correct_answer": correct_answer,
             "incorrect_answers": incorrect_answers
         })
+    # print(f"Formatted question: {formatted_questions[-1]}")
     
-    return random.shuffle(formatted_questions)
+    random.shuffle(formatted_questions)
+    return formatted_questions
  
 
 # Example usage
@@ -152,7 +154,7 @@ async def main():
     categories = await fetch_categories_async()
     print("Categories:", categories)
 
-    questions = await fetch_questions_async(amount=5, category=None, difficulty="easy")
+    questions = await fetch_questions_async(amount=5, category=["General", "History"], difficulty="easy")
     print("Questions:", questions)
 
 # Run the example

@@ -150,6 +150,7 @@ async def game_master(room_id, num_of_questions=10, difficulty=None, time_per_qu
     # Main loop for questions
     questions = await fetch_questions("OpenTriviaQA", amount=num_of_questions, category=categories)
     await asyncio.sleep(1)
+    # print(questions)
 
     for index, question in enumerate(questions):
         if len(room.players) == 0:
